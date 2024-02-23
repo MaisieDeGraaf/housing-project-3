@@ -1,0 +1,97 @@
+,,,"Oshawa, City [Census subdivision], Ontario",,,,,,"Durham, Regional municipality [Census division], Ontario"
+"Topic","Characteristics","Note","Total","Flag_Total","Male","Flag_Male","Female","Flag_Female","Total","Flag_Total","Male","Flag_Male","Female","Flag_Female"
+,,,"Counts (unless otherwise specified)",,,,,,
+"Labour force status","Total - Population aged 15 years and over by Labour force status - 25% sample data",163,  131110,,   63490,,   67625,,  523485,,  252970,,  270515,
+"Labour force status","  In the labour force",,   81425,,   41840,,   39585,,  352750,,  180575,,  172180,
+"Labour force status","    Employed",,   73470,,   37550,,   35920,,  324375,,  165625,,  158750,
+"Labour force status","    Unemployed",,    7955,,    4295,,    3660,,   28380,,   14950,,   13425,
+"Labour force status","  Not in the labour force",,   49685,,   21645,,   28040,,  170735,,   72395,,   98335,
+"Labour force status","Participation rate",, 62.1,, 65.9,, 58.5,, 67.4,, 71.4,, 63.6,
+"Labour force status","Employment rate",, 56.0,, 59.1,, 53.1,, 62.0,, 65.5,, 58.7,
+"Labour force status","Unemployment rate",,  9.8,, 10.3,,  9.2,,  8.0,,  8.3,,  7.8,
+"Work activity during the reference year","Total population aged 15 years and over by work activity during the reference year - 25% sample data",164,  131110,,   63485,,   67625,,  523485,,  252970,,  270515,
+"Work activity during the reference year","  Did not work",165,   48315,,   20775,,   27540,,  163425,,   68900,,   94530,
+"Work activity during the reference year","  Worked",,   82795,,   42715,,   40090,,  360060,,  184070,,  175990,
+"Work activity during the reference year","    Worked full year; full time",166,   43840,,   24680,,   19160,,  195635,,  108955,,   86680,
+"Work activity during the reference year","    Worked part year and/or part time",167,   38955,,   18030,,   20925,,  164420,,   75120,,   89305,
+"Work activity during the reference year","Average weeks worked in reference year",, 43.2,, 43.7,, 42.7,, 43.3,, 44.0,, 42.7,
+"Class of worker","Total labour force aged 15 years and over by class of worker - 25% sample data",168,   81425,,   41840,,   39585,,  352750,,  180575,,  172180,
+"Class of worker","  Class of worker - not applicable",169,    2590,,    1190,,    1400,,    9010,,    4320,,    4690,
+"Class of worker","  All classes of workers",170,   78840,,   40650,,   38185,,  343740,,  176250,,  167490,
+"Class of worker","    Employee",,   71875,,   36170,,   35705,,  309055,,  154255,,  154805,
+"Class of worker","    Self-employed",171,    6965,,    4475,,    2485,,   34690,,   22000,,   12685,
+"Occupation - National Occupational Classification (NOC) 2016","Total labour force population aged 15 years and over by occupation - National Occupational Classification (NOC) 2016 - 25% sample data",172,   81425,,   41835,,   39585,,  352750,,  180570,,  172175,
+"Occupation - National Occupational Classification (NOC) 2016","  Occupation - not applicable",169,    2590,,    1190,,    1400,,    9010,,    4320,,    4690,
+"Occupation - National Occupational Classification (NOC) 2016","  All occupations",170,   78840,,   40650,,   38185,,  343740,,  176255,,  167490,
+"Occupation - National Occupational Classification (NOC) 2016","    0 Management occupations",,    7250,,    4270,,    2980,,   40195,,   24155,,   16040,
+"Occupation - National Occupational Classification (NOC) 2016","    1 Business; finance and administration occupations",,   11775,,    3235,,    8540,,   57860,,   16330,,   41530,
+"Occupation - National Occupational Classification (NOC) 2016","    2 Natural and applied sciences and related occupations",,    4000,,    3200,,     800,,   22520,,   17760,,    4760,
+"Occupation - National Occupational Classification (NOC) 2016","    3 Health occupations",,    4745,,     680,,    4065,,   20795,,    3270,,   17525,
+"Occupation - National Occupational Classification (NOC) 2016","    4 Occupations in education; law and social; community and government services",,    8565,,    2520,,    6050,,   41320,,   12435,,   28885,
+"Occupation - National Occupational Classification (NOC) 2016","    5 Occupations in art; culture; recreation and sport",,    1895,,     855,,    1040,,    9690,,    4410,,    5280,
+"Occupation - National Occupational Classification (NOC) 2016","    6 Sales and service occupations",,   21175,,    8850,,   12325,,   80975,,   35230,,   45740,
+"Occupation - National Occupational Classification (NOC) 2016","    7 Trades; transport and equipment operators and related occupations",,   13790,,   12830,,     960,,   50515,,   47385,,    3130,
+"Occupation - National Occupational Classification (NOC) 2016","    8 Natural resources; agriculture and related production occupations",,     940,,     790,,     145,,    4945,,    3980,,     965,
+"Occupation - National Occupational Classification (NOC) 2016","    9 Occupations in manufacturing and utilities",,    4690,,    3415,,    1275,,   14925,,   11295,,    3630,
+"Industry - North American Industry Classification System (NAICS) 2012","Total labour force population aged 15 years and over by Industry - North American Industry Classification System (NAICS) 2012 - 25% sample data",173,   81430,,   41840,,   39585,,  352750,,  180570,,  172180,
+"Industry - North American Industry Classification System (NAICS) 2012","  Industry - NAICS2012 - not applicable",169,    2590,,    1190,,    1400,,    9010,,    4320,,    4690,
+"Industry - North American Industry Classification System (NAICS) 2012","  All industry categories",170,   78840,,   40650,,   38190,,  343740,,  176255,,  167485,
+"Industry - North American Industry Classification System (NAICS) 2012","    11 Agriculture; forestry; fishing and hunting",,     240,,     145,,      95,,    3000,,    1875,,    1130,
+"Industry - North American Industry Classification System (NAICS) 2012","    21 Mining; quarrying; and oil and gas extraction",,     100,,      70,,      30,,     635,,     475,,     160,
+"Industry - North American Industry Classification System (NAICS) 2012","    22 Utilities",,    1415,,    1050,,     365,,    7560,,    5555,,    2005,
+"Industry - North American Industry Classification System (NAICS) 2012","    23 Construction",,    6565,,    5860,,     705,,   27260,,   24135,,    3125,
+"Industry - North American Industry Classification System (NAICS) 2012","    31-33 Manufacturing",,    7950,,    5800,,    2150,,   28645,,   20935,,    7705,
+"Industry - North American Industry Classification System (NAICS) 2012","    41 Wholesale trade",,    2990,,    2050,,     940,,   13325,,    9045,,    4275,
+"Industry - North American Industry Classification System (NAICS) 2012","    44-45 Retail trade",,   10010,,    4680,,    5335,,   39965,,   18850,,   21110,
+"Industry - North American Industry Classification System (NAICS) 2012","    48-49 Transportation and warehousing",,    4600,,    3540,,    1060,,   16605,,   12735,,    3870,
+"Industry - North American Industry Classification System (NAICS) 2012","    51 Information and cultural industries",,    1920,,    1040,,     875,,    9890,,    5545,,    4345,
+"Industry - North American Industry Classification System (NAICS) 2012","    52 Finance and insurance",,    2965,,    1135,,    1835,,   22350,,    9220,,   13130,
+"Industry - North American Industry Classification System (NAICS) 2012","    53 Real estate and rental and leasing",,    1265,,     645,,     620,,    6615,,    3335,,    3280,
+"Industry - North American Industry Classification System (NAICS) 2012","    54 Professional; scientific and technical services",,    4180,,    2100,,    2080,,   24150,,   12395,,   11760,
+"Industry - North American Industry Classification System (NAICS) 2012","    55 Management of companies and enterprises",,     105,,      40,,      65,,     835,,     310,,     530,
+"Industry - North American Industry Classification System (NAICS) 2012","    56 Administrative and support; waste management and remediation services",,    4795,,    2620,,    2175,,   17420,,    9970,,    7455,
+"Industry - North American Industry Classification System (NAICS) 2012","    61 Educational services",,    5890,,    1825,,    4065,,   26940,,    7640,,   19295,
+"Industry - North American Industry Classification System (NAICS) 2012","    62 Health care and social assistance",,    8780,,    1215,,    7565,,   36610,,    5130,,   31475,
+"Industry - North American Industry Classification System (NAICS) 2012","    71 Arts; entertainment and recreation",,    1620,,     880,,     740,,    7600,,    3965,,    3640,
+"Industry - North American Industry Classification System (NAICS) 2012","    72 Accommodation and food services",,    5795,,    2195,,    3600,,   20630,,    8290,,   12340,
+"Industry - North American Industry Classification System (NAICS) 2012","    81 Other services (except public administration)",,    3375,,    1620,,    1760,,   13655,,    6520,,    7135,
+"Industry - North American Industry Classification System (NAICS) 2012","    91 Public administration",,    4280,,    2145,,    2135,,   20045,,   10330,,    9720,
+"Place of work status","Total - Place of work status for the employed labour force aged 15 years and over in private households - 25% sample data",174,   73470,,   37545,,   35925,,  324375,,  165625,,  158750,
+"Place of work status","  Worked at home",,    3815,,    1835,,    1980,,   21845,,   10570,,   11270,
+"Place of work status","  Worked outside Canada",,     130,,      75,,      55,,     910,,     590,,     320,
+"Place of work status","  No fixed workplace address",,    9540,,    7110,,    2435,,   39565,,   29400,,   10165,
+"Place of work status","  Worked at usual place",,   59985,,   28530,,   31455,,  262055,,  125060,,  136995,
+
+Symbols:
+
+Notes:
+163, Refers to whether a person aged 15 years and over was employed  unemployed or not in the labour force during the week of Sunday  May 1 to Saturday  May 7  2016.
+,Early enumeration was conducted in remote  isolated parts of the provinces and territories. When enumeration has taken place before May 2016  the reference date used is the date on which the household was enumerated.
+,In the past  this variable was called Labour force activity.
+164, Refers to the number of weeks in which a person aged 15 years and over worked for pay or in self-employment in 2015 at all jobs held  even if only for a few hours  and whether these weeks were mostly full time (30 hours or more per week) or mostly part time (less than 30 hours per week).
+165, Includes persons aged 15 years and over who never worked  persons who worked prior to 2015 and persons who worked in 2016  but not in 2015.
+166, Includes persons aged 15 years and over who worked full year (49 weeks and over) and mostly full time (30 hours or more per week) in 2015.
+167, Includes persons aged 15 years and over who worked full year mostly part time or part year mostly full time or part year mostly part time in 2015. Part year is less than 49 weeks and part time is less than 30 hours per week.
+168, Class of worker refers to whether a person aged 15 years and over is an employee or is self-employed.
+169, Includes unemployed persons aged 15 years and over who have never worked for pay or in self-employment  or who had last worked prior to January 1  2015.
+170, Includes the experienced labour force which refers to persons aged 15 years and over who  during the week of Sunday  May 1 to Saturday  May 7  2016  were employed and the unemployed who had last worked for pay or in self-employment in either 2015 or 2016.
+171, Includes persons aged 15 years and over with or without an incorporated business with paid help or without paid help  as well as unpaid family workers.
+172, Refers to the kind of work performed by persons aged 15 years and over as determined by their kind of work and the description of the main activities in their job. The occupation data are produced according to the NOC 2016.
+173, Refers to the general nature of the business carried out in the establishment where the person worked. The data are produced according to the NAICS 2012.
+174, Classification of respondents according to whether they worked at home  worked outside Canada  had no fixed workplace address or worked at a specific address (usual place of work).
+
+Data quality:
+Oshawa; City [Census subdivision]; Ontario
+Global non-response rate (GNR)  short-form census questionnaire: 3.6%
+Global non-response rate (GNR)  long-form census questionnaire: 4.7%
+
+Durham; Regional municipality [Census division]; Ontario
+Global non-response rate (GNR)  short-form census questionnaire: 3.0%
+Global non-response rate (GNR)  long-form census questionnaire: 4.0%
+
+
+"Source: Statistics Canada, 2016 Census of Population."
+
+How to cite: Statistics Canada. 2017. Census Profile. 2016 Census.
+Statistics Canada Catalogue no. 98-316-X2016001. Ottawa. Released November 29 2017.
+http://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/index.cfm?Lang=E

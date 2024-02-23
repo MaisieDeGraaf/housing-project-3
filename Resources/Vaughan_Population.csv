@@ -1,0 +1,39 @@
+"Census Profile, 2021 Census of Population"
+,,,"Vaughan, City (CY) [Census subdivision], Ontario",,
+,,,"Counts",,
+"Topic","Characteristic","Note","Total","Total_Flag",
+"Population and dwellings","Population, 2021",1,323103,"",
+"Population and dwellings","Population, 2016",1,306233,"",
+"Population and dwellings","Population percentage change, 2016 to 2021",,    5.5,"",
+"Population and dwellings","Total private dwellings",2,107159,"",
+"Population and dwellings","Private dwellings occupied by usual residents",3,103914,"",
+"Population and dwellings","Population density per square kilometre",, 1185.9,"",
+"Population and dwellings","Land area in square kilometres",,  272.44,"",
+
+Symbols:
+
+
+Notes:
+1,2021 and 2016 population
+,Statistics Canada is committed to protect the privacy of all Canadians and the confidentiality of the data they provide to us. As part of this commitment  some population counts of geographic areas are adjusted in order to ensure confidentiality.
+,The adjustment to counts of the total population for any dissemination block is controlled to ensure that the population counts for dissemination areas will always be within 5 of the actual values. The adjustment has no impact on the population counts of census divisions and large census subdivisions.
+
+2,Total private dwellings
+,Private dwelling refers to a separate set of living quarters with a private entrance either from outside the building or from a common hall  lobby  vestibule or stairway inside the building. The entrance to the dwelling must be one that can be used without passing through the living quarters of some other person or group of persons.
+
+3,Private dwellings occupied by usual residents
+,A private dwelling occupied by usual residents refers to a private dwelling in which a person or a group of persons is permanently residing. Also included are private dwellings whose usual residents are temporarily absent on May 11  2021.
+
+
+
+Data quality:
+"Vaughan, City (CY)"
+"Total non-response (TNR) rate, short-form census questionnaire: 1.5%"
+"Total non-response (TNR) rate, long-form census questionnaire: 2.3%"
+
+
+"Source: Statistics Canada, 2021 Census of Population."
+
+How to cite: Statistics Canada. 2023. Census Profile. 2021 Census.
+Statistics Canada Catalogue no. 98-316-X2021001. Ottawa. Released February 8  2023.
+https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E

@@ -1,0 +1,3 @@
+City,Year,Population,Household Income ($),Average Rent ($),Median Rent ($),Estimated House Value ($),Unemployment Rate (%),Property Tax Rate (%),Rented Houses,Owned Houses,New Built,Average Sale Price ($),Median Sale Price ($)
+Vaughan,2016,306233,   90615,2492,2300,  893065,  5.8,0.815855,    9765,   84490,"2,270",656698,600000
+Vaughan, 2021,323103,124000,2841,2550,1282000,   12.5,0.669976, 14620, 89290,"5,564",1299913,1200000

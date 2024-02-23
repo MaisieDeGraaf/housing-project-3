@@ -1,0 +1,163 @@
+"Census Profile, 2021 Census of Population"
+,,,"Oshawa, City (CY) [Census subdivision], Ontario",,,,,,,,,,,,
+,,,"Counts",,,,,,"Rates",,,,,,
+"Topic","Characteristic","Note","Total","Total_Flag","Men+","Men+_Flag","Women+","Women+_Flag","Total","Total_Flag","Men+","Men+_Flag","Women+","Women+_Flag",
+"Household characteristics","Total - Private households by tenure - 25% sample data",50, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  Owner",, 42750,"",,"...",,"...",   64.2,"",,"...",,"...",
+"Household characteristics","  Renter",, 23880,"",,"...",,"...",   35.8,"",,"...",,"...",
+"Household characteristics","  Dwelling provided by the local government, First Nation or Indian band",,     0,"",,"...",,"...",    0.0,"",,"...",,"...",
+"Household characteristics","Total - Occupied private dwellings by condominium status - 25% sample data",51, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  Condominium",,  4770,"",,"...",,"...",    7.2,"",,"...",,"...",
+"Household characteristics","  Not condominium",, 61865,"",,"...",,"...",   92.8,"",,"...",,"...",
+"Household characteristics","Total - Occupied private dwellings by number of bedrooms - 25% sample data",52, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  No bedrooms",,   455,"",,"...",,"...",    0.7,"",,"...",,"...",
+"Household characteristics","  1 bedroom",,  6740,"",,"...",,"...",   10.1,"",,"...",,"...",
+"Household characteristics","  2 bedrooms",, 13395,"",,"...",,"...",   20.1,"",,"...",,"...",
+"Household characteristics","  3 bedrooms",, 26810,"",,"...",,"...",   40.2,"",,"...",,"...",
+"Household characteristics","  4 or more bedrooms",, 19240,"",,"...",,"...",   28.9,"",,"...",,"...",
+"Household characteristics","Total - Occupied private dwellings by number of rooms - 25% sample data",53, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  1 to 4 rooms",, 15030,"",,"...",,"...",   22.6,"",,"...",,"...",
+"Household characteristics","  5 rooms",, 10365,"",,"...",,"...",   15.6,"",,"...",,"...",
+"Household characteristics","  6 rooms",, 11095,"",,"...",,"...",   16.7,"",,"...",,"...",
+"Household characteristics","  7 rooms",,  9955,"",,"...",,"...",   14.9,"",,"...",,"...",
+"Household characteristics","  8 or more rooms",, 20185,"",,"...",,"...",   30.3,"",,"...",,"...",
+"Household characteristics","Average number of rooms per dwelling",,    6.4,"",,"...",,"...",    6.4,"",,"...",,"...",
+"Household characteristics","Total - Private households by number of persons per room - 25% sample data",54, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  One person or fewer per room",, 65285,"",,"...",,"...",   98.0,"",,"...",,"...",
+"Household characteristics","  More than one person per room",,  1350,"",,"...",,"...",    2.0,"",,"...",,"...",
+"Household characteristics","Total - Private households by housing suitability - 25% sample data",55, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  Suitable",, 62575,"",,"...",,"...",   93.9,"",,"...",,"...",
+"Household characteristics","  Not suitable",,  4060,"",,"...",,"...",    6.1,"",,"...",,"...",
+"Household characteristics","Total - Occupied private dwellings by period of construction - 25% sample data",56, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  1960 or before",, 15700,"",,"...",,"...",   23.6,"",,"...",,"...",
+"Household characteristics","  1961 to 1980",, 23330,"",,"...",,"...",   35.0,"",,"...",,"...",
+"Household characteristics","  1981 to 1990",,  7925,"",,"...",,"...",   11.9,"",,"...",,"...",
+"Household characteristics","  1991 to 2000",,  5425,"",,"...",,"...",    8.1,"",,"...",,"...",
+"Household characteristics","  2001 to 2005",,  3135,"",,"...",,"...",    4.7,"",,"...",,"...",
+"Household characteristics","  2006 to 2010",,  3680,"",,"...",,"...",    5.5,"",,"...",,"...",
+"Household characteristics","  2011 to 2015",,  3325,"",,"...",,"...",    5.0,"",,"...",,"...",
+"Household characteristics","  2016 to 2021",57,  4100,"",,"...",,"...",    6.2,"",,"...",,"...",
+"Household characteristics","Total - Occupied private dwellings by dwelling condition - 25% sample data",58, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  Only regular maintenance and minor repairs needed",, 62465,"",,"...",,"...",   93.7,"",,"...",,"...",
+"Household characteristics","  Major repairs needed",,  4170,"",,"...",,"...",    6.3,"",,"...",,"...",
+"Household characteristics","Total - Private households by number of household maintainers - 25% sample data",59, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  One-maintainer household",, 33265,"",,"...",,"...",   49.9,"",,"...",,"...",
+"Household characteristics","  Two-maintainer household",, 29045,"",,"...",,"...",   43.6,"",,"...",,"...",
+"Household characteristics","  Three-or-more-maintainer household",,  4320,"",,"...",,"...",    6.5,"",,"...",,"...",
+"Household characteristics","Total - Private households by age of primary household maintainers - 25% sample data",60, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  15 to 24 years",,  1400,"",,"...",,"...",    2.1,"",,"...",,"...",
+"Household characteristics","  25 to 34 years",,  9225,"",,"...",,"...",   13.8,"",,"...",,"...",
+"Household characteristics","  35 to 44 years",, 12245,"",,"...",,"...",   18.4,"",,"...",,"...",
+"Household characteristics","  45 to 54 years",, 12245,"",,"...",,"...",   18.4,"",,"...",,"...",
+"Household characteristics","  55 to 64 years",, 13825,"",,"...",,"...",   20.7,"",,"...",,"...",
+"Household characteristics","  65 to 74 years",,  9845,"",,"...",,"...",   14.8,"",,"...",,"...",
+"Household characteristics","  75 to 84 years",,  5500,"",,"...",,"...",    8.3,"",,"...",,"...",
+"Household characteristics","  85 years and over",,  2350,"",,"...",,"...",    3.5,"",,"...",,"...",
+"Household characteristics","Total - Owner and tenant households with household total income greater than zero, in non-farm, non-reserve private dwellings by shelter-cost-to-income ratio - 25% sample data",61, 66345,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  Spending less than 30% of income on shelter costs",, 48015,"",,"...",,"...",   72.4,"",,"...",,"...",
+"Household characteristics","  Spending 30% or more of income on shelter costs",, 18330,"",,"...",,"...",   27.6,"",,"...",,"...",
+"Household characteristics","    30% to less than 100%",, 16945,"",,"...",,"...",   25.5,"",,"...",,"...",
+"Household characteristics","Total - Occupied private dwellings by housing indicators - 25% sample data",62, 66630,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  Total - Households 'spending 30% or more of income on shelter costs' or 'not suitable' or 'major repairs needed'",, 23980,"",,"...",,"...",   36.0,"",,"...",,"...",
+"Household characteristics","    Spending 30% or more of income on shelter costs only",, 16170,"",,"...",,"...",   24.3,"",,"...",,"...",
+"Household characteristics","    Not suitable only",,  2880,"",,"...",,"...",    4.3,"",,"...",,"...",
+"Household characteristics","    Major repairs needed only",,  2435,"",,"...",,"...",    3.7,"",,"...",,"...",
+"Household characteristics","    'Spending 30% or more of income on shelter costs' and 'not suitable'",,   765,"",,"...",,"...",    1.1,"",,"...",,"...",
+"Household characteristics","    'Spending 30% or more of income on shelter costs' and 'major repairs needed'",,  1320,"",,"...",,"...",    2.0,"",,"...",,"...",
+"Household characteristics","    'Not suitable' and 'major repairs needed'",,   340,"",,"...",,"...",    0.5,"",,"...",,"...",
+"Household characteristics","    'Spending 30% or more of income on shelter costs' and 'not suitable' and 'major repairs needed'",,    80,"",,"...",,"...",    0.1,"",,"...",,"...",
+"Household characteristics","  Acceptable housing",, 42655,"",,"...",,"...",   64.0,"",,"...",,"...",
+"Household characteristics","Total - Owner and tenant households with household total income greater than zero and shelter-cost-to-income ratio less than 100%, in non-farm, non-reserve private dwellings - 25% sample data",63, 64960,"",,"...",,"...",  100.0,"",,"...",,"...",
+"Household characteristics","  In core need",,  9790,"",,"...",,"...",   15.1,"",,"...",,"...",
+"Household characteristics","  Not in core need",, 55170,"",,"...",,"...",   84.9,"",,"...",,"...",
+"Household characteristics","Total - Owner households in non-farm, non-reserve private dwellings - 25% sample data",, 42720,"",,"...",,"...",,"...",,"...",,"...",
+"Household characteristics","  % of owner households with a mortgage",64,   66.9,"",,"...",,"...",   66.9,"",,"...",,"...",
+"Household characteristics","  % of owner households spending 30% or more of its income on shelter costs",61,   19.3,"",,"...",,"...",   19.3,"",,"...",,"...",
+"Household characteristics","  % in core housing need",63,    6.4,"",,"...",,"...",    6.4,"",,"...",,"...",
+"Household characteristics","  Median monthly shelter costs for owned dwellings ($)",65,  1640,"",,"...",,"...",  1640,"",,"...",,"...",
+"Household characteristics","  Average monthly shelter costs for owned dwellings ($)",65,  1726,"",,"...",,"...",  1726,"",,"...",,"...",
+"Household characteristics","  Median value of dwellings ($)",66,695000,"",,"...",,"...",695000,"",,"...",,"...",
+"Household characteristics","  Average value of dwellings ($)",66,705000,"",,"...",,"...",705000,"",,"...",,"...",
+"Household characteristics","Total - Tenant households in non-farm, non-reserve private dwellings - 25% sample data",, 23870,"",,"...",,"...",,"...",,"...",,"...",
+"Household characteristics","  % of tenant households in subsidized housing",67,   12.0,"",,"...",,"...",   12.0,"",,"...",,"...",
+"Household characteristics","  % of tenant households spending 30% or more of its income on shelter costs",61,   42.7,"",,"...",,"...",   42.7,"",,"...",,"...",
+"Household characteristics","  % in core housing need",63,   30.9,"",,"...",,"...",   30.9,"",,"...",,"...",
+"Household characteristics","  Median monthly shelter costs for rented dwellings ($)",65,  1300,"",,"...",,"...",  1300,"",,"...",,"...",
+"Household characteristics","  Average monthly shelter costs for rented dwellings ($)",65,  1400,"",,"...",,"...",  1400,"",,"...",,"...",
+"Household characteristics","Total - Households living in a dwelling provided by the local government, First Nation or Indian band in non-farm private dwellings - 25% sample data",,     0,"",,"...",,"...",,"...",,"...",,"...",
+"Household characteristics","  % of households living in a dwelling provided by the local government, First Nation or Indian band spending more than 30% on shelter costs",61,,"...",,"...",,"...",,"...",,"...",,"...",
+"Household characteristics","  Median monthly shelter costs for dwellings provided by local government, First Nation or Indian band ($)",65,,"...",,"...",,"...",,"...",,"...",,"...",
+"Household characteristics","  Average monthly shelter costs for dwellings provided by local government, First Nation or Indian band ($)",65,,"...",,"...",,"...",,"...",,"...",,"...",
+
+Symbols:
+...,"not applicable"
+
+
+Notes:
+50,Tenure refers to whether the household owns or rents their private dwelling. The private dwelling may be situated on rented or leased land or be part of a condominium. A household is considered to own their dwelling if some member of the household owns the dwelling even if it is not fully paid for  for example if there is a mortgage or some other claim on it. A household is considered to rent their dwelling if no member of the household owns the dwelling. A household is considered to rent that dwelling even if the dwelling is provided without cash rent or at a reduced rent  or if the dwelling is part of a cooperative.
+For historical and statutory reasons  shelter occupancy on Indian reserves or settlements does not lend itself to the usual classification by standard tenure categories. Therefore  a special category  'dwelling provided by the local government  First Nation or Indian band ' has been created for census purposes.
+
+51,Condominium status refers to whether the private dwelling is part of a condominium development. A condominium is a residential complex in which dwellings are owned individually while land and common elements are held in joint ownership with others.
+
+52,Bedrooms refers to rooms in a private dwelling that are designed mainly for sleeping purposes even if they are now used for other purposes  such as guest rooms and television rooms. Also included are rooms used as bedrooms now  even if they were not originally built as bedrooms  such as bedrooms in a finished basement. Bedrooms exclude rooms designed for another use during the day such as dining rooms and living rooms even if they may be used for sleeping purposes at night. By definition  one-room private dwellings such as bachelor or studio apartments have zero bedrooms.
+
+53,Rooms refers to enclosed areas within a private dwelling which are finished and suitable for year round living. The number of rooms in a private dwelling includes kitchens  bedrooms and finished rooms in the attic or basement. The number of rooms in a private dwelling excludes bathrooms  halls  vestibules and rooms used solely for business purposes. Partially divided rooms are considered to be separate rooms if they are considered as such by the respondent (e.g.  L-shaped dining-room and living-room arrangements).
+
+54,Number of persons per room - Refers to an indicator of the level of crowding in a private dwelling. It is calculated by dividing the number of persons in the household by the number of rooms in the dwelling.
+
+55,Housing suitability refers to whether a private household is living in suitable accommodations according to the National Occupancy Standard (NOS); that is  whether the dwelling has enough bedrooms for the size and composition of the household. A household is deemed to be living in suitable accommodations if its dwelling has enough bedrooms  as calculated using the NOS.
+'Housing suitability' assesses the required number of bedrooms for a household based on the age  sex  and relationships among household members. An alternative variable  'persons per room ' considers all rooms in a private dwelling and the number of household members.
+Housing suitability and the National Occupancy Standard (NOS) on which it is based were developed by Canada Mortgage and Housing Corporation (CMHC) through consultations with provincial housing agencies.
+
+56,Period of construction refers to the period in time during which the building or dwelling was originally constructed.
+This refers to the period in which the building was completed  not the time of any later remodeling  additions or conversions.
+For properties having multiple residential structures  this refers to the period in which the most recent structure was completed.
+
+57,Includes data up to May 11  2021.
+
+58,Dwelling condition refers to whether the dwelling is in need of repairs. This does not include desirable remodelling or additions.
+
+59,Refers to whether or not a person residing in the household is responsible for paying the rent  or the mortgage  or the taxes  or the electricity or other services or utilities. Where a number of people may contribute to the payments  more than one person in the household may be identified as a household maintainer. If no person in the household is identified as making such payments  the reference person is identified by default.
+
+60,Primary household maintainer - The first person in the household identified as someone who pays the rent  or the mortgage  or the taxes  or the electricity or other services or utilities for the dwelling. When more than one member of the household contributes to the payments  the first person listed is chosen as the primary household maintainer. If no person in the household is identified as making any such payments  the first person listed is selected by default.
+The order of the persons in a household is determined by the order in which they are listed on the questionnaire. Generally  an adult is listed first followed  if applicable  by their spouse or common-law partner and then by their children. The order does not necessarily correspond to the proportion of household payments made by each person.
+
+61,Shelter-cost-to-income ratio - Refers to the proportion of average total income of household which is spent on shelter costs.
+Shelter-cost-to-income ratio is calculated for private households  who reported a total household income greater than zero.
+Private households located on an agricultural operation that is operated by a member of the household  and households who reported a zero or negative total household income are excluded.
+The relatively high shelter-costs-to-household income ratios for some households may have resulted from the difference in the reference period for shelter costs and household total income data. The reference period for shelter cost data is 2021  while household total income is reported for the year 2020. As well  for some households  the 2020 household total income may represent income for only part of a year.
+For more information on household total income or shelter costs  refer to the Census Dictionary: Total income and Shelter cost.
+
+62,Acceptable housing refers to whether a household meets each of the three indicator thresholds established by the Canada Mortgage and Housing Corporation for housing adequacy  suitability and affordability.Housing indicator thresholds are defined as follows:
+    *Adequate housing is reported by their residents as not requiring any major repairs.
+,    *Affordable housing has shelter costs equal to less than 30% of total before-tax household income.
+,    *Suitable housing has enough bedrooms for the size and composition of resident households according to the National Occupancy Standard (NOS)  conceived by the Canada Mortgage and Housing Corporation and provincial and territorial representatives.
+,Acceptable housing identifies which thresholds the household falls below  if any. Housing that is adequate in condition  suitable in size and affordable is considered to be acceptable.
+Households below and above the thresholds are based on the indicators for which individual households can be assessed. Farm and on-reserve households whose housing does not meet either or both of the suitability and adequacy thresholds are counted in the total of households below the thresholds. Farm and on-reserve households who live in housing that meets both the suitability and adequacy thresholds are counted in the total of households above the thresholds (even though it is not possible to assess housing affordability for these households). Farm households and on-reserve households cannot be assessed for housing affordability because the concept is not applicable.
+Housing affordability is assessed for owner and tenant households with household total income greater than zero in non-farm  non-reserve private dwellings.
+
+63,Core housing need refers to whether a private household's housing falls below at least one of the indicator thresholds for housing adequacy  affordability or suitability  and would have to spend 30% or more of its total before-tax income to pay the median rent of alternative local housing that is acceptable (attains all three housing indicator thresholds). Housing indicator thresholds are defined as follows: Adequate housing is reported by their residents as not requiring any major repairs. Affordable housing has shelter costs equal to less than 30% of total before-tax household income. Suitable housing has enough bedrooms for the size and composition of resident households according to the National Occupancy Standard (NOS)  conceived by the Canada Mortgage and Housing Corporation and provincial and territorial representatives. Only private  non-farm  non-reserve and owner- or renter-households with incomes greater than zero and shelter-cost-to-income ratios less than 100% are assessed for 'core housing need.' Non-family households with at least one maintainer aged 15 to 29 attending school are considered not to be in 'core housing need' regardless of their housing circumstances. Attending school is considered a transitional phase  and low incomes earned by student households are viewed as being a temporary condition.
+
+64,Presence of mortgage payments refers to whether an owner household makes regular mortgage or loan payments for their dwelling.
+
+65,Shelter cost refers to the average monthly total of all shelter expenses paid by households.
+Shelter costs for owner households include  where applicable  mortgage payments  property taxes and condominium fees  along with the costs of electricity  heat  water and other municipal services. For renter households  shelter costs include  where applicable  the rent and the costs of electricity  heat  water and other municipal services. For households living in a dwelling provided by the local government  First Nation or Indian band  shelter costs include  where applicable  the monthly use or occupancy payment and the costs of electricity  heat  water and other municipal services.
+
+66,Value (owner estimated) refers to the dollar amount expected by the owner if the asset were to be sold.
+In the context of dwelling  it refers to the value of the entire dwelling  including the value of the land it is on and of any other structure  such as a garage  which is on the property. If the dwelling is located in a building which contains several dwellings  or a combination of residential and business premises  all of which the household owns  the value is estimated as a portion of the market value that applies only to the dwelling in which the household resides.
+
+67,Subsidized housing refers to whether a renter household lives in a dwelling that is subsidized. Subsidized housing includes rent geared to income  social housing  public housing  government-assisted housing  non-profit housing  rent supplements and housing allowances.
+
+
+
+Data quality:
+"Oshawa, City (CY)"
+"Total non-response (TNR) rate, short-form census questionnaire: 2.3%"
+"Total non-response (TNR) rate, long-form census questionnaire: 3.7%"
+
+
+"Source: Statistics Canada, 2021 Census of Population."
+
+How to cite: Statistics Canada. 2023. Census Profile. 2021 Census.
+Statistics Canada Catalogue no. 98-316-X2021001. Ottawa. Released February 8  2023.
+https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E

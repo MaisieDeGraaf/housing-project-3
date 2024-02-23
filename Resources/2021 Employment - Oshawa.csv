@@ -1,0 +1,105 @@
+"Census Profile, 2021 Census of Population"
+,,,"Oshawa, City (CY) [Census subdivision], Ontario",,,,,,,,,,,,
+,,,"Counts",,,,,,"Rates",,,,,,
+"Topic","Characteristic","Note","Total","Total_Flag","Men+","Men+_Flag","Women+","Women+_Flag","Total","Total_Flag","Men+","Men+_Flag","Women+","Women+_Flag",
+"Labour force status","Total - Population aged 15 years and over by labour force status - 25% sample data",184,143235,"", 69625,"", 73610,"",,"...",,"...",,"...",
+"Labour force status","  In the labour force",, 87550,"", 45430,"", 42120,"",,"...",,"...",,"...",
+"Labour force status","    Employed",, 74250,"", 39160,"", 35090,"",,"...",,"...",,"...",
+"Labour force status","    Unemployed",, 13300,"",  6270,"",  7025,"",,"...",,"...",,"...",
+"Labour force status","  Not in the labour force",, 55685,"", 24195,"", 31490,"",,"...",,"...",,"...",
+"Labour force status","Participation rate",,   61.1,"",   65.2,"",   57.2,"",   61.1,"",   65.2,"",   57.2,"",
+"Labour force status","Employment rate",,   51.8,"",   56.2,"",   47.7,"",   51.8,"",   56.2,"",   47.7,"",
+"Labour force status","Unemployment rate",,   15.2,"",   13.8,"",   16.7,"",   15.2,"",   13.8,"",   16.7,"",
+"Work activity during the reference year","Total - Population aged 15 years and over by work activity during the reference year - 25% sample data",185,143235,"", 69630,"", 73610,"",  100.0,"",  100.0,"",  100.0,"",
+"Work activity during the reference year","  Did not work",186, 58485,"", 25785,"", 32700,"",   40.8,"",   37.0,"",   44.4,"",
+"Work activity during the reference year","  Worked",, 84750,"", 43840,"", 40905,"",   59.2,"",   63.0,"",   55.6,"",
+"Work activity during the reference year","    Worked full year full time",187, 44780,"", 24965,"", 19815,"",   31.3,"",   35.9,"",   26.9,"",
+"Work activity during the reference year","    Worked part year and/or part time",188, 39965,"", 18875,"", 21090,"",   27.9,"",   27.1,"",   28.7,"",
+"Work activity during the reference year","    Average weeks worked in reference year",,   40.7,"",   41.5,"",   39.8,"",   40.7,"",   41.5,"",   39.8,"",
+"Class of worker including job permanency","Total - Labour force aged 15 years and over by class of worker including job permanency - 25% sample data",189, 87550,"", 45435,"", 42120,"",  100.0,"",  100.0,"",  100.0,"",
+"Class of worker including job permanency","  Class of worker - not applicable",190,  3555,"",  1770,"",  1785,"",    4.1,"",    3.9,"",    4.2,"",
+"Class of worker including job permanency","  All classes of workers",191, 83995,"", 43660,"", 40335,"",   95.9,"",   96.1,"",   95.8,"",
+"Class of worker including job permanency","    Employee",, 74040,"", 37700,"", 36340,"",   84.6,"",   83.0,"",   86.3,"",
+"Class of worker including job permanency","      Permanent position",, 63820,"", 32560,"", 31265,"",   72.9,"",   71.7,"",   74.2,"",
+"Class of worker including job permanency","      Temporary position",, 10215,"",  5140,"",  5075,"",   11.7,"",   11.3,"",   12.0,"",
+"Class of worker including job permanency","        Fixed term (1 year or more)",,  3530,"",  1790,"",  1735,"",    4.0,"",    3.9,"",    4.1,"",
+"Class of worker including job permanency","        Casual, seasonal or short-term position (less than 1 year)",,  6690,"",  3355,"",  3340,"",    7.6,"",    7.4,"",    7.9,"",
+"Class of worker including job permanency","    Self-employed",192,  9955,"",  5960,"",  3995,"",   11.4,"",   13.1,"",    9.5,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","Total - Labour force aged 15 years and over by occupation - Broad category - National Occupational Classification (NOC) 2021 - 25% sample data",193, 87550,"", 45435,"", 42120,"",  100.0,"",  100.0,"",  100.0,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","  Occupation - not applicable",190,  3555,"",  1770,"",  1785,"",    4.1,"",    3.9,"",    4.2,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","  All occupations",191, 83995,"", 43660,"", 40335,"",   95.9,"",   96.1,"",   95.8,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","    0 Legislative and senior management occupations",,   500,"",   325,"",   180,"",    0.6,"",    0.7,"",    0.4,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","    1 Business, finance and administration occupations",, 14165,"",  4460,"",  9705,"",   16.2,"",    9.8,"",   23.0,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","    2 Natural and applied sciences and related occupations",,  6245,"",  4905,"",  1340,"",    7.1,"",   10.8,"",    3.2,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","    3 Health occupations",,  6435,"",  1035,"",  5400,"",    7.4,"",    2.3,"",   12.8,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","    4 Occupations in education, law and social, community and government services",,  9590,"",  2845,"",  6745,"",   11.0,"",    6.3,"",   16.0,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","    5 Occupations in art, culture, recreation and sport",,  2105,"",   930,"",  1175,"",    2.4,"",    2.0,"",    2.8,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","    6 Sales and service occupations",, 23235,"", 10110,"", 13120,"",   26.5,"",   22.3,"",   31.1,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","    7 Trades, transport and equipment operators and related occupations",, 16915,"", 15400,"",  1510,"",   19.3,"",   33.9,"",    3.6,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","    8 Natural resources, agriculture and related production occupations",,  1120,"",   895,"",   225,"",    1.3,"",    2.0,"",    0.5,"",
+"Occupation - Broad category - National Occupational Classification (NOC) 2021","    9 Occupations in manufacturing and utilities",,  3680,"",  2745,"",   935,"",    4.2,"",    6.0,"",    2.2,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","Total - Labour force aged 15 years and over by industry - Sectors - North American Industry Classification System (NAICS) 2017 - 25% sample data",194, 87550,"", 45435,"", 42120,"",  100.0,"",  100.0,"",  100.0,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","  Industry - not applicable",190,  3555,"",  1770,"",  1785,"",    4.1,"",    3.9,"",    4.2,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","  All industries",191, 83995,"", 43660,"", 40335,"",   95.9,"",   96.1,"",   95.8,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    11 Agriculture, forestry, fishing and hunting",,   405,"",   210,"",   190,"",    0.5,"",    0.5,"",    0.5,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    21 Mining, quarrying, and oil and gas extraction",,   135,"",   105,"",    25,"",    0.2,"",    0.2,"",    0.1,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    22 Utilities",,  1550,"",  1220,"",   335,"",    1.8,"",    2.7,"",    0.8,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    23 Construction",,  7700,"",  6975,"",   725,"",    8.8,"",   15.4,"",    1.7,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    31-33 Manufacturing",,  5900,"",  4325,"",  1570,"",    6.7,"",    9.5,"",    3.7,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    41 Wholesale trade",,  2355,"",  1635,"",   715,"",    2.7,"",    3.6,"",    1.7,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    44-45 Retail trade",, 11290,"",  5515,"",  5780,"",   12.9,"",   12.1,"",   13.7,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    48-49 Transportation and warehousing",,  4995,"",  3795,"",  1200,"",    5.7,"",    8.4,"",    2.8,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    51 Information and cultural industries",,  1905,"",  1125,"",   785,"",    2.2,"",    2.5,"",    1.9,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    52 Finance and insurance",,  3905,"",  1670,"",  2230,"",    4.5,"",    3.7,"",    5.3,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    53 Real estate and rental and leasing",,  1680,"",   885,"",   795,"",    1.9,"",    1.9,"",    1.9,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    54 Professional, scientific and technical services",,  5595,"",  2985,"",  2610,"",    6.4,"",    6.6,"",    6.2,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    55 Management of companies and enterprises",,   325,"",   180,"",   145,"",    0.4,"",    0.4,"",    0.3,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    56 Administrative and support, waste management and remediation services",,  5325,"",  3015,"",  2305,"",    6.1,"",    6.6,"",    5.5,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    61 Educational services",,  6060,"",  1900,"",  4155,"",    6.9,"",    4.2,"",    9.9,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    62 Health care and social assistance",, 11115,"",  1765,"",  9355,"",   12.7,"",    3.9,"",   22.2,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    71 Arts, entertainment and recreation",,  1580,"",   780,"",   805,"",    1.8,"",    1.7,"",    1.9,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    72 Accommodation and food services",,  4775,"",  2020,"",  2760,"",    5.5,"",    4.4,"",    6.6,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    81 Other services (except public administration)",,  3435,"",  1635,"",  1795,"",    3.9,"",    3.6,"",    4.3,"",
+"Industry - Sectors - North American Industry Classification System (NAICS) 2017","    91 Public administration",,  3965,"",  1915,"",  2055,"",    4.5,"",    4.2,"",    4.9,"",
+
+Symbols:
+...,"not applicable"
+
+
+Notes:
+184,Refers to whether a person aged 15 years and over was employed  unemployed or not in the labour force during the week of Sunday  May 2 to Saturday  May 8  2021.
+For information on the comparability of the 2021 Census labour force status data with those of the Labour Force Survey  see Appendix 2.11 of the Dictionary  Census of Population  2021.
+
+185,Refers to the number of weeks in which a person aged 15 years and over worked for pay or in self-employment in 2020 at all jobs held  even if only for a few hours  and whether these weeks were mostly full time (30 hours or more per week) or mostly part time (less than 30 hours per week).
+
+186,Includes persons aged 15 years and over who never worked  persons who worked prior to 2020 and persons who worked in 2021  but not in 2020.
+
+187,Includes persons aged 15 years and over who worked full year (49 weeks and over) and mostly full time (30 hours or more per week) in 2020.
+
+188,Includes persons aged 15 years and over who worked full year mostly part time or part year either mostly full time or mostly part time in 2020. Part year is less than 49 weeks and part time is less than 30 hours per week.
+
+189,Class of worker including job permanency refers to whether a person is a paid employee or is self-employed. Employees' positions are further classified as either permanent or temporary.
+
+190,Includes unemployed persons aged 15 years and over who have never worked for pay or in self-employment  or who had last worked prior to January 1  2020.
+
+191,Includes persons aged 15 years and over in the labour force who have worked at some point in time between January 1  2020 and May 8  2021.
+
+192,Includes self-employed persons aged 15 years and over with or without an incorporated business and with or without paid help  as well as unpaid family workers.
+
+193,Refers to the kind of work performed by persons aged 15 years and over as determined by their kind of work and the description of the main activities in their job. The occupation data are produced according to the National Occupational Classification [NOC] 2021 Version 1.0.
+
+194,Refers to the general nature of the business carried out in the establishment where the person worked. The industry data are produced according to the North American Industry Classification System (NAICS) Canada 2017 Version 3.0.
+
+
+
+Data quality:
+"Oshawa, City (CY)"
+"Total non-response (TNR) rate, short-form census questionnaire: 2.3%"
+"Total non-response (TNR) rate, long-form census questionnaire: 3.7%"
+
+
+"Source: Statistics Canada, 2021 Census of Population."
+
+How to cite: Statistics Canada. 2023. Census Profile. 2021 Census.
+Statistics Canada Catalogue no. 98-316-X2021001. Ottawa. Released February 8  2023.
+https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E

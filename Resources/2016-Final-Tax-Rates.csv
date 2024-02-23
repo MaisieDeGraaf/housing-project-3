@@ -1,0 +1,16 @@
+﻿Tax Class Description,Tax Class*,Total Urban Area,Total Rural Area,Total Rural Area
+Residential,RT,0.00871013,0.00819555,0.0082208
+Residential - Farmlands I,R1,0.0065326,0.00614666,0.0061656
+Residential - Education Only,RD,0.00188,0.00188,0.00188
+Multi-Residential,MT,0.01732908,0.01616515,0.01622226
+New Multi-Residential,NT,0.01554026,0.0145111,0.0145616
+Commercial,"CH, CT, DH, DT, GT, ST, XT, YT, ZT",0.01864374,0.01789425,0.01793103
+Commercial - excess/vacant land,"CU, CX, DU, SU, XU, ZU",0.01305062,0.01252598,0.01255172
+Industrial,"IH, IT,  LT",0.03045025,0.02923589,0.02929548
+Industrial - excess/vacant land,"IJ, IK, IU, IX, LU",0.01979268,0.01900335,0.01904208
+Industrial - new contruction,JT,0.02791841,0.02670405,0.02676364
+Industrial - new contruction vacant land,JX,0.01814698,0.01735765,0.01739638
+Industrial-Farmlands I,I1,0.0065326,0.00614666,0.0061656
+Pipelines,PT,0.01884189,0.01829556,0.01832237
+Farm,FT,0.00183603,0.00173311,0.00173816
+Managed Forests,TT,0.00217754,0.0020489,0.00205521

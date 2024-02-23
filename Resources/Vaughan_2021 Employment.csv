@@ -1,0 +1,33 @@
+"Census Profile, 2021 Census of Population"
+,,,"Vaughan, City (CY) [Census subdivision], Ontario",,
+,,,"Counts",,
+"Topic","Characteristic","Note","Total","Total_Flag",
+"Labour force status","Total - Population aged 15 years and over by labour force status - 25% sample data",184,268050,"",
+"Labour force status","  In the labour force",,176625,"",
+"Labour force status","    Employed",,154615,"",
+"Labour force status","    Unemployed",, 22010,"",
+"Labour force status","  Not in the labour force",, 91420,"",
+"Labour force status","Participation rate",,   65.9,"",
+"Labour force status","Employment rate",,   57.7,"",
+"Labour force status","Unemployment rate",,   12.5,"",
+
+Symbols:
+
+
+Notes:
+184,Refers to whether a person aged 15 years and over was employed  unemployed or not in the labour force during the week of Sunday  May 2 to Saturday  May 8  2021.
+For information on the comparability of the 2021 Census labour force status data with those of the Labour Force Survey  see Appendix 2.11 of the Dictionary  Census of Population  2021.
+
+
+
+Data quality:
+"Vaughan, City (CY)"
+"Total non-response (TNR) rate, short-form census questionnaire: 1.5%"
+"Total non-response (TNR) rate, long-form census questionnaire: 2.3%"
+
+
+"Source: Statistics Canada, 2021 Census of Population."
+
+How to cite: Statistics Canada. 2023. Census Profile. 2021 Census.
+Statistics Canada Catalogue no. 98-316-X2021001. Ottawa. Released February 8  2023.
+https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E

@@ -1,0 +1,204 @@
+"Census Profile, 2021 Census of Population"
+,,,"Vaughan, City (CY) [Census subdivision], Ontario",,
+,,,"Counts",,
+"Topic","Characteristic","Note","Total","Total_Flag",
+"Income of households in 2020","Total - Income statistics for private households - 100% data",26,103915,"",
+"Income of households in 2020","  Median total income of household in 2020 ($)",,124000,"",
+"Income of households in 2020","  Median after-tax income of household in 2020 ($)",,107000,"",
+"Income of households in 2020","    Total - Income statistics for one-person private households - 100% data",, 15780,"",
+"Income of households in 2020","      Median total income of one-person households in 2020 ($)",, 47200,"",
+"Income of households in 2020","      Median after-tax income of one-person households in 2020 ($)",, 42400,"",
+"Income of households in 2020","    Total - Income statistics for two-or-more-persons private households - 100% data",, 88140,"",
+"Income of households in 2020","      Median total income of two-or-more-person households in 2020 ($)",,139000,"",
+"Income of households in 2020","      Median after-tax income of two-or-more-person households in 2020 ($)",,119000,"",
+"Income of households in 2020","Total - Income statistics for private households - 25% sample data",27,103915,"",
+"Income of households in 2020","  Average total income of household in 2020 ($)",,153000,"",
+"Income of households in 2020","  Average after-tax income of household in 2020 ($)",,123000,"",
+"Income of households in 2020","    Total - Income statistics for one-person private households - 25% sample data",, 15665,"",
+"Income of households in 2020","      Average total income of one-person households in 2020 ($)",, 71100,"",
+"Income of households in 2020","      Average after-tax income of one-person households in 2020 ($)",, 56250,"",
+"Income of households in 2020","    Total - Income statistics for two-or-more-persons private households - 25% sample data",, 88245,"",
+"Income of households in 2020","      Average total income of two-or-more-person households in 2020 ($)",,167600,"",
+"Income of households in 2020","      Average after-tax income of two-or-more-person households in 2020 ($)",,134800,"",
+"Income of households in 2020","Total - Household total income groups in 2020 for private households - 100% data",21,103915,"",
+"Income of households in 2020","  Under $5,000",,   785,"",
+"Income of households in 2020","  $5,000 to $9,999",,   360,"",
+"Income of households in 2020","  $10,000 to $14,999",,   580,"",
+"Income of households in 2020","  $15,000 to $19,999",,   970,"",
+"Income of households in 2020","  $20,000 to $24,999",,  2020,"",
+"Income of households in 2020","  $25,000 to $29,999",,  2150,"",
+"Income of households in 2020","  $30,000 to $34,999",,  1990,"",
+"Income of households in 2020","  $35,000 to $39,999",,  2280,"",
+"Income of households in 2020","  $40,000 to $44,999",,  2410,"",
+"Income of households in 2020","  $45,000 to $49,999",,  2305,"",
+"Income of households in 2020","  $50,000 to $59,999",,  4920,"",
+"Income of households in 2020","  $60,000 to $69,999",,  4905,"",
+"Income of households in 2020","  $70,000 to $79,999",,  5015,"",
+"Income of households in 2020","  $80,000 to $89,999",,  5035,"",
+"Income of households in 2020","  $90,000 to $99,999",,  4965,"",
+"Income of households in 2020","  $100,000 and over",, 63225,"",
+"Income of households in 2020","    $100,000 to $124,999",, 11680,"",
+"Income of households in 2020","    $125,000 to $149,999",, 10685,"",
+"Income of households in 2020","    $150,000 to $199,999",, 16785,"",
+"Income of households in 2020","    $200,000 and over",, 24080,"",
+"Income of households in 2020","Total - Household after-tax income groups in 2020 for private households - 100% data",22,103915,"",
+"Income of households in 2020","  Under $5,000",,  1015,"",
+"Income of households in 2020","  $5,000 to $9,999",,   375,"",
+"Income of households in 2020","  $10,000 to $14,999",,   605,"",
+"Income of households in 2020","  $15,000 to $19,999",,  1015,"",
+"Income of households in 2020","  $20,000 to $24,999",,  2170,"",
+"Income of households in 2020","  $25,000 to $29,999",,  2465,"",
+"Income of households in 2020","  $30,000 to $34,999",,  2160,"",
+"Income of households in 2020","  $35,000 to $39,999",,  2565,"",
+"Income of households in 2020","  $40,000 to $44,999",,  2745,"",
+"Income of households in 2020","  $45,000 to $49,999",,  2770,"",
+"Income of households in 2020","  $50,000 to $59,999",,  5725,"",
+"Income of households in 2020","  $60,000 to $69,999",,  6165,"",
+"Income of households in 2020","  $70,000 to $79,999",,  6220,"",
+"Income of households in 2020","  $80,000 to $89,999",,  6250,"",
+"Income of households in 2020","  $90,000 to $99,999",,  5865,"",
+"Income of households in 2020","  $100,000 and over",, 55805,"",
+"Income of households in 2020","    $100,000 to $124,999",, 14040,"",
+"Income of households in 2020","    $125,000 to $149,999",, 12190,"",
+"Income of households in 2020","    $150,000 and over",, 29575,"",
+
+Symbols:
+
+
+Notes:
+21,Total income - The sum of certain incomes (in cash and  in some circumstances  in kind) of the statistical unit during a specified reference period. The components used to calculate total income vary between:
+
+
+    *statistical units of social statistical programs such as persons  private households  census families and economic families;
+,
+    *statistical units of business statistical programs such as enterprises  companies  establishments and locations;
+,
+    *statistical units of farm statistical programs such as farm operator and farm family.
+,
+
+In the context of persons  total income refers to receipts from certain sources  before income taxes and deductions  during a specified reference period.
+
+In the context of census families  total income refers to receipts from certain sources of all of its family members  before income taxes and deductions  during a specified reference period.
+
+In the context of economic families  total income refers to receipts from certain sources of all of its family members  before income taxes and deductions  during a specified reference period.
+
+In the context of households  total income refers to receipts from certain sources of all household members  before income taxes and deductions  during a specified reference period.
+
+The monetary receipts included are those that tend to be of a regular and recurring nature. Receipts that are included as income are:
+
+
+    *employment income from wages  salaries  tips  commissions and net income from self-employment (for both unincorporated farm and non-farm activities);
+,
+    *income from investment sources  such as dividends and interest on bonds  accounts  guaranteed investment certificates (GICs) and mutual funds;
+,
+    *income from employer and personal pension sources  such as private pensions and payments from annuities and registered retirement income funds (RRIFs);
+,
+    *other regular cash income  such as child support payments received  spousal support payments (alimony) received and scholarships;
+,
+    *income from government sources  such as social assistance  child benefits  Employment Insurance benefits  Old Age Security benefits  COVID-19 benefits and Canada Pension Plan and Québec Pension Plan benefits and disability income.
+,
+
+Receipts excluded from this income definition are:
+
+
+    *one-time receipts  such as lottery winnings  gambling winnings  cash inheritances  lump-sum insurance settlements and tax-free savings account (TFSA) or registered retirement savings plan (RRSP) withdrawals;
+,
+    *capital gains because they are not by their nature regular and recurring. It is further assumed that they are more relevant to the concept of wealth than the concept of income;
+,
+    *employers' contributions to registered pension plans  Canada Pension Plan  Québec Pension Plan and Employment Insurance;
+,
+    *voluntary inter-household transfers  imputed rent  goods and services produced for barter and goods produced for own consumption.
+,
+
+For the 2021 Census  the reference period for income data is the calendar year 2020  unless otherwise specified.
+
+22,After-tax income - After-tax income refers to total income less income taxes of the statistical unit during a specified reference period. Income taxes refers to the sum of federal income taxes  provincial and territorial income taxes  less abatement where applicable. Provincial and territorial income taxes include health care premiums in certain jurisdictions. Abatement reduces the federal income taxes payable by persons residing in Quebec or in certain self-governing Yukon First Nation settlement lands.
+
+For the 2021 Census  the reference period for income data is the calendar year 2020  unless otherwise specified.
+
+26,Total income - The sum of certain incomes (in cash and  in some circumstances  in kind) of the statistical unit during a specified reference period. The components used to calculate total income vary between:
+
+
+    *statistical units of social statistical programs such as persons  private households  census families and economic families;
+,
+    *statistical units of business statistical programs such as enterprises  companies  establishments and locations;
+,
+    *statistical units of farm statistical programs such as farm operator and farm family.
+,
+
+In the context of persons  total income refers to receipts from certain sources  before income taxes and deductions  during a specified reference period.
+
+In the context of census families  total income refers to receipts from certain sources of all of its family members  before income taxes and deductions  during a specified reference period.
+
+In the context of economic families  total income refers to receipts from certain sources of all of its family members  before income taxes and deductions  during a specified reference period.
+
+In the context of households  total income refers to receipts from certain sources of all household members  before income taxes and deductions  during a specified reference period.
+
+The monetary receipts included are those that tend to be of a regular and recurring nature. Receipts that are included as income are:
+
+
+    *employment income from wages  salaries  tips  commissions and net income from self-employment (for both unincorporated farm and non-farm activities);
+,
+    *income from investment sources  such as dividends and interest on bonds  accounts  guaranteed investment certificates (GICs) and mutual funds;
+,
+    *income from employer and personal pension sources  such as private pensions and payments from annuities and registered retirement income funds (RRIFs);
+,
+    *other regular cash income  such as child support payments received  spousal support payments (alimony) received and scholarships;
+,
+    *income from government sources  such as social assistance  child benefits  Employment Insurance benefits  Old Age Security benefits  COVID-19 benefits and Canada Pension Plan and Québec Pension Plan benefits and disability income.
+,
+
+Receipts excluded from this income definition are:
+
+
+    *one-time receipts  such as lottery winnings  gambling winnings  cash inheritances  lump-sum insurance settlements and tax-free savings account (TFSA) or registered retirement savings plan (RRSP) withdrawals;
+,
+    *capital gains because they are not by their nature regular and recurring. It is further assumed that they are more relevant to the concept of wealth than the concept of income;
+,
+    *employers' contributions to registered pension plans  Canada Pension Plan  Québec Pension Plan and Employment Insurance;
+,
+    *voluntary inter-household transfers  imputed rent  goods and services produced for barter and goods produced for own consumption.
+,
+
+After-tax income - Total income less income taxes of the statistical unit during a specified reference period. Income taxes refers to the sum of federal income taxes  provincial and territorial income taxes  less abatement where applicable. Provincial and territorial income taxes include health care premiums in certain jurisdictions. Abatement reduces the federal income taxes payable by persons residing in Quebec or in certain self-governing Yukon First Nation settlement lands.
+
+For the 2021 Census  the reference period for income data is the calendar year 2020  unless otherwise specified.
+
+Median income - The median income of a specified group is the amount that divides the income distribution of that group into two halves  i.e.  the incomes of half of the units in that group are below the median  while those of the other half are above the median. Median incomes of households are calculated for all units  whether or not they had income.
+
+27,Total income - The sum of certain incomes (in cash and  in some circumstances  in kind) of the statistical unit during a specified reference period. The components used to calculate total income vary between:
+    *statistical units of social statistical programs such as persons  private households  census families and economic families;
+,    *statistical units of business statistical programs such as enterprises  companies  establishments and locations;
+,    *statistical units of farm statistical programs such as farm operator and farm family.
+,In the context of persons  total income refers to receipts from certain sources  before income taxes and deductions  during a specified reference period.
+In the context of census families  total income refers to receipts from certain sources of all of its family members  before income taxes and deductions  during a specified reference period.
+In the context of economic families  total income refers to receipts from certain sources of all of its family members  before income taxes and deductions  during a specified reference period.
+In the context of households  total income refers to receipts from certain sources of all household members  before income taxes and deductions  during a specified reference period.
+The monetary receipts included are those that tend to be of a regular and recurring nature. Receipts that are included as income are:
+    *employment income from wages  salaries  tips  commissions and net income from self-employment (for both unincorporated farm and non-farm activities);
+,    *income from investment sources  such as dividends and interest on bonds  accounts  guaranteed investment certificates (GICs) and mutual funds;
+,    *income from employer and personal pension sources  such as private pensions and payments from annuities and registered retirement income funds (RRIFs);
+,    *other regular cash income  such as child support payments received  spousal support payments (alimony) received and scholarships;
+,    *income from government sources  such as social assistance  child benefits  Employment Insurance benefits  Old Age Security benefits  COVID-19 benefits and Canada Pension Plan and Québec Pension Plan benefits and disability income.
+,Receipts excluded from this income definition are:
+    *one-time receipts  such as lottery winnings  gambling winnings  cash inheritances  lump-sum insurance settlements and tax-free savings account (TFSA) or registered retirement savings plan (RRSP) withdrawals;
+,    *capital gains because they are not by their nature regular and recurring. It is further assumed that they are more relevant to the concept of wealth than the concept of income;
+,    *employers' contributions to registered pension plans  Canada Pension Plan  Québec Pension Plan and Employment Insurance;
+,    *voluntary inter-household transfers  imputed rent  goods and services produced for barter and goods produced for own consumption.
+,After-tax income - Total income less income taxes of the statistical unit during a specified reference period. Income taxes refers to the sum of federal income taxes  provincial and territorial income taxes  less abatement where applicable. Provincial and territorial income taxes include health care premiums in certain jurisdictions. Abatement reduces the federal income taxes payable by persons residing in Quebec or in certain self-governing Yukon First Nation settlement lands.
+For the 2021 Census  the reference period for income data is the calendar year 2020  unless otherwise specified.
+Average income - Average income of a specified group is calculated by dividing the aggregate income of that group by the number of units in that group. Average incomes of households are calculated for all units  whether or not they had income.
+
+
+
+Data quality:
+"Vaughan, City (CY)"
+"Total non-response (TNR) rate, short-form census questionnaire: 1.5%"
+"Total non-response (TNR) rate, long-form census questionnaire: 2.3%"
+
+
+"Source: Statistics Canada, 2021 Census of Population."
+
+How to cite: Statistics Canada. 2023. Census Profile. 2021 Census.
+Statistics Canada Catalogue no. 98-316-X2021001. Ottawa. Released February 8  2023.
+https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E

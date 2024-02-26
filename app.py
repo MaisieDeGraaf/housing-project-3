@@ -16,8 +16,14 @@ import json
 
 mongo = MongoClient(port=27017)
 
+#Importing the csv files 
+
+#mongoimport --type json -d uk_food -c establishments --drop ../Resources/data.csv
+
 #Assigning our db to a variable
-    #I'm using a db from a previous work. Should we first use jupyter notebook to turn the data in our df into a json type ?
+
+    #I'm using a db from a previous work.
+    
 
 db = mongo['uk_food']
 

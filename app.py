@@ -7,6 +7,7 @@ from pprint import pprint
 from bson import json_util
 from flask import Flask, jsonify, render_template
 import json
+from api_keys import mongo_username,mongo_password
 
 
 #################################################
@@ -14,25 +15,23 @@ import json
 #################################################
 #Creating an instance of MongoClient
 
-mongo = MongoClient(port=27017)
+connection_string = f'mongodb+srv://{mongo_username}:{mongo_password}@cluster0.9gjuly6.mongodb.net/'
+mongo = MongoClient(port=27017) ##here I have to use, the connection_string instead of the port
 
 #Importing the csv files 
-
-#mongoimport --type json -d uk_food -c establishments --drop ../Resources/data.csv
+#Looks like this doesn't work and might have to be done with Jupyter Notebook ?
+#! mongoimport --type csv -d Household_size -c size --headerline --drop Resources/2016_Household_Size.csv
 
 #Assigning our db to a variable
 
     #I'm using a db from a previous work.
     
 
-db = mongo['uk_food']
-
-#Printing all the collections in our db
-db.list_collection_names()
+db = mongo['Household_size']
 
 #Assigning our collection to a variable
 
-establishments = db["establishments"]
+size = db["size"]
 
 #################################################
 # Flask Setup
@@ -54,8 +53,8 @@ def main():
     # the below json formula came from stack overflow https://stackoverflow.com/questions/16586180/typeerror-objectid-is-not-json-serializable
 @app.route("/api/housing")
 def api_data():
-    query = {'scores.Hygiene':{'$eq':20}}
-    results = establishments.find(query)
+    query = {}
+    results = size.find(query)
     output = []
     for x in results:
         output.append(x) 

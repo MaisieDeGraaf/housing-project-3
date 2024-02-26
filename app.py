@@ -1,7 +1,4 @@
 # Import the dependencies.
-import datetime as dt
-import numpy as np
-import pandas as pd
 from pymongo import MongoClient
 from pprint import pprint
 from bson import json_util
@@ -16,10 +13,10 @@ from api_keys import mongo_username,mongo_password
 #Creating an instance of MongoClient
 
 connection_string = f'mongodb+srv://{mongo_username}:{mongo_password}@cluster0.9gjuly6.mongodb.net/'
-mongo = MongoClient(port=27017) ##here I have to use, the connection_string instead of the port
+mongo = MongoClient(port=27017) ##here we have to use, the connection_string instead of the port
 
 #Importing the csv files 
-#Looks like this doesn't work and might have to be done with Jupyter Notebook ?
+#Looks like this doesn't work and might have to be done in terminal or Jupiter Notebook first.
 #! mongoimport --type csv -d Household_size -c size --headerline --drop Resources/2016_Household_Size.csv
 
 #Assigning our db to a variable
@@ -51,6 +48,7 @@ def main():
 
 #2.API Page
     # the below json formula came from stack overflow https://stackoverflow.com/questions/16586180/typeerror-objectid-is-not-json-serializable
+    #I think we need to make sure our data is raw so that Json can read it properly
 @app.route("/api/housing")
 def api_data():
     query = {}

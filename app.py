@@ -4,8 +4,9 @@ import numpy as np
 import pandas as pd
 from pymongo import MongoClient
 from pprint import pprint
-
+from bson import json_util
 from flask import Flask, jsonify, render_template
+import json
 
 
 #################################################
@@ -32,12 +33,11 @@ establishments = db["establishments"]
 #################################################
 app = Flask(__name__)
 
-
 #################################################
 # Flask Routes
 #################################################
 
-#1. Main Page
+#1. Main Page + Charts
     #Below I am taking a random index.html file to test
     #Maybe I should ask Maise to list our routes in the html intro and we could add a 'onclick' event
 @app.route("/")
@@ -45,18 +45,15 @@ def main():
     return (render_template('index.html'))
 
 #2.API Page
+    # the below json formula came from stack overflow https://stackoverflow.com/questions/16586180/typeerror-objectid-is-not-json-serializable
 @app.route("/api/housing")
 def api_data():
     query = {'scores.Hygiene':{'$eq':20}}
+    results = establishments.find(query)
     output = []
-    for x in establishments.find(query):
-        output.append(x)
-    return (output)
-#3. Charts Page
-@app.route("/charts")
-
-def charts():
-    return print('This is just a test')
+    for x in results:
+        output.append(x) 
+    return json.loads(json_util.dumps(output))
                 
                 
 if __name__ == '__main__':

@@ -53,6 +53,50 @@ def api_data():
         output.append(x) 
     return json.loads(json_util.dumps(output))
                 
-                
+@app.route("/api/oakville")
+def api_oakville():
+    query = {"City":'Oakville'}
+    results = db_data.find(query)
+    output = []
+    for x in results:
+        output.append(x) 
+    return json.loads(json_util.dumps(output))
+
+@app.route("/api/oshawa")
+def api_oshawa():
+    query = {"City":'Oshawa'}
+    results = db_data.find(query)
+    output = []
+    for x in results:
+        output.append(x) 
+    return json.loads(json_util.dumps(output))
+
+@app.route("/api/milton")
+def api_milton():
+    query = {"City":'Milton'}
+    results = db_data.find(query)
+    output = []
+    for x in results:
+        output.append(x) 
+    return json.loads(json_util.dumps(output))
+
+@app.route("/api/burlington")
+def api_burlington():
+    query = {"City":'Burlington'}
+    results = db_data.find(query)
+    output = []
+    for x in results:
+        output.append(x) 
+    return json.loads(json_util.dumps(output))
+
+@app.route("/api/vaughan")
+def api_vaughan():
+    query = {"City":'Vaughan'}
+    results = db_data.find(query)
+    output = []
+    for x in results:
+        output.append(x) 
+    return json.loads(json_util.dumps(output))
+
 if __name__ == '__main__':
     app.run(debug=True)

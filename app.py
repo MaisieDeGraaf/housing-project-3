@@ -23,11 +23,11 @@ mongo = MongoClient(connection_string)
     #I'm using a db from a previous work.
     
 
-db = mongo['Household_size']
+db = mongo['Housing']
 
 #Assigning our collection to a variable
 
-size = db["size"]
+db_data = db["data"]
 
 #################################################
 # Flask Setup
@@ -51,7 +51,7 @@ def main():
 @app.route("/api/housing")
 def api_data():
     query = {}
-    results = size.find(query)
+    results = db_data.find(query)
     output = []
     for x in results:
         output.append(x) 

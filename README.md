@@ -5,35 +5,31 @@
 2. We will be looking at the different building types (townhouses, condos & houses), prices and properties for each listing per city.
 3. Using the data created, we will display the notable tendencies on maps and charts with a focus on neighborhoods.
 
+# Methodology
+1. Data & Delivery
+	a. We will scrape websites to obtain listings for each city and store them in a MongoDB database.
+	b. We will then cleanse the data using a dataframe and displayed in our API endpoint using Flask.
+2. Back End & Visualization
+	a. Using JS, we will create various maps using Plotly, D3, Bootstrap, and Leaflet to display each listing filtered by prices/cities/and other possibilities.
+	b. We will create multiple charts and graphs to visulaize average, low and high prices in each city.
 
-+ Data & Delivery
-We will scrape websites to obtain listings for each city and store them in a MongoDB database.
-The Data will then be cleanse using a dataframe and displayed in our API endpoint using Flask.
-+ Back End & Visualization
-Using JS, we will create various maps using Plotly and Leaflet to display each listing filtered by prices/cities/and other possibilities.
-A Bar chart will also be created to display average, low and high prices in each city.
+# Datasets used:
 
 
-# Work breakdown structure
-1. Flask app – Peggy; Create app.py in vs code
+# Members of the Group & Work breakdown structure
+1. Peggy Tadi (@peggz19); Flask app –  Create app.py in vs code
+2. Jaylene Hughes (@jhyooz); API scraper & convert data from sqllit to mongodb
+3. Maisie DeGraaf (@MaisieDeGraaf); Html & CSS code - Create the html header, Body, Div.
+4. Pooja Niranjan (@Pooja14n); Visualization – Leaflet maps & Label per house for each city
+5. Robert Skrepnek (@RSkrep); Dropdown menu for each city, neighborhood, home type (condo, townhome, semi-detached, detached), price*(filter)
 
-2. API scraper – Jaylene
-Change to mongodb from sqllit
+# Technologies used
+1. MongoDB
+2. Python
+3. Flask
+4. Matplotlib
+5. Javascript - Leaflet, D3, Bootstrap
 
-3. Html – Maisie
-Create the html
- header
-	Body
-	Div
-	etc
-
-4. Visualization –
-	Leaflet maps - Pooja
-	Label per house for each city - 
-
-5. Dropdown menu for each city, neighborhood, home type (condo, townhome/ semi-detached, detached), price*(filter) - Robert
-
-15 graphs/maps
-Avg price in each city 5 maps d3/plotly prefer d3
-Bubble chart of population
-heatmap
+# References
+Referred to various class activity exercises, got support from Assistant Instructor, and websites: 
+   

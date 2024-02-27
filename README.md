@@ -1,4 +1,4 @@
-# Ontario Housing Market Analysis in Ontario <hr>
+# Ontario Housing Market Analysis in Ontario
 
 # Project Overview
 1. For Project 3, we are analyzing listings in 5 cities (Oshawa, Oakville, Burlington, Vaughan and Milton) in Ontario and building a website with various filters across these 5 cities. 

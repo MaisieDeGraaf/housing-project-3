@@ -20,7 +20,7 @@
 1. Peggy Tadi (@peggz19); Flask app –  Create app.py in vs code
 2. Jaylene Hughes (@jhyooz); API scraper & convert data from sqllit to mongodb
 3. Maisie DeGraaf (@MaisieDeGraaf); Html & CSS code - Create the html header, Body, Div.
-4. Pooja Niranjan (@Pooja14n); Visualization – Leaflet maps & Label per house for each city
+4. Pooja Niranjan (@Pooja14n); Visualization – Leaflet maps & bind popups for each house for each city
 5. Robert Skrepnek (@RSkrep); Dropdown menu for each city, neighborhood, home type (condo, townhome, semi-detached, detached), price*(filter)
 
 # Technologies used

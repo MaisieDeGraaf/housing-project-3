@@ -32,4 +32,10 @@
 
 # References
 Referred to various class activity exercises, got support from Assistant Instructor, and websites: 
-   
+
+
+# Link to Presentation: 
+
+https://www.canva.com/design/DAF98YLI6t8/WEgsgGw7uR6DxIoG4mJ-lg/edit
+
+

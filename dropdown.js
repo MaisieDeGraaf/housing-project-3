@@ -85,3 +85,4 @@ window.onclick = function(event) {
 
 
 dropdown
+GamepadHapticActuator

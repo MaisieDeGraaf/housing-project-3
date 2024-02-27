@@ -55,4 +55,4 @@ function createMap(housing) {
 
 
 // Perform an API call to the Citi Bike API to get the station information. Call createMarkers when it completes.
-d3.json("https://housesigma.com/on/map/");
+d3.json("https://housesigma.com/listings/watched-area-and-community");

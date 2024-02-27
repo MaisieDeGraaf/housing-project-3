@@ -13,11 +13,10 @@ from api_keys import mongo_username,mongo_password
 #Creating an instance of MongoClient
 
 connection_string = f'mongodb+srv://{mongo_username}:{mongo_password}@cluster0.9gjuly6.mongodb.net/'
-mongo = MongoClient(port=27017) ##here we have to use, the connection_string instead of the port
+mongo = MongoClient(connection_string)
 
 #Importing the csv files 
-#Looks like this doesn't work and might have to be done in terminal or Jupiter Notebook first.
-#! mongoimport --type csv -d Household_size -c size --headerline --drop Resources/2016_Household_Size.csv
+#Done in Terminal using mongoimport --uri "mongodb+srv://<username>:<password>@cluster0.9gjuly6.mongodb.net/" --type csv -d Household_size -c size --headerline --drop Resources/2016_Household_Size.csv
 
 #Assigning our db to a variable
 

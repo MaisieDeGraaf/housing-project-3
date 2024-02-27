@@ -8,3 +8,7 @@ apify_key = "255ef6c290804a2f9e0d33405770abbc"
 #HouseSigma Login
 email = 'qwerty.kitten.m@gmail.com'
 passw = 'Bootcamp2024*'
+
+#MongoDB
+mongo_username = 'peggy'
+mongo_password = 'DHQ7uWtv66djBHt3'

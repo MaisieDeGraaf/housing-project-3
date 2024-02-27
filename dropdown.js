@@ -82,8 +82,3 @@ window.onclick = function(event) {
 
 </body>
 </html>
-
-
-dropdown
-GamepadHapticActuator
-jhvuj

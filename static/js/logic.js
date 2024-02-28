@@ -60,9 +60,15 @@
 
 
 // Store our API endpoint as queryUrl.
-let queryUrl = "housingdata.geojson";
+let query = "housingdata.geojson";
 
-d3.json(queryUrl).then(function (data) {
+// let myMap = L.map("map", {
+//   center: [43.62, -79.59],
+//   zoom: 9
+// });
+
+
+d3.json(query).then(function (data) {
     // console.log(data)
 
     createFeatures(data.features)
@@ -77,8 +83,8 @@ function createFeatures(housingData) {
   
     function createMarker(feature, latlng){
         let markers = {
-         radius:feature.properties.Price_Listed*2,
-         fillColor: chooseColor(feature.properties.Price_Listed),
+        //  radius:feature.properties.Price_Listed*2,
+         fillColor: chooseColor(feature.properties.listedprice),
          color: "black",
          weight: 0.5,
          opacity: 0.8,
@@ -106,22 +112,22 @@ function createFeatures(housingData) {
 }
 
 
-// let legend = L.control({position: 'bottomright'});
+let legend = L.control({position: 'bottomright'});
 
-// legend.onAdd = function() {
-//     let div = L.DomUtil.create('div', 'info legend');
-//     let grades = [-10, 10, 30, 50, 70, 90];
-//     let labels = [];
-//     let legendInfo = "<h4></h4>";
+legend.onAdd = function() {
+    let div = L.DomUtil.create('div', 'info legend');
+    let grades = [300000, 500000, 700000, 800000, 900000, 1000000];
+    let labels = [];
+    let legendInfo = "<h4></h4>";
     
-//     for (var i = 0; i < grades.length; i++) {
-//         div.innerHTML +=
-//             '<i style="background:' + chooseColor(grades[i] + 1) + '"></i> ' +
-//             grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-//     }
+    for (var i = 0; i < grades.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + chooseColor(grades[i] + 1) + '"></i> ' +
+            grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
+    }
 
-//     return div;
-//   };
+    return div;
+  };
            
 
   function createMap(houses) {

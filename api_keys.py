@@ -12,3 +12,7 @@ passw = 'Bootcamp2024*'
 #MongoDB
 mongo_username = 'peggy'
 mongo_password = 'DHQ7uWtv66djBHt3'
+
+#MongoDB-scraping
+mongo_username_scraper = 'jaylene'
+mongo_password_scraper = 'emv7qzy.ZWM1nta9qbv'

@@ -55,7 +55,7 @@
 
 
 // // Perform an API call to the Citi Bike API to get the station information. Call createMarkers when it completes.
-// d3.json("housingdata.geojson");
+// d3.json("housingdata.json");
 
 
 
@@ -75,52 +75,28 @@ d3.json(query).then(function (data) {
 
 });
 
-function createFeatures(housingdata) {
+function createFeatures(housingData) {
 
     function onOurFeature(feature, layer)  {       
         layer.bindPopup(`<h3>Location: ${feature.properties.Address}</h3><hr><p>Listed Price: ${feature.properties.Price_Listed}</p>`);
     }
   
-    function createMarkers(response) {
-
-        // Pull the "stations" property from response.data.
-        let house = response.data.features;
-      
-        // Initialize an array to hold bike markers.
-        let houseMarkers = [];
-      
-        // Loop through the stations array.
-        for (let index = 0; index < house.length; index++) {
-          let house = house[index];
-      
-          // For each station, create a marker, and bind a popup with the station's name.
-          let houseMarker = L.marker([properties.Latitude, properties.Longitude])
-            .bindPopup("<h3>" + house.Address + "<h3><h3>Capacity: " + house.Neighbourhood + "</h3>");
-      
-          // Add the marker to the bikeMarkers array.
-          houseMarkers.push(houseMarker);
-        }
-      
-        // Create a layer group that's made from the bike markers array, and pass it to the createMap function.
-        createMap(L.layerGroup(houseMarkers));
-      }
-
-
-    // function createMarker(feature, latlng){
-    //     let markers = {
-    //     //  radius:feature.properties.Price_Listed*2,
-    //      fillColor: chooseColor(feature.geometry.coordinates),
-    //      color: "black",
-    //      weight: 0.5,
-    //      opacity: 0.8,
-    //      fillOpacity: 0.7
-    //     } 
-    //     return L.circleMarker(latlng, markers);
-    //  }
+    
+    function createMarker(feature, latlng){
+        let markers = {
+        //  radius:feature.properties.Price_Listed*2,
+         fillColor: chooseColor(feature.geometry.coordinates),
+         color: "black",
+         weight: 0.5,
+         opacity: 0.8,
+         fillOpacity: 0.7
+        } 
+        return L.circleMarker(latlng, markers);
+     }
      
-     let houses = L.geoJSON(housingdata, {
-         onEachFeature: onOurFeature
-         //pointToLayer: createMarkers
+     let houses = L.geoJSON(housingData, {
+         onEachFeature: onOurFeature,
+         pointToLayer: createMarker
      });
  
      

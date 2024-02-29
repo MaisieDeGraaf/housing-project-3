@@ -26,7 +26,7 @@ d3.json(queryUrl).then(data => {
         };
 
         
-        var homeIcon = L.icon({
+        let homeIcon = L.icon({
             iconUrl: '../images/home.PNG',
 
             iconSize: [15, 15], 
@@ -34,7 +34,7 @@ d3.json(queryUrl).then(data => {
             popupAnchor: [0, -10] 
         });
 
-        var greenIcon = L.icon({
+        let greenIcon = L.icon({
             iconUrl: '..images/green.jpg',
 
             iconSize: [15, 15], 
@@ -42,7 +42,7 @@ d3.json(queryUrl).then(data => {
             popupAnchor: [0, -10] 
         });
 
-        var blueIcon = L.icon({
+        let blueIcon = L.icon({
             iconUrl: '../images/blue.png',
 
             iconSize: [15, 15], 
@@ -50,7 +50,7 @@ d3.json(queryUrl).then(data => {
             popupAnchor: [0, -10] 
         });
 
-        var orangeIcon = L.icon({
+        let orangeIcon = L.icon({
             iconUrl: '../images/orange.png',
 
             iconSize: [15, 15], 
@@ -58,7 +58,7 @@ d3.json(queryUrl).then(data => {
             popupAnchor: [0, -10] 
         });
 
-        var yellowIcon = L.icon({
+        let yellowIcon = L.icon({
             iconUrl: '../images/yellow.jpg',
 
             iconSize: [15, 15], 
@@ -66,7 +66,7 @@ d3.json(queryUrl).then(data => {
             popupAnchor: [0, -10] 
         });
 
-        var redIcon = L.icon({
+        let redIcon = L.icon({
             iconUrl: '../images/red.png',
 
             iconSize: [15, 15], 
@@ -88,7 +88,7 @@ d3.json(queryUrl).then(data => {
 
         layers.one = L.geoJson(data, {
             filter: function (feature, layer) {
-                return (feature.properties.Price_Listed <= 250000);
+                return (feature.properties.Price_Listed <= 250000.0);
             },
 
             pointToLayer: function (feature, latlng) {
@@ -113,8 +113,8 @@ d3.json(queryUrl).then(data => {
         layers.two = L.geoJson(data, {
             filter: function (feature, layer) {
                 return (
-                    feature.properties.Price_Listed >= 250000 &&
-                    feature.properties.Price_Listed <= 500000
+                    feature.properties.Price_Listed >= 250000.0 &&
+                    feature.properties.Price_Listed <= 500000.0
                 )
             },
 
@@ -139,8 +139,8 @@ d3.json(queryUrl).then(data => {
         layers.three = L.geoJson(data, {
             filter: function (feature, layer) {
                 return (
-                    feature.properties.Price_Listed >= 500000 &&
-                    feature.properties.Price_Listed <= 750000
+                    feature.properties.Price_Listed >= 500000.0 &&
+                    feature.properties.Price_Listed <= 750000.0
                 )
             },
 
@@ -165,8 +165,8 @@ d3.json(queryUrl).then(data => {
         layers.four = L.geoJson(data, {
             filter: function (feature, layer) {
                 return (
-                    feature.properties.Price_Listed >= 750000 &&
-                    feature.properties.Price_Listed <= 1000000
+                    feature.properties.Price_Listed >= 750000.0 &&
+                    feature.properties.Price_Listed <= 1000000.0
                 )
             },
 
@@ -190,7 +190,7 @@ d3.json(queryUrl).then(data => {
 
         layers.five = L.geoJson(data, {
             filter: function (feature, layer) {
-                return (feature.properties.Price_Listed >= 1000000);
+                return (feature.properties.Price_Listed >= 1000000.0);
             },
 
             pointToLayer: function (feature, latlng) {

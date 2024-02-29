@@ -30,7 +30,7 @@ d3.json(URL)
 
     // Step 4: Create a new Chart instance with the canvas element
     let ctx = canvas.getContext('2d');
-    let myChart1, myChart2, myChart3, myChart4, myChart5;
+    let myChart1, myChart2, myChart3, myChart4, myChart5, myChart6, myChart7;
 
     // Step 5: Function to update chart data
     function updateChartData(chart, newData) {
@@ -186,6 +186,54 @@ d3.json(URL)
         }]
       },
       options: options
+    });
+
+    // Add 6th chart
+    myChart6 = new Chart(ctx, {
+      type: 'bubble',
+      data: {
+        datasets: [{
+          label: 'Houses Marked (by City)',
+          backgroundColor: 'rgba(255, 99, 132, 0.6)',
+          borderColor: 'rgba(255, 99, 132, 1)',
+          data: cities.map(city => ({
+            x: city,
+            y: data.filter(item => item.City === city).length, // Number of houses marked
+            r: data.filter(item => item.City === city).length * 5 // Bubble size based on the number of houses
+          }))
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            display: false
+          }
+        }
+      }
+    });
+
+    // Add 7th chart
+    myChart7 = new Chart(ctx, {
+      type: 'bubble',
+      data: {
+        datasets: [{
+          label: 'Houses Marked (by Neighborhood)',
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          data: neighborhoods.map(neighborhood => ({
+            x: neighborhood,
+            y: data.filter(item => item.Neighborhood === neighborhood).length, // Number of houses marked
+            r: data.filter(item => item.Neighborhood === neighborhood).length * 5 // Bubble size based on the number of houses
+          }))
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            display: false
+          }
+        }
+      }
     });
 
     // Event listener for city selection

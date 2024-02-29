@@ -265,7 +265,7 @@ d3.json(queryUrl).then(data => {
                     },
 
                     pointToLayer: function (feature, latlng) {
-                        let city = feature.properties.City;
+                        let city = feature.properties.city;
                         return L.circle(latlng, circleStyle[city]); 
                     },
 

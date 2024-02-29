@@ -88,7 +88,7 @@ d3.json(queryUrl).then(data => {
 
         layers.one = L.geoJson(data, {
             filter: function (feature, layer) {
-                return (feature.properties.Price_Listed <= 250000.0);
+                return (feature.properties.price <= 250000.0);
             },
 
             pointToLayer: function (feature, latlng) {
@@ -99,13 +99,13 @@ d3.json(queryUrl).then(data => {
                 
                 layer.bindPopup(
                     '<h3>' +
-                    feature.properties.Address +
+                    feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    numberWithCommas(feature.properties.Price_Listed) + ' / ' +
-                    feature.properties.Bedrooms + ' bedrooms' + ' / ' +
-                    feature.properties.Bathrooms + ' baths' + ' / ' +
-                    feature.properties.Status + ' status' + ' / ' +
+                    numberWithCommas(feature.properties.price) + ' / ' +
+                    feature.properties.bedrooms + ' bedrooms' + ' / ' +
+                    feature.properties.bathrooms + ' baths' + ' / ' +
+                    feature.properties.status + ' status' + ' / ' +
                     '</p>')
             }
         })
@@ -113,8 +113,8 @@ d3.json(queryUrl).then(data => {
         layers.two = L.geoJson(data, {
             filter: function (feature, layer) {
                 return (
-                    feature.properties.Price_Listed >= 250000.0 &&
-                    feature.properties.Price_Listed <= 500000.0
+                    feature.properties.price >= 250000.0 &&
+                    feature.properties.price <= 500000.0
                 )
             },
 
@@ -125,13 +125,13 @@ d3.json(queryUrl).then(data => {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
                     '<h3>' +
-                    feature.properties.Address +
+                    feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    numberWithCommas(feature.properties.Price_Listed) + ' / ' +
-                    feature.properties.Bedrooms + ' bedrooms' + ' / ' +
-                    feature.properties.Bathrooms + ' baths' + ' / ' +
-                    feature.properties.Status + ' status' + ' / ' +
+                    numberWithCommas(feature.properties.price) + ' / ' +
+                    feature.properties.bedrooms + ' bedrooms' + ' / ' +
+                    feature.properties.bathrooms + ' baths' + ' / ' +
+                    feature.properties.status + ' status' + ' / ' +
                     '</p>')
             }
         })
@@ -139,8 +139,8 @@ d3.json(queryUrl).then(data => {
         layers.three = L.geoJson(data, {
             filter: function (feature, layer) {
                 return (
-                    feature.properties.Price_Listed >= 500000.0 &&
-                    feature.properties.Price_Listed <= 750000.0
+                    feature.properties.price >= 500000.0 &&
+                    feature.properties.price <= 750000.0
                 )
             },
 
@@ -151,13 +151,13 @@ d3.json(queryUrl).then(data => {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
                     '<h3>' +
-                    feature.properties.Address +
+                    feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    numberWithCommas(feature.properties.Price_Listed) + ' / ' +
-                    feature.properties.Bedrooms + ' bedrooms' + ' / ' +
-                    feature.properties.Bathrooms + ' baths' + ' / ' +
-                    feature.properties.Status + ' status' + ' / ' +
+                    numberWithCommas(feature.properties.price) + ' / ' +
+                    feature.properties.bedrooms + ' bedrooms' + ' / ' +
+                    feature.properties.bathrooms + ' baths' + ' / ' +
+                    feature.properties.status + ' status' + ' / ' +
                     '</p>')
             }
         })
@@ -165,8 +165,8 @@ d3.json(queryUrl).then(data => {
         layers.four = L.geoJson(data, {
             filter: function (feature, layer) {
                 return (
-                    feature.properties.Price_Listed >= 750000.0 &&
-                    feature.properties.Price_Listed <= 1000000.0
+                    feature.properties.price >= 750000.0 &&
+                    feature.properties.price <= 1000000.0
                 )
             },
 
@@ -177,20 +177,20 @@ d3.json(queryUrl).then(data => {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
                     '<h3>' +
-                    feature.properties.Address +
+                    feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    numberWithCommas(feature.properties.Price_Listed) + ' / ' +
-                    feature.properties.Bedrooms + ' bedrooms' + ' / ' +
-                    feature.properties.Bathrooms + ' baths' + ' / ' +
-                    feature.properties.Status + ' status' + ' / ' +
+                    numberWithCommas(feature.properties.price) + ' / ' +
+                    feature.properties.bedrooms + ' bedrooms' + ' / ' +
+                    feature.properties.bathrooms + ' baths' + ' / ' +
+                    feature.properties.status + ' status' + ' / ' +
                     '</p>')
             }
         })
 
         layers.five = L.geoJson(data, {
             filter: function (feature, layer) {
-                return (feature.properties.Price_Listed >= 1000000.0);
+                return (feature.properties.price >= 1000000.0);
             },
 
             pointToLayer: function (feature, latlng) {
@@ -200,13 +200,13 @@ d3.json(queryUrl).then(data => {
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(
                     '<h3>' +
-                    feature.properties.Address +
+                    feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    numberWithCommas(feature.properties.Price_Listed) + ' / ' +
-                    feature.properties.Bedrooms + ' bedrooms' + ' / ' +
-                    feature.properties.Bathrooms + ' baths' + ' / ' +
-                    feature.properties.Status + ' status' + ' / ' +
+                    numberWithCommas(feature.properties.price) + ' / ' +
+                    feature.properties.bedrooms + ' bedrooms' + ' / ' +
+                    feature.properties.bathrooms + ' baths' + ' / ' +
+                    feature.properties.status + ' status' + ' / ' +
                     '</p>')
             }
         })

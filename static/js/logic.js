@@ -1,8 +1,8 @@
 
 // API endpoint"
-let queryUrl = "static/data/housingdata.geojson";
+// let queryUrl = "static/data/housingdata.geojson";
 
-// let queryUrl = "http://127.0.0.1:5000/api/housing"
+let queryUrl = "http://127.0.0.1:5000/api/housing"
 
 
 // function to add commas to List Price popup
@@ -22,7 +22,7 @@ d3.json(queryUrl).then(data => {
 
         let baseMaps = {
             "Street Map": streetmap
-            // "Light Map": lightmap
+           
         };
 
         
@@ -257,7 +257,6 @@ d3.json(queryUrl).then(data => {
                 };
 
 
-                // School Quality layer - mimics a heatmap based on school rating
                 layers.six = L.geoJson(citydata, {
 
                     // call "features" of geojson file

@@ -20,12 +20,12 @@ mongo = MongoClient(connection_string)
 
 #Assigning our db to a variable  
 
-db = mongo['Housing']
-
+db1 = mongo['Housing']
+db2 = mongo["Leisure"]
 #Assigning our collection to a variable
 
-db_data = db["data"]
-
+db1_data = db1["data"]
+db2_data=db2['leisuredata']
 #################################################
 # Flask Setup
 #################################################
@@ -47,7 +47,7 @@ def main():
 @app.route("/api/housing")
 def api_data():
     query = {}
-    results = db_data.find(query)
+    results = db1_data.find(query)
     output = []
     for x in results:
         output.append(x) 
@@ -56,7 +56,7 @@ def api_data():
 @app.route("/api/oakville")
 def api_oakville():
     query = {"City":'Oakville'}
-    results = db_data.find(query)
+    results = db1_data.find(query)
     output = []
     for x in results:
         output.append(x) 
@@ -65,7 +65,7 @@ def api_oakville():
 @app.route("/api/oshawa")
 def api_oshawa():
     query = {"City":'Oshawa'}
-    results = db_data.find(query)
+    results = db1_data.find(query)
     output = []
     for x in results:
         output.append(x) 
@@ -74,7 +74,7 @@ def api_oshawa():
 @app.route("/api/milton")
 def api_milton():
     query = {"City":'Milton'}
-    results = db_data.find(query)
+    results = db1_data.find(query)
     output = []
     for x in results:
         output.append(x) 
@@ -83,7 +83,7 @@ def api_milton():
 @app.route("/api/burlington")
 def api_burlington():
     query = {"City":'Burlington'}
-    results = db_data.find(query)
+    results = db1_data.find(query)
     output = []
     for x in results:
         output.append(x) 
@@ -92,7 +92,16 @@ def api_burlington():
 @app.route("/api/vaughan")
 def api_vaughan():
     query = {"City":'Vaughan'}
-    results = db_data.find(query)
+    results = db1_data.find(query)
+    output = []
+    for x in results:
+        output.append(x) 
+    return json.loads(json_util.dumps(output))
+
+@app.route("/api/leisure")
+def api_leisure():
+    query = {}
+    results = db2_data.find(query)
     output = []
     for x in results:
         output.append(x) 

@@ -3,7 +3,11 @@
 // let queryUrl = "static/data/housingdata.geojson";
 
 let queryUrl = "http://127.0.0.1:5000/api/v1.0/housing"
-
+// var image1 = document.getElementById('image-source').getAttribute('src');
+// var image1 = new Image()
+// image1.src="../images/blue.png"
+var image1 = document.createElement("img");
+image1.src = '../images/green.jpg';
 
 // function to add commas to List Price popup
 function numberWithCommas(x) {
@@ -26,16 +30,16 @@ d3.json(queryUrl).then(data => {
         };
 
         
-        let homeIcon = L.icon({
-            iconUrl: '../images/home.PNG',
+        // let homeIcon = L.icon({
+        //     iconUrl: image1,
 
-            iconSize: [15, 15], 
-            iconAnchor: [7, 7], 
-            popupAnchor: [0, -10] 
-        });
+        //     iconSize: [15, 15], 
+        //     iconAnchor: [7, 7], 
+        //     popupAnchor: [0, -10] 
+        // });
 
         let greenIcon = L.icon({
-            iconUrl: '..images/green.jpg',
+            iconUrl: image1,
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -277,8 +281,8 @@ d3.json(queryUrl).then(data => {
         function maplegend() {
             
             let overlayMaps = {
-                "<img src='../images/green.jpg' width = 15 /> <span>Up to $250K</span>": layers.one,
-                "<img src='../images/blue.png' width = 15 /> <span>$250K - $500K</span>": layers.two,
+               image1 : layers.one,
+              '<i class="bi bi-house">21232</i>' : layers.two,
                 "<img src='../images/orange.png' width = 15 /> <span>$500K - $750K</span>": layers.three,
                 "<img src='../images/yellow.jpg' width = 15 /> <span>$750K - $1M</span>": layers.four,
                 "<img src='../images/red.png' width = 15 /> <span>$1M+</span>": layers.five,

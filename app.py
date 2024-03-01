@@ -2,7 +2,7 @@
 from pymongo import MongoClient
 from pprint import pprint
 from bson import json_util
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template, send_from_directory
 import json
 from api_keys import mongo_username,mongo_password
 
@@ -39,10 +39,10 @@ app = Flask(__name__)
 @app.route("/")
 def main():
     return (render_template('index.html'))
+
 @app.route("/map")
 def map():
     return (render_template('map.html'))
-
 
 #2.API Page
     # the below json_util formula came from stack overflow https://stackoverflow.com/questions/16586180/typeerror-objectid-is-not-json-serializable

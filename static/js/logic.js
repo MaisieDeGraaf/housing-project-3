@@ -27,7 +27,7 @@ d3.json(queryUrl).then(data => {
 
         
         let homeIcon = L.icon({
-            iconUrl: '../images/home.PNG',
+            iconUrl: '../images/home.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -35,7 +35,7 @@ d3.json(queryUrl).then(data => {
         });
 
         let greenIcon = L.icon({
-            iconUrl: '..images/green.jpg',
+            iconUrl: '../images/green.jpg',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 

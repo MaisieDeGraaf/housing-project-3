@@ -27,8 +27,8 @@ d3.json(queryUrl).then(data => {
         };
 
         
-        let homeIcon = L.icon({
-            iconUrl: '../images/home.PNG',
+        // let homeIcon = L.icon({
+        //     iconUrl: image1,
 
         //     iconSize: [15, 15], 
         //     iconAnchor: [7, 7], 
@@ -36,7 +36,7 @@ d3.json(queryUrl).then(data => {
         // });
 
         let greenIcon = L.icon({
-            iconUrl: '..images/green.jpg',
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -44,7 +44,7 @@ d3.json(queryUrl).then(data => {
         });
 
         let blueIcon = L.icon({
-            iconUrl: '../images/blue.png',
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -52,7 +52,7 @@ d3.json(queryUrl).then(data => {
         });
 
         let orangeIcon = L.icon({
-            iconUrl: '../images/orange.png',
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -60,15 +60,14 @@ d3.json(queryUrl).then(data => {
         });
 
         let yellowIcon = L.icon({
-            iconUrl: '../images/yellow.jpg',
-
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
         });
 
         let redIcon = L.icon({
-            iconUrl: '../images/red.png',
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -272,15 +271,15 @@ d3.json(queryUrl).then(data => {
         console.log("Finished processing!")
             
             let overlayMaps = {
-                "<img src='../images/green.jpg' width = 15 /> <span>Up to $250K</span>": layers.one,
-                "<img src='../images/blue.png' width = 15 /> <span>$250K - $500K</span>": layers.two,
-                "<img src='../images/orange.png' width = 15 /> <span>$500K - $750K</span>": layers.three,
-                "<img src='../images/yellow.jpg' width = 15 /> <span>$750K - $1M</span>": layers.four,
-                "<img src='../images/red.png' width = 15 /> <span>$1M+</span>": layers.five,
+                '<i class="bi bi-house"> under 250K </i>' : layers.one,
+                '<i class="bi bi-house"> $250K - $500K </i>' : layers.two,
+                '<i class="bi bi-house"> $500K - $750K </i>': layers.three,
+                '<i class="bi bi-house"> $750K - $1M </i>': layers.four,
+                '<i class="bi bi-house"> $1M </i>': layers.five,
                 "City": layers.six
             };
 
-            let myMap = L.map("map-id", {
+            let myMap = L.map("map", {
                 center: [
                     43.62, -79.59
                 ],

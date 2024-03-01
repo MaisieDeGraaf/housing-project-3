@@ -2,7 +2,7 @@
 // API endpoint"
 // let queryUrl = "static/data/housingdata.geojson";
 
-let queryUrl = "http://127.0.0.1:5000/api/housing"
+let queryUrl = "http://127.0.0.1:5000/api/v1.0/housing"
 
 
 // function to add commas to List Price popup
@@ -11,7 +11,7 @@ function numberWithCommas(x) {
 }
 
 d3.json(queryUrl).then(data => {
-
+    console.log(data)
     createMap();
 
     function createMap() {

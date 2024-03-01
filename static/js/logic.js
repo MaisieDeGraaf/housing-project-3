@@ -1,13 +1,13 @@
 
 // API endpoint"
-// let queryUrl = "static/data/housingdata.geojson";
+// let queryUrl = "static/data/housingdata.marker";
 
-let queryUrl = "http://127.0.0.1:5000/api/v1.0/housing"
+let queryUrl = "/api/v1.0/housing"
 // var image1 = document.getElementById('image-source').getAttribute('src');
 // var image1 = new Image()
 // image1.src="../images/blue.png"
-var image1 = document.createElement("img");
-image1.src = '../images/green.jpg';
+// var image1 = document.createElement("img");
+// image1.src = '../images/green.jpg';
 
 // function to add commas to List Price popup
 function numberWithCommas(x) {
@@ -16,9 +16,6 @@ function numberWithCommas(x) {
 
 d3.json(queryUrl).then(data => {
     console.log(data)
-    createMap();
-
-    function createMap() {
 
         let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -39,7 +36,7 @@ d3.json(queryUrl).then(data => {
         // });
 
         let greenIcon = L.icon({
-            iconUrl: image1,
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -47,7 +44,7 @@ d3.json(queryUrl).then(data => {
         });
 
         let blueIcon = L.icon({
-            iconUrl: '../images/blue.png',
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -55,7 +52,7 @@ d3.json(queryUrl).then(data => {
         });
 
         let orangeIcon = L.icon({
-            iconUrl: '../images/orange.png',
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -63,15 +60,14 @@ d3.json(queryUrl).then(data => {
         });
 
         let yellowIcon = L.icon({
-            iconUrl: '../images/yellow.jpg',
-
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
         });
 
         let redIcon = L.icon({
-            iconUrl: '../images/red.png',
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -90,7 +86,7 @@ d3.json(queryUrl).then(data => {
         };
 
 
-        layers.one = L.geoJson(data, {
+        layers.one = L.marker(data, {
             filter: function (feature, layer) {
                 return (feature.properties.price <= 250000.0);
             },
@@ -114,7 +110,7 @@ d3.json(queryUrl).then(data => {
             }
         })
 
-        layers.two = L.geoJson(data, {
+        layers.two = L.marker(data, {
             filter: function (feature, layer) {
                 return (
                     feature.properties.price >= 250000.0 &&
@@ -140,7 +136,7 @@ d3.json(queryUrl).then(data => {
             }
         })
 
-        layers.three = L.geoJson(data, {
+        layers.three = L.marker(data, {
             filter: function (feature, layer) {
                 return (
                     feature.properties.price >= 500000.0 &&
@@ -166,7 +162,7 @@ d3.json(queryUrl).then(data => {
             }
         })
 
-        layers.four = L.geoJson(data, {
+        layers.four = L.marker(data, {
             filter: function (feature, layer) {
                 return (
                     feature.properties.price >= 750000.0 &&
@@ -192,7 +188,7 @@ d3.json(queryUrl).then(data => {
             }
         })
 
-        layers.five = L.geoJson(data, {
+        layers.five = L.marker(data, {
             filter: function (feature, layer) {
                 return (feature.properties.price >= 1000000.0);
             },
@@ -218,10 +214,6 @@ d3.json(queryUrl).then(data => {
  
         d3.json(queryUrl).then(citydata => {
             
-            cityMap();
-            maplegend();
-
-            function cityMap() {
 
                 let circleStyle = {};
                 circleStyle.Oakville = {
@@ -261,9 +253,9 @@ d3.json(queryUrl).then(data => {
                 };
 
 
-                layers.six = L.geoJson(citydata, {
+                layers.six = L.marker(citydata, {
 
-                    // call "features" of geojson file
+                    // call "features" of marker file
                     filter: function (feature, layer) {
                         return citydata.features;
                     },
@@ -274,18 +266,16 @@ d3.json(queryUrl).then(data => {
                     },
 
                 })
-            }
+        
         });
-
-
-        function maplegend() {
+        console.log("Finished processing!")
             
             let overlayMaps = {
-               image1 : layers.one,
-              '<i class="bi bi-house">21232</i>' : layers.two,
-                "<img src='../images/orange.png' width = 15 /> <span>$500K - $750K</span>": layers.three,
-                "<img src='../images/yellow.jpg' width = 15 /> <span>$750K - $1M</span>": layers.four,
-                "<img src='../images/red.png' width = 15 /> <span>$1M+</span>": layers.five,
+                '<i class="bi bi-house"> under 250K </i>' : layers.one,
+                '<i class="bi bi-house"> $250K - $500K </i>' : layers.two,
+                '<i class="bi bi-house"> $500K - $750K </i>': layers.three,
+                '<i class="bi bi-house"> $750K - $1M </i>': layers.four,
+                '<i class="bi bi-house"> $1M </i>': layers.five,
                 "City": layers.six
             };
 
@@ -311,7 +301,5 @@ d3.json(queryUrl).then(data => {
 
             L.control.scale(position = 'topleft').addTo(myMap);
 
-            
-        } 
-    };
+    
 });

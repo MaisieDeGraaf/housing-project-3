@@ -11,7 +11,7 @@ function numberWithCommas(x) {
 }
 
 d3.json(queryUrl).then(data => {
-
+    console.log(data)
     createMap();
 
     function createMap() {

@@ -15,17 +15,16 @@ from api_keys import mongo_username,mongo_password
 connection_string = f'mongodb+srv://{mongo_username}:{mongo_password}@cluster0.9gjuly6.mongodb.net/'
 mongo = MongoClient(connection_string)
 
-#Importing the csv files 
-#Done in Terminal using mongoimport --uri "mongodb+srv://<username>:<password>@cluster0.9gjuly6.mongodb.net/" --type csv -d Housing -c data --headerline --drop housingdata.csv
-
 #Assigning our db to a variable  
 
-db1 = mongo['Housing']
-db2 = mongo["Leisure"]
-#Assigning our collection to a variable
+db = mongo['properties']
 
-db1_data = db1["data"]
-db2_data=db2['leisuredata']
+#Assigning our collections to a variable
+
+all_houses = db["all_houses"]
+leisure_spaces=db['leisure_spaces']
+sold_houses = db['sold_houses']
+weather_data = db['weather_data']
 #################################################
 # Flask Setup
 #################################################
@@ -42,66 +41,84 @@ def main():
     return (render_template('index.html'))
 
 #2.API Page
-    # the below json formula came from stack overflow https://stackoverflow.com/questions/16586180/typeerror-objectid-is-not-json-serializable
-    #I think we need to make sure our data is raw so that Json can read it properly
-@app.route("/api/housing")
+    # the below json_util formula came from stack overflow https://stackoverflow.com/questions/16586180/typeerror-objectid-is-not-json-serializable
+    
+@app.route("/api/v1.0/housing")
 def api_data():
-    query = {}
-    results = db1_data.find(query)
+    query = {"city":{"$in":['Oshawa','Oakville','Vaughan','Milton','Burlington']}}
+    results = all_houses.find(query)
     output = []
     for x in results:
         output.append(x) 
     return json.loads(json_util.dumps(output))
                 
-@app.route("/api/oakville")
+@app.route("/api/v1.0/oakville")
 def api_oakville():
-    query = {"City":'Oakville'}
-    results = db1_data.find(query)
+    query = {"city":'Oakville'}
+    results = all_houses.find(query)
     output = []
     for x in results:
         output.append(x) 
     return json.loads(json_util.dumps(output))
 
-@app.route("/api/oshawa")
+@app.route("/api/v1.0/oshawa")
 def api_oshawa():
-    query = {"City":'Oshawa'}
-    results = db1_data.find(query)
+    query = {"city":'Oshawa'}
+    results = all_houses.find(query)
     output = []
     for x in results:
         output.append(x) 
     return json.loads(json_util.dumps(output))
 
-@app.route("/api/milton")
+@app.route("/api/v1.0/milton")
 def api_milton():
-    query = {"City":'Milton'}
-    results = db1_data.find(query)
+    query = {"city":'Milton'}
+    results = all_houses.find(query)
     output = []
     for x in results:
         output.append(x) 
     return json.loads(json_util.dumps(output))
 
-@app.route("/api/burlington")
+@app.route("/api/v1.0/burlington")
 def api_burlington():
-    query = {"City":'Burlington'}
-    results = db1_data.find(query)
+    query = {"city":'Burlington'}
+    results = all_houses.find(query)
     output = []
     for x in results:
         output.append(x) 
     return json.loads(json_util.dumps(output))
 
-@app.route("/api/vaughan")
+@app.route("/api/v1.0/vaughan")
 def api_vaughan():
-    query = {"City":'Vaughan'}
-    results = db1_data.find(query)
+    query = {"city":'Vaughan'}
+    results = all_houses.find(query)
     output = []
     for x in results:
         output.append(x) 
     return json.loads(json_util.dumps(output))
 
-@app.route("/api/leisure")
+@app.route("/api/v1.0/leisure")
 def api_leisure():
     query = {}
-    results = db2_data.find(query)
+    results = leisure_spaces.find(query)
+    output = []
+    for x in results:
+        output.append(x) 
+    return json.loads(json_util.dumps(output))
+
+@app.route("/api/v1.0/sold-houses")
+def api_sold_houses():
+    query = {}
+    results = sold_houses.find(query)
+    output = []
+    for x in results:
+        output.append(x) 
+    return json.loads(json_util.dumps(output))
+
+@app.route("/api/v1.0/weather")
+def weather():
+    query = {}
+    results = weather_data.find(query)
     output = []
     for x in results:
         output.append(x) 

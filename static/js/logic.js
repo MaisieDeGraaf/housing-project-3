@@ -25,7 +25,6 @@ d3.json(queryUrl).then(data => {
         
         let homeIcon = L.icon({
             iconUrl: '../static/home_2544087.png',
-
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
@@ -33,7 +32,6 @@ d3.json(queryUrl).then(data => {
 
         let greenIcon = L.icon({
             iconUrl: '../static/green.jpg',
-
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
@@ -41,7 +39,6 @@ d3.json(queryUrl).then(data => {
 
         let blueIcon = L.icon({
             iconUrl: '../static/blue.png',
-
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
@@ -49,7 +46,6 @@ d3.json(queryUrl).then(data => {
 
         let orangeIcon = L.icon({
             iconUrl: '../static/orange.png',
-
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
@@ -57,7 +53,6 @@ d3.json(queryUrl).then(data => {
 
         let yellowIcon = L.icon({
             iconUrl: '../static/yellow.jpg',
-
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
@@ -65,7 +60,6 @@ d3.json(queryUrl).then(data => {
 
         let redIcon = L.icon({
             iconUrl: '../static/red.png',
-
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 

@@ -1,6 +1,6 @@
 
 // API endpoint"
-// let queryUrl = "static/data/housingdata.geojson";
+// let queryUrl = "static/data/housingdata.marker";
 
 let queryUrl = "http://127.0.0.1:5000/api/v1.0/housing"
 
@@ -12,9 +12,6 @@ function numberWithCommas(x) {
 
 d3.json(queryUrl).then(data => {
     console.log(data)
-    createMap();
-
-    function createMap() {
 
         let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -86,7 +83,7 @@ d3.json(queryUrl).then(data => {
         };
 
 
-        layers.one = L.geoJson(data, {
+        layers.one = L.marker(data, {
             filter: function (feature, layer) {
                 return (feature.properties.price <= 250000.0);
             },
@@ -110,7 +107,7 @@ d3.json(queryUrl).then(data => {
             }
         })
 
-        layers.two = L.geoJson(data, {
+        layers.two = L.marker(data, {
             filter: function (feature, layer) {
                 return (
                     feature.properties.price >= 250000.0 &&
@@ -136,7 +133,7 @@ d3.json(queryUrl).then(data => {
             }
         })
 
-        layers.three = L.geoJson(data, {
+        layers.three = L.marker(data, {
             filter: function (feature, layer) {
                 return (
                     feature.properties.price >= 500000.0 &&
@@ -162,7 +159,7 @@ d3.json(queryUrl).then(data => {
             }
         })
 
-        layers.four = L.geoJson(data, {
+        layers.four = L.marker(data, {
             filter: function (feature, layer) {
                 return (
                     feature.properties.price >= 750000.0 &&
@@ -213,11 +210,7 @@ d3.json(queryUrl).then(data => {
        
  
         d3.json(queryUrl).then(citydata => {
-            
-            cityMap();
-            maplegend();
 
-            function cityMap() {
 
                 let circleStyle = {};
                 circleStyle.Oakville = {
@@ -257,9 +250,9 @@ d3.json(queryUrl).then(data => {
                 };
 
 
-                layers.six = L.geoJson(citydata, {
+                layers.six = L.marker(citydata, {
 
-                    // call "features" of geojson file
+                    // call "features" of marker file
                     filter: function (feature, layer) {
                         return citydata.features;
                     },
@@ -270,11 +263,9 @@ d3.json(queryUrl).then(data => {
                     },
 
                 })
-            }
+
         });
-
-
-        function maplegend() {
+        console.log("Finished processing!")
             
             let overlayMaps = {
                 "<img src='../static/green.jpg' width = 15 /> <span>Up to $250K</span>": layers.one,
@@ -307,7 +298,5 @@ d3.json(queryUrl).then(data => {
 
             L.control.scale(position = 'topleft').addTo(myMap);
 
-            
-        } 
-    };
+
 });

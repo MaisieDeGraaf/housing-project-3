@@ -1,5 +1,5 @@
 // Call URL using d3
-let URL = 'http://127.0.0.1:5000/api/housing';
+let URL = 'http://127.0.0.1:5000/api/v1.0/housing';
 
 d3.json(URL)
   .then(function(data) {

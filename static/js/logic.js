@@ -2,12 +2,8 @@
 // API endpoint"
 // let queryUrl = "static/data/housingdata.marker";
 
-let queryUrl = "/api/v1.0/housing"
-// var image1 = document.getElementById('image-source').getAttribute('src');
-// var image1 = new Image()
-// image1.src="../images/blue.png"
-// var image1 = document.createElement("img");
-// image1.src = '../images/green.jpg';
+let queryUrl = "http://127.0.0.1:5000/api/v1.0/housing"
+
 
 // function to add commas to List Price popup
 function numberWithCommas(x) {
@@ -27,16 +23,16 @@ d3.json(queryUrl).then(data => {
         };
 
         
-        // let homeIcon = L.icon({
-        //     iconUrl: image1,
+        let homeIcon = L.icon({
+            iconUrl: '../static/home_2544087.png',
 
-        //     iconSize: [15, 15], 
-        //     iconAnchor: [7, 7], 
-        //     popupAnchor: [0, -10] 
-        // });
+            iconSize: [15, 15], 
+            iconAnchor: [7, 7], 
+            popupAnchor: [0, -10] 
+        });
 
         let greenIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+            iconUrl: '../static/green.jpg',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -44,7 +40,7 @@ d3.json(queryUrl).then(data => {
         });
 
         let blueIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+            iconUrl: '../static/blue.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -52,7 +48,7 @@ d3.json(queryUrl).then(data => {
         });
 
         let orangeIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
+            iconUrl: '../static/orange.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -60,14 +56,15 @@ d3.json(queryUrl).then(data => {
         });
 
         let yellowIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
+            iconUrl: '../static/yellow.jpg',
+
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
         });
 
         let redIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+            iconUrl: '../static/red.png',
 
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
@@ -213,7 +210,7 @@ d3.json(queryUrl).then(data => {
        
  
         d3.json(queryUrl).then(citydata => {
-            
+
 
                 let circleStyle = {};
                 circleStyle.Oakville = {
@@ -266,20 +263,20 @@ d3.json(queryUrl).then(data => {
                     },
 
                 })
-        
+
         });
         console.log("Finished processing!")
             
             let overlayMaps = {
-                '<i class="bi bi-house"> under 250K </i>' : layers.one,
-                '<i class="bi bi-house"> $250K - $500K </i>' : layers.two,
-                '<i class="bi bi-house"> $500K - $750K </i>': layers.three,
-                '<i class="bi bi-house"> $750K - $1M </i>': layers.four,
-                '<i class="bi bi-house"> $1M </i>': layers.five,
+                "<img src='../static/green.jpg' width = 15 /> <span>Up to $250K</span>": layers.one,
+                "<img src='../static/blue.png' width = 15 /> <span>$250K - $500K</span>": layers.two,
+                "<img src='../static/orange.png' width = 15 /> <span>$500K - $750K</span>": layers.three,
+                "<img src='../static/yellow.jpg' width = 15 /> <span>$750K - $1M</span>": layers.four,
+                "<img src='../static/red.png' width = 15 /> <span>$1M+</span>": layers.five,
                 "City": layers.six
             };
 
-            let myMap = L.map("map", {
+            let myMap = L.map("map-id", {
                 center: [
                     43.62, -79.59
                 ],
@@ -301,5 +298,5 @@ d3.json(queryUrl).then(data => {
 
             L.control.scale(position = 'topleft').addTo(myMap);
 
-    
+
 });

@@ -1,18 +1,8 @@
-
 // API endpoint"
 // let queryUrl = "static/data/housingdata.marker";
 
 let queryUrl = "/api/v1.0/housing"
-// var image1 = document.getElementById('image-source').getAttribute('src');
-// var image1 = new Image()
-// image1.src="../images/blue.png"
-// var image1 = document.createElement("img");
-// image1.src = '../images/green.jpg';
 
-// function to add commas to List Price popup
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
-}
 
 d3.json(queryUrl).then(data => {
     console.log(data)
@@ -27,17 +17,8 @@ d3.json(queryUrl).then(data => {
         };
 
         
-        // let homeIcon = L.icon({
-        //     iconUrl: image1,
-
-        //     iconSize: [15, 15], 
-        //     iconAnchor: [7, 7], 
-        //     popupAnchor: [0, -10] 
-        // });
-
         let greenIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
@@ -45,7 +26,6 @@ d3.json(queryUrl).then(data => {
 
         let blueIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
-
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
@@ -53,7 +33,6 @@ d3.json(queryUrl).then(data => {
 
         let orangeIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
-
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
@@ -68,7 +47,6 @@ d3.json(queryUrl).then(data => {
 
         let redIcon = L.icon({
             iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-
             iconSize: [15, 15], 
             iconAnchor: [7, 7], 
             popupAnchor: [0, -10] 
@@ -86,6 +64,14 @@ d3.json(queryUrl).then(data => {
         };
 
 
+
+        // var mark = L.marker(
+        //     L.latlng(
+        //       parseFloat(item["Latitude"]),
+        //       parseFloat(item["Longitude"])
+        //     )
+        //   );
+
         layers.one = L.marker(data, {
             filter: function (feature, layer) {
                 return (feature.properties.price <= 250000.0);
@@ -102,7 +88,7 @@ d3.json(queryUrl).then(data => {
                     feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    numberWithCommas(feature.properties.price) + ' / ' +
+                    feature.properties.price + ' / ' +
                     feature.properties.bedrooms + ' bedrooms' + ' / ' +
                     feature.properties.bathrooms + ' baths' + ' / ' +
                     feature.properties.status + ' status' + ' / ' +
@@ -128,7 +114,7 @@ d3.json(queryUrl).then(data => {
                     feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    numberWithCommas(feature.properties.price) + ' / ' +
+                    feature.properties.price + ' / ' +
                     feature.properties.bedrooms + ' bedrooms' + ' / ' +
                     feature.properties.bathrooms + ' baths' + ' / ' +
                     feature.properties.status + ' status' + ' / ' +
@@ -154,7 +140,7 @@ d3.json(queryUrl).then(data => {
                     feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    numberWithCommas(feature.properties.price) + ' / ' +
+                    feature.properties.price + ' / ' +
                     feature.properties.bedrooms + ' bedrooms' + ' / ' +
                     feature.properties.bathrooms + ' baths' + ' / ' +
                     feature.properties.status + ' status' + ' / ' +
@@ -180,7 +166,7 @@ d3.json(queryUrl).then(data => {
                     feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    numberWithCommas(feature.properties.price) + ' / ' +
+                    feature.properties.price + ' / ' +
                     feature.properties.bedrooms + ' bedrooms' + ' / ' +
                     feature.properties.bathrooms + ' baths' + ' / ' +
                     feature.properties.status + ' status' + ' / ' +
@@ -203,7 +189,7 @@ d3.json(queryUrl).then(data => {
                     feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    numberWithCommas(feature.properties.price) + ' / ' +
+                    feature.properties.price + ' / ' +
                     feature.properties.bedrooms + ' bedrooms' + ' / ' +
                     feature.properties.bathrooms + ' baths' + ' / ' +
                     feature.properties.status + ' status' + ' / ' +
@@ -254,8 +240,7 @@ d3.json(queryUrl).then(data => {
 
 
                 layers.six = L.marker(citydata, {
-
-                    // call "features" of marker file
+                    
                     filter: function (feature, layer) {
                         return citydata.features;
                     },

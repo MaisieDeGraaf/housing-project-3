@@ -1,6 +1,23 @@
 body {
-  padding: 0;
-  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; 
+}
+
+.container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 15px; 
+}
+
+/* Header Styles */
+header {
+  background-color: #343a40; 
+  color: #ffffff; 
+  padding: 20px 0; 
+}
+
+header h1 {
+  margin: 0; 
 }
 
 #map,
@@ -12,4 +29,3 @@ html {
 /* For Leisure Marker */
 .leisure-marker {
   border: 2px solid #0ed46a; /* Adjust the border width and color as needed */
-}

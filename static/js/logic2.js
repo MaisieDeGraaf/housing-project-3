@@ -1,3 +1,27 @@
+//Defining our cities coordinates
+let cities = [{
+    location: [43.46, -79.66],
+    name: "Oakville"
+  },
+  {
+    location: [43.89, -78.86],
+    name: "Oshawa"
+  },
+  {
+    location: [43.52, -79.89],
+    name: "Milton",
+  },
+  {
+    location: [43.80, -79.55],
+    name: "Vaughan"
+  },
+  {
+    location: [43.32, -79.81],
+    name: "Burlington"
+  }
+  ];
+  
+
 // API endpoints
 let queryUrl = "http://127.0.0.1:5000/api/v1.0/housing"
 let leisureUrl = "http://127.0.0.1:5000/api/v1.0/leisure";
@@ -37,6 +61,7 @@ var homeIcon = new LeafIcon({iconUrl: '../static/home_2544087.png'}),
     orangeIcon = new LeafIcon({iconUrl:'../static/orange.png'}),
     yellowIcon = new LeafIcon({iconUrl: '../static/yellow.jpg'}),
     redIcon = new LeafIcon({iconUrl: '../static/red.png'});
+    cityIcon = new LeafIcon({iconUrl: '../static/city.png'});
 
 L.icon = function (options) {
     return new L.Icon(options);
@@ -140,6 +165,16 @@ d3.json(queryUrl).then(data => {
 
         })
 
+        // CREATING THE CITY LAYER BASED on the dict at line 2
+        cities.forEach(function (city) {
+            let myMarker = L.marker(city.location, {
+                title: city.name,
+                icon : cityIcon}).bindPopup(city.name)
+            layers.six.addLayer(myMarker)})
+
+
+
+        // CREATING THE LEISURE LAYER
         d3.json(leisureUrl).then(leisureData => {
 
             console.log(leisureData)
@@ -152,7 +187,7 @@ d3.json(queryUrl).then(data => {
                 let leisureMarker = L.circleMarker(latlng, {
                     radius: 5, 
                     fillColor: "blue",
-                    color: "blue",
+                    color: "white",
                     weight: 1,
                     opacity: 1,
                     fillOpacity: 0.8
@@ -175,7 +210,7 @@ d3.json(queryUrl).then(data => {
                 "<img src='../static/yellow.jpg' width = 15 /> <span>$750K - $1M</span>": layers.four,
                 "<img src='../static/red.png' width = 15 /> <span>$1M+</span>": layers.five,
                 "<img src='../static/city.png' width = 15 /> <span>City </span>": layers.six,
-                "<img src='../static/leisure.png' width = 15 /> <span>Leisure Spots</span>": layers.seven
+                "<img src='../static/leisure.png' width = 15 /> <span>Leisure Spots</span>": leisureLayer
             };
 
             // Add controls 

@@ -206,4 +206,4 @@ d3.json(queryUrl).then(data => {
                 collapsed: false
             }).addTo(myMap);
 
-            L.control.scale({ position: 'topleft', maxWidth: 150 }).addTo(myMap)})
+            L.control.scale({ position: 'bottomleft', maxWidth: 150 }).addTo(myMap)})

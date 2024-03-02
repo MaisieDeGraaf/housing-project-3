@@ -39,10 +39,11 @@ footer {
   background-color: #ffffff; 
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
   z-index: 1;
-  transition: opacity 0.3s ease-in-out; 
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: opacity 0.3s ease-in-out; /* Apply transition to opacity */
 }
 
 .dropdown:hover .dropdown-content {
   display: block; 
-  opacity: 1; 
+  opacity: 1; /* Set opacity to 1 when dropdown is hovered */
 }

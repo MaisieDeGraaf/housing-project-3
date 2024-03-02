@@ -6,11 +6,6 @@ d3.json(URL)
     // Log the loaded data for verification
     console.log(data);
 
-    // Step 1: Load Chart.js library
-    let script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/chart.js';
-    document.head.appendChild(script);
-
     // Step 2: Create a canvas element for the chart
     let canvas = document.createElement('canvas');
     canvas.width = 400;
@@ -29,8 +24,8 @@ d3.json(URL)
     };
 
     // Step 4: Create a new Chart instance with the canvas element
-    let ctx = canvas.getContext('2d');
-    let myChart1, myChart2, myChart3, myChart4, myChart5, myChart6, myChart7;
+    // let ctx = canvas.getContext('2d');
+    // let myChart1, myChart2, myChart3, myChart4, myChart5, myChart6, myChart7;
 
     // Step 5: Function to update chart data
     function updateChartData(chart, newData) {
@@ -107,7 +102,7 @@ d3.json(URL)
     });
 
     // Step 7: Create Chart.js instances
-    myChart1 = new Chart(ctx, {
+    myChart1 = new Chart(document.getElementById('chart1'), {
       type: 'bar',
       data: {
         labels: cities,
@@ -122,7 +117,7 @@ d3.json(URL)
       options: options
     });
 
-    myChart2 = new Chart(ctx, {
+    myChart2 = new Chart(document.getElementById('chart2'), {
       type: 'bar',
       data: {
         labels: cities,
@@ -137,7 +132,7 @@ d3.json(URL)
       options: options
     });
 
-    myChart3 = new Chart(ctx, {
+    myChart3 = new Chart(document.getElementById('chart3'), {
       type: 'bar',
       data: {
         labels: cities,
@@ -158,7 +153,7 @@ d3.json(URL)
       options: options
     });
 
-    myChart4 = new Chart(ctx, {
+    myChart4 = new Chart(document.getElementById('chart4'), {
       type: 'bar',
       data: {
         labels: neighborhoods,
@@ -173,7 +168,7 @@ d3.json(URL)
       options: options
     });
 
-    myChart5 = new Chart(ctx, {
+    myChart5 = new Chart(document.getElementById('chart5'), {
       type: 'bar',
       data: {
         labels: neighborhoods,
@@ -189,7 +184,7 @@ d3.json(URL)
     });
 
     // Add 6th chart
-    myChart6 = new Chart(ctx, {
+    myChart6 = new Chart(document.getElementById('chart6'), {
       type: 'bubble',
       data: {
         datasets: [{
@@ -213,7 +208,7 @@ d3.json(URL)
     });
 
     // Add 7th chart
-    myChart7 = new Chart(ctx, {
+    myChart7 = new Chart(document.getElementById('chart7'), {
       type: 'bubble',
       data: {
         datasets: [{

@@ -15,17 +15,33 @@ d3.json(URL)
     // Step 3: Define options for your charts
     let options = {
       scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true
+        x: {
+          title: {
+            display: true,
+            text: 'Cities' // Label for the x-axis
           }
-        }]
+        },
+        y: {
+          beginAtZero: true,
+          ticks: {
+            callback: function(value, index, values) {
+              return '$' + value;
+            }
+          },
+          scaleLabel: {
+            display: true,
+            labelString: 'Price'
+          },
+          grid: {
+            display: true,
+            color: 'rgba(0, 0, 0, 0.1)'
+          }
+        }
       }
     };
 
-    // Step 4: Create a new Chart instance with the canvas element
-    // let ctx = canvas.getContext('2d');
-    // let myChart1, myChart2, myChart3, myChart4, myChart5, myChart6, myChart7;
+    // Step 4: Create Chart.js instances
+    let myChart1, myChart2, myChart3, myChart4, myChart5, myChart6, myChart7;
 
     // Step 5: Function to update chart data
     function updateChartData(chart, newData) {
@@ -33,7 +49,7 @@ d3.json(URL)
       chart.update();
     }
 
-    // Step 6: Calculate average prices for each city and neighborhood
+    // Step 6: Extract data for visualization
     let cities = [];
     let neighborhoods = [];
     let averageListPricesByCity = {};
@@ -42,10 +58,10 @@ d3.json(URL)
     let averageSalePricesByNeighborhood = {};
 
     data.forEach(function(item) {
-      let city = item.City;
-      let neighborhood = item.Neighborhood;
-      let listPrice = parseFloat(item.Price);
-      let salePrice = parseFloat(item.SalePrice);
+      let city = item.city;
+      let neighborhood = item.neighbourhood;
+      let listPrice = parseFloat(item.price);
+      let salePrice = parseFloat(item.price); // Assuming the same for sale price
 
       if (!isNaN(salePrice)) {
         if (!averageListPricesByCity[city]) {
@@ -101,7 +117,7 @@ d3.json(URL)
       averageSalePricesByNeighborhood[neighborhood] = averageSalePrice;
     });
 
-    // Step 7: Create Chart.js instances
+    // Create Chart.js instances
     myChart1 = new Chart(document.getElementById('chart1'), {
       type: 'bar',
       data: {
@@ -193,8 +209,8 @@ d3.json(URL)
           borderColor: 'rgba(255, 99, 132, 1)',
           data: cities.map(city => ({
             x: city,
-            y: data.filter(item => item.City === city).length, // Number of houses marked
-            r: data.filter(item => item.City === city).length * 5 // Bubble size based on the number of houses
+            y: data.filter(item => item.city === city).length,
+            r: data.filter(item => item.city === city).length * 5
           }))
         }]
       },
@@ -217,8 +233,8 @@ d3.json(URL)
           borderColor: 'rgba(54, 162, 235, 1)',
           data: neighborhoods.map(neighborhood => ({
             x: neighborhood,
-            y: data.filter(item => item.Neighborhood === neighborhood).length, // Number of houses marked
-            r: data.filter(item => item.Neighborhood === neighborhood).length * 5 // Bubble size based on the number of houses
+            y: data.filter(item => item.neighbourhood === neighborhood).length,
+            r: data.filter(item => item.neighbourhood === neighborhood).length * 5
           }))
         }]
       },
@@ -230,66 +246,6 @@ d3.json(URL)
         }
       }
     });
-
-    // Event listener for city selection
-    document.querySelectorAll('#cityDropdown .dropdown-content a').forEach(item => {
-      item.addEventListener('click', function() {
-        let selectedCity = this.getAttribute('data-info');
-        console.log("Selected city: ", selectedCity); // For testing purposes, log the selected city
-
-        // Update charts based on the selected city
-        updateCharts(selectedCity);
-      });
-    });
-
-    // Function to update charts based on the selected city
-    function updateCharts(selectedCity) {
-      // Your logic to fetch data based on the selected city and its neighborhoods
-      // Update charts (Chart 3 and Chart 4) with new data
-      let averagePrices = calculateAveragePrices(selectedCity, data);
-
-      // Update Chart 3 with new data
-      myChart3.data.labels = ['Average List Price', 'Average Sale Price'];
-      myChart3.data.datasets[0].data = [averagePrices.averageListPrice, averagePrices.averageSalePrice];
-      myChart3.update();
-    }
-
-    // Function to calculate average prices for the selected city
-    function calculateAveragePrices(selectedCity, data) {
-      let filteredData = data.filter(item => item.City === selectedCity);
-      let averageListPrice = 0;
-      let averageSalePrice = 0;
-      let countListed = 0;
-      let countSold = 0;
-
-      filteredData.forEach(function(item) {
-        let listPrice = parseFloat(item.Price);
-        let salePrice = parseFloat(item.SalePrice);
-
-        if (!isNaN(listPrice)) {
-          averageListPrice += listPrice;
-          countListed++;
-        }
-
-        if (!isNaN(salePrice)) {
-          averageSalePrice += salePrice;
-          countSold++;
-        }
-      });
-
-      if (countListed > 0) {
-        averageListPrice /= countListed;
-      }
-
-      if (countSold > 0) {
-        averageSalePrice /= countSold;
-      }
-
-      return {
-        averageListPrice: averageListPrice,
-        averageSalePrice: averageSalePrice
-      };
-    }
 
   }).catch(function(error) {
     console.log('Error loading data:', error);

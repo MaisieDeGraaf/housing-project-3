@@ -52,26 +52,21 @@ d3.json(URL)
     // Step 6: Extract data for visualization
     let cities = [];
     let neighborhoods = [];
-    let averageListPricesByCity = {};
-    let averageSalePricesByCity = {};
-    let averageListPricesByNeighborhood = {};
-    let averageSalePricesByNeighborhood = {};
+    let averagePricesByCity = {};
+    let averagePricesByNeighborhood = {};
 
     data.forEach(function(item) {
       let city = item.city;
       let neighborhood = item.neighbourhood;
-      let listPrice = parseFloat(item.price);
-      let salePrice = parseFloat(item.price); // Assuming the same for sale price
+      let Price = parseFloat(item.price);
 
-      if (!isNaN(salePrice)) {
-        if (!averageListPricesByCity[city]) {
-          averageListPricesByCity[city] = [];
-          averageSalePricesByCity[city] = [];
+      if (!isNaN(Price)) {
+        if (!averagePricesByCity[city]) {
+          averagePricesByCity[city] = [];
         }
 
-        if (!averageListPricesByNeighborhood[neighborhood]) {
-          averageListPricesByNeighborhood[neighborhood] = [];
-          averageSalePricesByNeighborhood[neighborhood] = [];
+        if (!averagePricesByNeighborhood[neighborhood]) {
+          averagePricesByNeighborhood[neighborhood] = [];
         }
 
         if (cities.indexOf(city) === -1) {
@@ -82,39 +77,29 @@ d3.json(URL)
           neighborhoods.push(neighborhood);
         }
 
-        averageListPricesByCity[city].push(listPrice);
-        averageSalePricesByCity[city].push(salePrice);
-        averageListPricesByNeighborhood[neighborhood].push(listPrice);
-        averageSalePricesByNeighborhood[neighborhood].push(salePrice);
+        averagePricesByCity[city].push(Price);
+        averagePricesByNeighborhood[neighborhood].push(Price);
       }
     });
 
     // Calculate average prices for each city
     cities.forEach(city => {
-      let totalListPrice = averageListPricesByCity[city].reduce((acc, cur) => acc + cur, 0);
-      let totalSalePrice = averageSalePricesByCity[city].reduce((acc, cur) => acc + cur, 0);
-      let countListed = averageListPricesByCity[city].length;
-      let countSold = averageSalePricesByCity[city].length;
+      let totalPrice = averagePricesByCity[city].reduce((acc, cur) => acc + cur, 0);
+      let countListed = averagePricesByCity[city].length;
 
-      let averageListPrice = countListed > 0 ? totalListPrice / countListed : 0;
-      let averageSalePrice = countSold > 0 ? totalSalePrice / countSold : 0;
+      let averagePrice = countListed > 0 ? totalPrice / countListed : 0;
 
-      averageListPricesByCity[city] = averageListPrice;
-      averageSalePricesByCity[city] = averageSalePrice;
+      averagePricesByCity[city] = averagePrice;
     });
 
     // Calculate average prices for each neighborhood
     neighborhoods.forEach(neighborhood => {
-      let totalListPrice = averageListPricesByNeighborhood[neighborhood].reduce((acc, cur) => acc + cur, 0);
-      let totalSalePrice = averageSalePricesByNeighborhood[neighborhood].reduce((acc, cur) => acc + cur, 0);
-      let countListed = averageListPricesByNeighborhood[neighborhood].length;
-      let countSold = averageSalePricesByNeighborhood[neighborhood].length;
+      let totalPrice = averagePricesByNeighborhood[neighborhood].reduce((acc, cur) => acc + cur, 0);
+      let countListed = averagePricesByNeighborhood[neighborhood].length;
 
-      let averageListPrice = countListed > 0 ? totalListPrice / countListed : 0;
-      let averageSalePrice = countSold > 0 ? totalSalePrice / countSold : 0;
+      let averagePrice = countListed > 0 ? totalPrice / countListed : 0;
 
-      averageListPricesByNeighborhood[neighborhood] = averageListPrice;
-      averageSalePricesByNeighborhood[neighborhood] = averageSalePrice;
+      averagePricesByNeighborhood[neighborhood] = averagePrice;
     });
 
     // Create Chart.js instances
@@ -123,8 +108,8 @@ d3.json(URL)
       data: {
         labels: cities,
         datasets: [{
-          label: 'Average List Price',
-          data: Object.values(averageListPricesByCity),
+          label: 'Average Home Price (By City)',
+          data: Object.values(averagePricesByCity),
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           borderColor: 'rgba(255, 99, 132, 1)',
           borderWidth: 1
@@ -132,67 +117,15 @@ d3.json(URL)
       },
       options: options
     });
-
-    myChart2 = new Chart(document.getElementById('chart2'), {
-      type: 'bar',
-      data: {
-        labels: cities,
-        datasets: [{
-          label: 'Average Sale Price',
-          data: Object.values(averageSalePricesByCity),
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          borderWidth: 1
-        }]
-      },
-      options: options
-    });
-
-    myChart3 = new Chart(document.getElementById('chart3'), {
-      type: 'bar',
-      data: {
-        labels: cities,
-        datasets: [{
-          label: 'Average List Price',
-          data: Object.values(averageListPricesByCity),
-          backgroundColor: 'rgba(255, 99, 132, 0.2)',
-          borderColor: 'rgba(255, 99, 132, 1)',
-          borderWidth: 1
-        }, {
-          label: 'Average Sale Price',
-          data: Object.values(averageSalePricesByCity),
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          borderWidth: 1
-        }]
-      },
-      options: options
-    });
-
     myChart4 = new Chart(document.getElementById('chart4'), {
       type: 'bar',
       data: {
         labels: neighborhoods,
         datasets: [{
-          label: 'Average List Price',
-          data: Object.values(averageListPricesByNeighborhood),
+          label: 'Average Home Price (By Neighborhood)',
+          data: Object.values(averagePricesByNeighborhood),
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           borderColor: 'rgba(255, 99, 132, 1)',
-          borderWidth: 1
-        }]
-      },
-      options: options
-    });
-
-    myChart5 = new Chart(document.getElementById('chart5'), {
-      type: 'bar',
-      data: {
-        labels: neighborhoods,
-        datasets: [{
-          label: 'Average Sale Price',
-          data: Object.values(averageSalePricesByNeighborhood),
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
-          borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1
         }]
       },

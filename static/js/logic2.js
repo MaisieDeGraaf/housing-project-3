@@ -85,27 +85,27 @@ d3.json(queryUrl).then(data => {
         data.forEach(function (city) {
                 if (city.price <250000){
                     let myMarker = L.marker([city.longitude,city.latitude], {icon:greenIcon});
-                    myMarker.bindPopup(`Address:${city.address} <br> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
+                    myMarker.bindPopup(`Address: ${city.address} <br> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
                     layers.one.addLayer(myMarker);
                 }
                 else if (city.price >= 250000 && city.price <500000){
                     let myMarker = L.marker([city.longitude,city.latitude], {icon:blueIcon});
-                    myMarker.bindPopup(`Address:${city.address} <br> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
+                    myMarker.bindPopup(`Address: ${city.address} <br> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
                     layers.two.addLayer(myMarker);
                 }
                 else if (city.price >= 500000 && city.price <750000){
                     let myMarker = L.marker([city.longitude,city.latitude], {icon:orangeIcon});
-                    myMarker.bindPopup(`Address:${city.address} <br> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
+                    myMarker.bindPopup(`Address: ${city.address} <br> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
                     layers.three.addLayer(myMarker);
                 }
                 else if (city.price >= 750000 && city.price <1000000){
                     let myMarker = L.marker([city.longitude,city.latitude], {icon:yellowIcon});
-                    myMarker.bindPopup(`Address:${city.address} <br> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
+                    myMarker.bindPopup(`Address: ${city.address} <br> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
                     layers.four.addLayer(myMarker);
                 }
                 else if (city.price >= 1000000){
                     let myMarker = L.marker([city.longitude,city.latitude], {icon:redIcon});
-                    myMarker.bindPopup(`Address:${city.address} <br> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
+                    myMarker.bindPopup(`Address: ${city.address} <br> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
                     layers.five.addLayer(myMarker);
                 }
         })

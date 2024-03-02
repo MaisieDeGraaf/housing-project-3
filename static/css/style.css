@@ -48,3 +48,8 @@ footer {
   display: block; 
   opacity: 1; /* Set opacity to 1 when dropdown is hovered */
 }
+
+/* For Leisure Marker */
+.leisure-marker {
+  border: 2px solid #0ed46a; /* Adjust the border width and color as needed */
+}

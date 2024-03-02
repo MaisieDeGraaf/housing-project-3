@@ -1,76 +1,79 @@
-// API endpoint"
-// let queryUrl = "static/data/housingdata.marker";
+// API endpoints
+let queryUrl = "http://127.0.0.1:5000/api/v1.0/housing"
+let leisureUrl = "http://127.0.0.1:5000/api/v1.0/leisure";
 
-let queryUrl = "/api/v1.0/housing"
+// function to add commas to List Price popup
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+}
 
+// Create map
+let myMap = L.map("map", {
+    center: [43.62, -79.59],
+    zoom: 9.5,
+});
 
+// Add OpenStreetMap as a base layer and define basemap layer
+let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(myMap);
+
+let baseMaps = {
+    "Street Map": streetmap
+};
+
+// Add icons for housing markers
+let homeIcon = L.icon({
+    iconUrl: '../static/home_2544087.png',
+    iconSize: [15, 15], 
+    iconAnchor: [7, 7], 
+    popupAnchor: [0, -10] 
+});
+let greenIcon = L.icon({
+    iconUrl: '../static/green.jpg',
+    iconSize: [15, 15], 
+    iconAnchor: [7, 7], 
+    popupAnchor: [0, -10] 
+});
+let blueIcon = L.icon({
+    iconUrl: '../static/blue.png',
+    iconSize: [15, 15], 
+    iconAnchor: [7, 7], 
+    popupAnchor: [0, -10] 
+});
+let orangeIcon = L.icon({
+    iconUrl: '../static/orange.png',
+    iconSize: [15, 15], 
+    iconAnchor: [7, 7], 
+    popupAnchor: [0, -10] 
+});
+let yellowIcon = L.icon({
+    iconUrl: '../static/yellow.jpg',
+    iconSize: [15, 15], 
+    iconAnchor: [7, 7], 
+    popupAnchor: [0, -10] 
+});
+let redIcon = L.icon({
+    iconUrl: '../static/red.png',
+    iconSize: [15, 15], 
+    iconAnchor: [7, 7], 
+    popupAnchor: [0, -10] 
+});
+
+// Add layer groups for housing markers
+let layers = {
+    one: new L.LayerGroup(),
+    two: new L.LayerGroup(),
+    three: new L.LayerGroup(),
+    four: new L.LayerGroup(),
+    five: new L.LayerGroup(),
+    six: new L.LayerGroup(),
+    seven: new L.LayerGroup(),
+};
+
+// Get housing data and process it
 d3.json(queryUrl).then(data => {
     console.log(data)
-
-        let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        });
-
-        let baseMaps = {
-            "Street Map": streetmap
-           
-        };
-
-        
-        let greenIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-            iconSize: [15, 15], 
-            iconAnchor: [7, 7], 
-            popupAnchor: [0, -10] 
-        });
-
-        let blueIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
-            iconSize: [15, 15], 
-            iconAnchor: [7, 7], 
-            popupAnchor: [0, -10] 
-        });
-
-        let orangeIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png',
-            iconSize: [15, 15], 
-            iconAnchor: [7, 7], 
-            popupAnchor: [0, -10] 
-        });
-
-        let yellowIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-yellow.png',
-            iconSize: [15, 15], 
-            iconAnchor: [7, 7], 
-            popupAnchor: [0, -10] 
-        });
-
-        let redIcon = L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-            iconSize: [15, 15], 
-            iconAnchor: [7, 7], 
-            popupAnchor: [0, -10] 
-        });
-
-
-        const layers = {
-            active: [],
-            one: new L.LayerGroup(),
-            two: new L.LayerGroup(),
-            three: new L.LayerGroup(),
-            four: new L.LayerGroup(),
-            five: new L.LayerGroup(),
-            six: new L.LayerGroup()
-        };
-
-
-
-        // var mark = L.marker(
-        //     L.latlng(
-        //       parseFloat(item["Latitude"]),
-        //       parseFloat(item["Longitude"])
-        //     )
-        //   );
 
         layers.one = L.marker(data, {
             filter: function (feature, layer) {
@@ -88,7 +91,7 @@ d3.json(queryUrl).then(data => {
                     feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    feature.properties.price + ' / ' +
+                    numberWithCommas(feature.properties.price) + ' / ' +
                     feature.properties.bedrooms + ' bedrooms' + ' / ' +
                     feature.properties.bathrooms + ' baths' + ' / ' +
                     feature.properties.status + ' status' + ' / ' +
@@ -114,7 +117,7 @@ d3.json(queryUrl).then(data => {
                     feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    feature.properties.price + ' / ' +
+                    numberWithCommas(feature.properties.price) + ' / ' +
                     feature.properties.bedrooms + ' bedrooms' + ' / ' +
                     feature.properties.bathrooms + ' baths' + ' / ' +
                     feature.properties.status + ' status' + ' / ' +
@@ -140,7 +143,7 @@ d3.json(queryUrl).then(data => {
                     feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    feature.properties.price + ' / ' +
+                    numberWithCommas(feature.properties.price) + ' / ' +
                     feature.properties.bedrooms + ' bedrooms' + ' / ' +
                     feature.properties.bathrooms + ' baths' + ' / ' +
                     feature.properties.status + ' status' + ' / ' +
@@ -166,7 +169,7 @@ d3.json(queryUrl).then(data => {
                     feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    feature.properties.price + ' / ' +
+                    numberWithCommas(feature.properties.price) + ' / ' +
                     feature.properties.bedrooms + ' bedrooms' + ' / ' +
                     feature.properties.bathrooms + ' baths' + ' / ' +
                     feature.properties.status + ' status' + ' / ' +
@@ -189,7 +192,7 @@ d3.json(queryUrl).then(data => {
                     feature.properties.address +
                     '</h3><hr><p>' +
                     '$' +
-                    feature.properties.price + ' / ' +
+                    numberWithCommas(feature.properties.price) + ' / ' +
                     feature.properties.bedrooms + ' bedrooms' + ' / ' +
                     feature.properties.bathrooms + ' baths' + ' / ' +
                     feature.properties.status + ' status' + ' / ' +
@@ -197,10 +200,7 @@ d3.json(queryUrl).then(data => {
             }
         })
        
- 
         d3.json(queryUrl).then(citydata => {
-            
-
                 let circleStyle = {};
                 circleStyle.Oakville = {
                     color: "green",
@@ -240,7 +240,8 @@ d3.json(queryUrl).then(data => {
 
 
                 layers.six = L.marker(citydata, {
-                    
+
+                    // call "features" of marker file
                     filter: function (feature, layer) {
                         return citydata.features;
                     },
@@ -251,40 +252,55 @@ d3.json(queryUrl).then(data => {
                     },
 
                 })
+
+        })
+
+        d3.json(leisureUrl).then(leisureData => {
+
+            let leisureLayer = L.layerGroup(); 
         
-        });
+            leisureData.forEach(point => {
+                let latlng = L.latLng(point.Latitude, point.Longitude);
+                console.log(latlng);  // Are they NULL? (it was complaining but I can't find any NULL.)
+        
+                let leisureMarker = L.circleMarker(latlng, {
+                    radius: 5, 
+                    fillColor: "blue",
+                    color: "blue",
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                });
+        
+                leisureMarker.bindPopup(
+                    '<h3>' + point.City + '</h3><hr>' +
+                    '<p>Leisure Type: ' + point["Leisure Type"] + '</p>'
+                );
+        
+                leisureLayer.addLayer(leisureMarker);
+                
+            })
+
+            layers.seven = leisureLayer;
+        
+        })
         console.log("Finished processing!")
-            
+      // Add overlay maps      
             let overlayMaps = {
-                '<i class="bi bi-house"> under 250K </i>' : layers.one,
-                '<i class="bi bi-house"> $250K - $500K </i>' : layers.two,
-                '<i class="bi bi-house"> $500K - $750K </i>': layers.three,
-                '<i class="bi bi-house"> $750K - $1M </i>': layers.four,
-                '<i class="bi bi-house"> $1M </i>': layers.five,
-                "City": layers.six
+                "<img src='../static/green.jpg' width = 15 /> <span>Up to $250K</span>": layers.one,
+                "<img src='../static/blue.png' width = 15 /> <span>$250K - $500K</span>": layers.two,
+                "<img src='../static/orange.png' width = 15 /> <span>$500K - $750K</span>": layers.three,
+                "<img src='../static/yellow.jpg' width = 15 /> <span>$750K - $1M</span>": layers.four,
+                "<img src='../static/red.png' width = 15 /> <span>$1M+</span>": layers.five,
+                "<img src='../static/city.png' width = 15 /> <span>City </span>": layers.six,
+                "<img src='../static/leisure.png' width = 15 /> <span>Leisure Spots</span>": layers.seven,
+                "<img src='../static/leisure.png' width = 15 /> <span>Leisure Spots1</span>": layers.seven
             };
 
-            let myMap = L.map("map", {
-                center: [
-                    43.62, -79.59
-                ],
-                zoom: 9.5,
-                layers: [
-                    streetmap
-                    // layers.one,
-                    // layers.two,
-                    // layers.three,
-                    // layers.four,
-                    // layers.five
-                ]
-            });
-
-            
+            // Add controls 
             L.control.layers(baseMaps, overlayMaps, {
                 collapsed: false
             }).addTo(myMap);
 
             L.control.scale(position = 'topleft').addTo(myMap);
-
-    
-});
+})

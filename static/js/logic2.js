@@ -21,7 +21,6 @@ let cities = [{
   }
   ];
   
-
 // API endpoints
 let queryUrl = "http://127.0.0.1:5000/api/v1.0/housing"
 let leisureUrl = "http://127.0.0.1:5000/api/v1.0/leisure";
@@ -37,7 +36,7 @@ let myMap = L.map("map-id", {
     zoom: 9.2,
 });
 
-// Add OpenStreetMap as a base layer and define basemap layer
+// Add OpenStreetMap as a base layer
 let streetmap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(myMap);
@@ -55,13 +54,14 @@ let LeafIcon = L.Icon.extend({
         popupAnchor: [0, -10] 
 }});
 
-var homeIcon = new LeafIcon({iconUrl: '../static/home_2544087.png'}),
+var homeIcon = new LeafIcon({iconUrl: '../static/home.png'}),
     greenIcon = new LeafIcon({iconUrl: '../static/green.jpg'}),
     blueIcon = new LeafIcon({iconUrl: '../static/blue.png'}),
     orangeIcon = new LeafIcon({iconUrl:'../static/orange.png'}),
     yellowIcon = new LeafIcon({iconUrl: '../static/yellow.jpg'}),
     redIcon = new LeafIcon({iconUrl: '../static/red.png'});
     cityIcon = new LeafIcon({iconUrl: '../static/city.png'});
+    leisureIcon = new LeafIcon({iconUrl: '../static/leisure.png'});
 
 L.icon = function (options) {
     return new L.Icon(options);
@@ -148,7 +148,6 @@ d3.json(queryUrl).then(data => {
                     weight: 0
                 };
 
-
                 layers.six = L.marker(citydata, {
 
                     // call "features" of marker file
@@ -160,10 +159,8 @@ d3.json(queryUrl).then(data => {
                         let city = feature.properties.city;
                         return L.circle(latlng, circleStyle[city]); 
                     },
-
                 })
-
-        })
+            })
 
         // CREATING THE CITY LAYER BASED on the dict at line 2
         cities.forEach(function (city) {
@@ -172,34 +169,38 @@ d3.json(queryUrl).then(data => {
                 icon : cityIcon}).bindPopup(city.name)
             layers.six.addLayer(myMarker)})
 
-
-
-        // CREATING THE LEISURE LAYER
-        d3.json(leisureUrl).then(leisureData => {
-
-            console.log(leisureData)
-            let leisureLayer = L.layerGroup(); 
         
+        // LEISURE ICON - to change opacity and add a border
+        let leisureIcon = L.icon({
+            iconUrl: '../static/leisure.png',
+            iconSize: [30, 30],
+            iconAnchor: [15, 30],
+            popupAnchor: [0, -30],
+            opacity: 0.3, // 0.0 is fully transparent and 1.0 is fully opaque
+            className: 'leisure-marker' // Add a custom class for styling
+        });
+
+        // CREATE LEISURE LAYER
+        let leisureLayer = L.layerGroup();
+
+        d3.json(leisureUrl).then(leisureData => {
             leisureData.forEach(point => {
                 let latlng = L.latLng(point.Latitude, point.Longitude);
-                //console.log(latlng);  // Are they NULL? (it was complaining but I can't find any NULL.)
-        
-                let leisureMarker = L.circleMarker(latlng, {
-                    radius: 5, 
-                    fillColor: "blue",
-                    color: "white",
-                    weight: 1,
-                    opacity: 1,
-                    fillOpacity: 0.8
-                });
-        
+
+                // Use the custom leisureIcon
+                let leisureMarker = L.marker(latlng, { icon: leisureIcon });
+
                 leisureMarker.bindPopup(
                     '<h3>' + point.City + '</h3><hr>' +
                     '<p>Leisure Type: ' + point["Leisure Type"] + '</p>'
                 );
-        
+
                 leisureLayer.addLayer(leisureMarker);
-            })
+            });
+
+            leisureLayer.addTo(mymap);
+        });
+
 
         console.log("Finished processing!")
       // Add overlay maps      
@@ -218,5 +219,4 @@ d3.json(queryUrl).then(data => {
                 collapsed: false
             }).addTo(myMap);
 
-            L.control.scale(position = 'topleft').addTo(myMap);
-},)})
+            L.control.scale(position = 'topleft').addTo(myMap)})

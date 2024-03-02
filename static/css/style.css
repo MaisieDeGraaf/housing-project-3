@@ -20,9 +20,10 @@ header h1 {
   margin: 0; 
 }
 
-/* Main Content Styles */
-main {
-  padding-top: 20px; 
+#map,
+body,
+html {
+  height: 100%;
 }
 
 /* Footer Styles */
@@ -46,4 +47,18 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block; 
   opacity: 1; /* Set opacity to 1 when dropdown is hovered */
+}
+
+/* For control layer - icons and text */
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-item input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.legend-item img {
+  margin-right: 5px;
 }

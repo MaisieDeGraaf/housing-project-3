@@ -49,7 +49,16 @@ footer {
   opacity: 1; /* Set opacity to 1 when dropdown is hovered */
 }
 
-/* For Leisure Marker */
-.leisure-marker {
-  border: 2px solid #23801cc2; /* Adjust the border width and color as needed */
+/* For control layer - icons and text */
+.legend-item {
+  display: flex;
+  align-items: center;
+}
+
+.legend-item input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.legend-item img {
+  margin-right: 5px;
 }

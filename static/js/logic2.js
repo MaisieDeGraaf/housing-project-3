@@ -54,11 +54,11 @@ let LeafIcon = L.Icon.extend({
         popupAnchor: [0, -10] 
 }});
 
-var homeIcon = new LeafIcon({iconUrl: '../static/home.png'}),
-    greenIcon = new LeafIcon({iconUrl: '../static/green.jpg'}),
+var homeIcon = new LeafIcon({iconUrl: '../static/pink.png'}),
+    greenIcon = new LeafIcon({iconUrl: '../static/green.png'}),
     blueIcon = new LeafIcon({iconUrl: '../static/blue.png'}),
     orangeIcon = new LeafIcon({iconUrl:'../static/orange.png'}),
-    yellowIcon = new LeafIcon({iconUrl: '../static/yellow.jpg'}),
+    yellowIcon = new LeafIcon({iconUrl: '../static/yellow.png'}),
     redIcon = new LeafIcon({iconUrl: '../static/red.png'});
     cityIcon = new LeafIcon({iconUrl: '../static/city.png'});
     leisureIcon = new LeafIcon({iconUrl: '../static/leisure.png'});
@@ -169,17 +169,6 @@ d3.json(queryUrl).then(data => {
                 icon : cityIcon}).bindPopup(city.name)
             layers.six.addLayer(myMarker)})
 
-        
-        // LEISURE ICON - to change opacity and add a border
-        let leisureIcon = L.icon({
-            iconUrl: '../static/leisure.png',
-            iconSize: [15, 15],
-            iconAnchor: [7, 7],
-            popupAnchor: [0, -10],
-            opacity: 0.3, // 0.0 is fully transparent and 1.0 is fully opaque
-            className: 'leisure-marker' // Add a custom class for styling
-        });
-
         // CREATE LEISURE LAYER
         let leisureLayer = L.layerGroup();
 
@@ -197,26 +186,24 @@ d3.json(queryUrl).then(data => {
 
                 leisureLayer.addLayer(leisureMarker);
             });
-
-            leisureLayer.addTo(mymap);
         });
 
 
         console.log("Finished processing!")
       // Add overlay maps      
-            let overlayMaps = {
-                "<img src='../static/green.jpg' width = 15 /> <span>Up to $250K</span>": layers.one,
-                "<img src='../static/blue.png' width = 15 /> <span>$250K - $500K</span>": layers.two,
-                "<img src='../static/orange.png' width = 15 /> <span>$500K - $750K</span>": layers.three,
-                "<img src='../static/yellow.jpg' width = 15 /> <span>$750K - $1M</span>": layers.four,
-                "<img src='../static/red.png' width = 15 /> <span>$1M+</span>": layers.five,
-                "<img src='../static/city.png' width = 15 /> <span>City </span>": layers.six,
-                "<img src='../static/leisure.png' width = 15 /> <span>Leisure Spots</span>": leisureLayer
-            };
+      let overlayMaps = {
+        "<div class='legend-item'><img src='../static/green.png' width='15' /> <span>Up to $250K</span></div>": layers.one,
+        "<div class='legend-item'><img src='../static/blue.png' width='15' /> <span>$250K - $500K</span></div>": layers.two,
+        "<div class='legend-item'><img src='../static/orange.png' width='15' /> <span>$500K - $750K</span></div>": layers.three,
+        "<div class='legend-item'><img src='../static/yellow.png' width='15' /> <span>$750K - $1M</span></div>": layers.four,
+        "<div class='legend-item'><img src='../static/red.png' width='15' /> <span>$1M+</span></div>": layers.five,
+        "<div class='legend-item'><img src='../static/city.png' width='15' /> <span>City </span></div>": layers.six,
+        "<div class='legend-item'><img src='../static/leisure.png' width='15' /> <span>Leisure Spots</span></div>": leisureLayer
+    };
 
             // Add controls 
             L.control.layers(baseMaps, overlayMaps, {
                 collapsed: false
             }).addTo(myMap);
 
-            L.control.scale(position = 'topleft').addTo(myMap)})
+            L.control.scale({ position: 'topleft', maxWidth: 150 }).addTo(myMap)})

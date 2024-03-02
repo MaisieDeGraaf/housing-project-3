@@ -173,9 +173,9 @@ d3.json(queryUrl).then(data => {
         // LEISURE ICON - to change opacity and add a border
         let leisureIcon = L.icon({
             iconUrl: '../static/leisure.png',
-            iconSize: [30, 30],
-            iconAnchor: [15, 30],
-            popupAnchor: [0, -30],
+            iconSize: [15, 15],
+            iconAnchor: [7, 7],
+            popupAnchor: [0, -10],
             opacity: 0.3, // 0.0 is fully transparent and 1.0 is fully opaque
             className: 'leisure-marker' // Add a custom class for styling
         });

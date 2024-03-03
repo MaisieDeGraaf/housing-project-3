@@ -1,2 +1,4 @@
-mongo_username = "robert"
-mongo_password = "P4YSEX9K6XuVZTuE"
+mongo_username = "maisie"
+mongo_password = "RTQH6l0wjghKk637"
+email = "qwerty.kitten.m@gmail.com"
+passw = "Bootcamp2024*"

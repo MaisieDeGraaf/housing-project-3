@@ -19,13 +19,39 @@ d3.json(URL)
 
     // Function to update charts based on selected city
     function updateCharts(selectedCity) {
-        // Your chart update logic here
-        console.log("Selected city:", selectedCity);
+        // Filter data for the selected city
+        const cityData = data.filter(item => item.city === selectedCity);
+
+        // Extract list and sale prices for the selected city
+        const neighborhoodPrices = {};
+        cityData.forEach(item => {
+          const neighborhood = item.neighbourhood;
+          const price = parseFloat(item.price);
+          if (!neighborhoodPrices[neighborhood]) {
+            neighborhoodPrices[neighborhood] = [];
+          }
+          neighborhoodPrices[neighborhood].push(price);
+        });
+
+        // Calculate average prices for each neighborhood in the selected city
+        const neighborhoodAverages = {};
+        Object.keys(neighborhoodPrices).forEach(neighborhood => {
+          const prices = neighborhoodPrices[neighborhood];
+          const averagePrice = prices.reduce((acc, cur) => acc + cur, 0) / prices.length;
+          neighborhoodAverages[neighborhood] = averagePrice;
+        });
+
+        // Update chart datasets
+        myChart4.data.labels = Object.keys(neighborhoodAverages);
+        myChart4.data.datasets[0].data = Object.values(neighborhoodAverages);
+        myChart4.update();
+
+        // You can update myChart5 or any other chart similarly
     }
 
     // Event listener for dropdown change
     dropdown.selectAll("a").on("click", function() {
-        const selectedCity = d3.select(this).attr("data-info");
+        const selectedCity = d3.select(this).text();
         updateCharts(selectedCity);
     });
 
@@ -195,10 +221,10 @@ d3.json(URL)
     myChart4 = new Chart(document.getElementById('chart4'), {
       type: 'bar',
       data: {
-        labels: neighborhoods,
+        labels: [],
         datasets: [{
           label: 'Average List Price',
-          data: Object.values(averageListPricesByNeighborhood),
+          data: [],
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           borderColor: 'rgba(255, 99, 132, 1)',
           borderWidth: 1
@@ -210,10 +236,10 @@ d3.json(URL)
     myChart5 = new Chart(document.getElementById('chart5'), {
       type: 'bar',
       data: {
-        labels: neighborhoods,
+        labels: [],
         datasets: [{
           label: 'Average Sale Price',
-          data: Object.values(averageSalePricesByNeighborhood),
+          data: [],
           backgroundColor: 'rgba(54, 162, 235, 0.2)',
           borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1

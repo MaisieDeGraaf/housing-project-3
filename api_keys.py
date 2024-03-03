@@ -1,5 +1,2 @@
-# MongoDB
-mongo_username = "jaylene"
-mongo_password = "emv7qzy.ZWM1nta9qbv"
-
-# House sigma
+mongo_username = "robert"
+mongo_password = "P4YSEX9K6XuVZTuE"

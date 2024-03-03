@@ -64,7 +64,7 @@ footer {
   margin-right: 5px;
 }
 
-
+/* I used chatGPT to help on how to hide the default controler and create the styling for the new custom controler*/
 /* Hide default Leaflet layer control */
 .leaflet-control-layers {
   display: none !important;

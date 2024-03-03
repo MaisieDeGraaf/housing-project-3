@@ -55,10 +55,25 @@ footer {
   align-items: center;
 }
 
-.legend-item input[type="checkbox"] {
+.legend-item img {
   margin-right: 5px;
 }
 
-.legend-item img {
+/* For the space between checkbox and the icon */
+.legend-item input[type='checkbox'] {
   margin-right: 5px;
+}
+
+
+/* Hide default Leaflet layer control */
+.leaflet-control-layers {
+  display: none !important;
+}
+
+/* Style for your custom control */
+.custom-control {
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }

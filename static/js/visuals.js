@@ -6,6 +6,29 @@ d3.json(URL)
     // Log the loaded data for verification
     console.log(data);
 
+    // Populate dropdown menu
+    const dropdown = d3.select("#cityDropdown");
+    const citys = ["All Cities", "Milton", "Oakville", "Vaughan", "Burlington", "Oshawa"];
+
+    dropdown.selectAll("a")
+        .data(citys)
+        .enter()
+        .append("a")
+        .text(function(d) { return d; })
+        .attr("href", "#");
+
+    // Function to update charts based on selected city
+    function updateCharts(selectedCity) {
+        // Your chart update logic here
+        console.log("Selected city:", selectedCity);
+    }
+
+    // Event listener for dropdown change
+    dropdown.selectAll("a").on("click", function() {
+        const selectedCity = d3.select(this).attr("data-info");
+        updateCharts(selectedCity);
+    });
+
     // Step 2: Create a canvas element for the chart
     let canvas = document.createElement('canvas');
     canvas.width = 400;
@@ -250,4 +273,3 @@ d3.json(URL)
   }).catch(function(error) {
     console.log('Error loading data:', error);
   });
-

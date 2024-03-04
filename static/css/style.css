@@ -48,32 +48,3 @@ footer {
   display: block; 
   opacity: 1; /* Set opacity to 1 when dropdown is hovered */
 }
-
-/* For control layer - icons and text */
-.legend-item {
-  display: flex;
-  align-items: center;
-}
-
-.legend-item img {
-  margin-right: 5px;
-}
-
-/* For the space between checkbox and the icon */
-.legend-item input[type='checkbox'] {
-  margin-right: 5px;
-}
-
-/* I used chatGPT to help on how to hide the default controler and create the styling for the new custom controler*/
-/* Hide default Leaflet layer control */
-.leaflet-control-layers {
-  display: none !important;
-}
-
-/* Style for the custom control */
-.custom-control {
-  background: white;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}

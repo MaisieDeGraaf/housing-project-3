@@ -110,9 +110,10 @@ d3.json(URL)
       let city = item.city;
       let neighborhood = item.neighbourhood;
       let listPrice = parseFloat(item.price);
-      let salePrice = parseFloat(item.price); // Assuming the same for sale price
+      let salePrice = parseFloat(item.sold_price);
 
-      if (!isNaN(salePrice)) {
+      // Only consider entries where salePrice is not zero
+      if (!isNaN(salePrice) && salePrice !== 0) {
         if (!averageListPricesByCity[city]) {
           averageListPricesByCity[city] = [];
           averageSalePricesByCity[city] = [];
@@ -224,9 +225,15 @@ d3.json(URL)
         labels: [],
         datasets: [{
           label: 'Average List Price',
-          data: [],
+          data: [Object.values(averageListPricesByNeighborhood)],
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           borderColor: 'rgba(255, 99, 132, 1)',
+          borderWidth: 1
+        }, {
+          label: 'Average Sale Price',
+          data: Object.values(averageSalePricesByNeighborhood),
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1
         }]
       },

@@ -19,8 +19,8 @@ d3.json(URL)
 
    // Function to update charts based on selected city
 function updateCharts(selectedCity) {
-  // Filter data for the selected city
-  const cityData = data.filter(item => item.city === selectedCity);
+  // Filter data for the selected city or show all data if "All Cities" is selected
+  const cityData = selectedCity === "All Cities" ? data : data.filter(item => item.city === selectedCity);
 
   // Extract list and sale prices for the selected city
   const neighborhoodPrices = {};

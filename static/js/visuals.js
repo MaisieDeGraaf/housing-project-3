@@ -40,11 +40,25 @@ function updateCharts(selectedCity) {
       const averagePrice = prices.reduce((acc, cur) => acc + cur, 0) / prices.length;
       neighborhoodAverages[neighborhood] = averagePrice;
   });
+  // Extract house types and their counts for the selected city
+  let houseTypes = {};
+  cityData.forEach(function(item) {
+    let houseType = item.type_of_house;
+    if (!houseTypes[houseType]) {
+      houseTypes[houseType] = 0;
+    }
+    houseTypes[houseType]++;
+  });
 
   // Update chart datasets
   myChart4.data.labels = Object.keys(neighborhoodAverages);
   myChart4.data.datasets[0].data = Object.values(neighborhoodAverages);
   myChart4.update();
+
+  // Update chart 5 data
+  myChart5.data.labels = Object.keys(houseTypes);
+  myChart5.data.datasets[0].data = Object.values(houseTypes);
+  myChart5.update();
 
   // Update chart 7 data
   myChart7.data.labels = Object.keys(neighborhoodPrices);
@@ -57,6 +71,15 @@ function updateCharts(selectedCity) {
         const selectedCity = d3.select(this).text();
         updateCharts(selectedCity);
     });
+    // Extract house types and their counts
+let houseTypes = {};
+data.forEach(function(item) {
+  let houseType = item.type_of_house;
+  if (!houseTypes[houseType]) {
+    houseTypes[houseType] = 0;
+  }
+  houseTypes[houseType]++;
+});
 
     // Step 2: Create a canvas element for the chart
     let canvas = document.createElement('canvas');
@@ -243,14 +266,14 @@ function updateCharts(selectedCity) {
       options: options
     });
 
-    myChart5 = new Chart(document.getElementById('chart5'), {
+    myChart5 = new Chart(canvas, {
       type: 'bar',
       data: {
-        labels: [],
+        labels: Object.keys(houseTypes),
         datasets: [{
-          label: 'Average Sale Price',
-          data: [],
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          label: 'Number of Houses',
+          data: Object.values(houseTypes),
+          backgroundColor: 'rgba(54, 162, 235, 0.6)',
           borderColor: 'rgba(54, 162, 235, 1)',
           borderWidth: 1
         }]
@@ -292,7 +315,7 @@ myChart7 = new Chart(document.getElementById('chart7'), {
   options: {
     scales: {
       y: {
-        beginAtZero: true
+        display: false
       }
     }
   }

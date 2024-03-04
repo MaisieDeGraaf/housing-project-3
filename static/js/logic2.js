@@ -190,48 +190,22 @@ d3.json(queryUrl).then(data => {
 
 
         console.log("Finished processing!")
-      // Add overlay maps      
-      var overlayMaps = {
-        "<div class='legend-item'><input type='checkbox' id='layerOneCheckbox'/> <img src='../static/green.png' width='15' /> <span>Up to $250K</span></div>": layers.one,
-        "<div class='legend-item'><input type='checkbox' id='layerTwoCheckbox'/> <img src='../static/blue.png' width='15' /> <span>$250K - $500K</span></div>": layers.two,
-        "<div class='legend-item'><input type='checkbox' id='layerThreeCheckbox'/> <img src='../static/orange.png' width='15' /> <span>$500K - $750K</span></div>": layers.three,
-        "<div class='legend-item'><input type='checkbox' id='layerFourCheckbox'/> <img src='../static/yellow.png' width='15' /> <span>$750K - $1M</span></div>": layers.four,
-        "<div class='legend-item'><input type='checkbox' id='layerFiveCheckbox'/> <img src='../static/red.png' width='15' /> <span>$1M+</span></div>": layers.five,
-        "<div class='legend-item'><input type='checkbox' id='layerSixCheckbox'/> <img src='../static/city.png' width='15' /> <span>City </span></div>": layers.six,
-        "<div class='legend-item'><input type='checkbox' id='leisureLayerCheckbox'/> <img src='../static/leisure.png' width='15' /> <span>Leisure Spots</span></div>": leisureLayer
-    };
-
-        // Create custom control to put checkboxes and icons/text on same line
-        var customControl = L.control({ position: 'topright' });
-
-        customControl.onAdd = function (myMap) {
-            var div = L.DomUtil.create('div', 'custom-control');
-            for (var overlay in overlayMaps) {
-                div.innerHTML += overlay;
-            }
-            return div;
-        };
-
-        customControl.addTo(myMap);
-
-        // Function to handle checkbox changes to toggle layer visibility
-        function handleCheckboxChange(checkboxId, layer) {
-            var checkbox = document.getElementById(checkboxId);
-            checkbox.addEventListener('change', function () {
-                if (checkbox.checked) {
-                    myMap.addLayer(layer);
-                } else {
-                    myMap.removeLayer(layer);
-                }
-            });
-
-                // ADD event listeners to checkboxes to actually make changes when checkbox tickied
-                handleCheckboxChange('layerOneCheckbox', layers.one);
-                handleCheckboxChange('layerTwoCheckbox', layers.two);
-                handleCheckboxChange('layerThreeCheckbox', layers.three);
-                handleCheckboxChange('layerFourCheckbox', layers.four);
-                handleCheckboxChange('layerFiveCheckbox', layers.five);
-                handleCheckboxChange('layerSixCheckbox', layers.six);
-                handleCheckboxChange('leisureLayerCheckbox', leisureLayer);
-
-            L.control.scale({ position: 'bottomleft', maxWidth: 150 }).addTo(myMap)}})
+        
+            // Add overlay maps      
+            let overlayMaps = {
+                "<div class='legend-item'><img src='../static/green.png' width='15' /> <span>Up to $250K</span></div>": layers.one,
+                "<div class='legend-item'><img src='../static/blue.png' width='15' /> <span>$250K - $500K</span></div>": layers.two,
+                "<div class='legend-item'><img src='../static/orange.png' width='15' /> <span>$500K - $750K</span></div>": layers.three,
+                "<div class='legend-item'><img src='../static/yellow.png' width='15' /> <span>$750K - $1M</span></div>": layers.four,
+                "<div class='legend-item'><img src='../static/red.png' width='15' /> <span>$1M+</span></div>": layers.five,
+                "<div class='legend-item'><img src='../static/city.png' width='15' /> <span>City </span></div>": layers.six,
+                "<div class='legend-item'><img src='../static/leisure.png' width='15' /> <span>Leisure Spots</span></div>": leisureLayer
+            };
+        
+                    // Add controls 
+                    L.control.layers(baseMaps, overlayMaps, {
+                        collapsed: false
+                    }).addTo(myMap);
+        
+                    L.control.scale({ position: 'bottomleft', maxWidth: 150 }).addTo(myMap)})
+        

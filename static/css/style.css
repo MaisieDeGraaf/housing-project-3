@@ -48,18 +48,3 @@ footer {
   display: block; 
   opacity: 1; /* Set opacity to 1 when dropdown is hovered */
 }
-
-/* For control layer - icons and text
-.legend-item {
-  display: flex;
-  align-items: center;
-}
-
-.legend-item img {
-  margin-right: 5px;
-} */
-
-/* For the space between checkbox and the icon
-.legend-item input[type='checkbox'] {
-  margin-right: 5px;
-} */

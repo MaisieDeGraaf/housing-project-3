@@ -4,19 +4,21 @@ let weatherURL = "http://127.0.0.1:5000/api/v1.0/weather";
 
 d3.json(weatherURL).then(weatherData => {
     let currentDate = new Date();
+    let currentMonth = currentDate.getMonth() + 1; // Adding 1 because getMonth() returns zero-based month index
+    let currentDay = currentDate.getDate();
     let currentDateFormatted = currentDate.toISOString().split('T')[0];
 
     let weatherDataForCurrentDate = weatherData.filter(entry => {
         let entryDateFormatted = new Date(entry.local_date).toISOString().split('T')[0]; 
         return entryDateFormatted === currentDateFormatted;
     });
-    console.log("Weather data for current month and day:", weatherDataForCurrentMonthDay);
+    console.log("Weather data for current month and day:", weatherDataForCurrentDate);
 
 
-    let averageMaxTemperature = weatherDataForCurrentMonthDay.reduce((acc, curr) => acc + curr.max_temperature, 0) / weatherDataForCurrentMonthDay.length;
-    let averageMinTemperature = weatherDataForCurrentMonthDay.reduce((acc, curr) => acc + curr.min_temperature, 0) / weatherDataForCurrentMonthDay.length;
-    let averageWindSpeed = weatherDataForCurrentMonthDay.reduce((acc, curr) => acc + curr.wind_speed, 0) / weatherDataForCurrentMonthDay.length;
-    let averagePrecipitation = weatherDataForCurrentMonthDay.reduce((acc, curr) => acc + curr.total_precipitation, 0) / weatherDataForCurrentMonthDay.length;
+    let averageMaxTemperature = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.max_temperature, 0) / weatherDataForCurrentDate.length;
+    let averageMinTemperature = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.min_temperature, 0) / weatherDataForCurrentDate.length;
+    let averageWindSpeed = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.wind_speed, 0) / weatherDataForCurrentDate.length;
+    let averagePrecipitation = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.total_precipitation, 0) / weatherDataForCurrentDate.length;
 
     // Display average weather information
     let weatherBox = document.getElementById("weather-box");
@@ -27,7 +29,7 @@ d3.json(weatherURL).then(weatherData => {
         <p>Average Wind Speed: ${averageWindSpeed.toFixed(2)}</p>
         <p>Average Precipitation: ${averagePrecipitation.toFixed(2)}</p>
     `;
-})
+});
 
 d3.json(URL)
   .then(function(data) {

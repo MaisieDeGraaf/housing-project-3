@@ -6,6 +6,81 @@ d3.json(URL)
     // Log the loaded data for verification
     console.log(data);
 
+    // Populate dropdown menu
+    const dropdown = d3.select("#cityDropdown");
+    const citys = ["All Cities", "Milton", "Oakville", "Vaughan", "Burlington", "Oshawa"];
+
+    dropdown.selectAll("a")
+        .data(citys)
+        .enter()
+        .append("a")
+        .text(function(d) { return d; })
+        .attr("href", "#");
+
+   // Function to update charts based on selected city
+function updateCharts(selectedCity) {
+  // Filter data for the selected city or show all data if "All Cities" is selected
+  const cityData = selectedCity === "All Cities" ? data : data.filter(item => item.city === selectedCity);
+
+  // Extract list and sale prices for the selected city
+  const neighborhoodPrices = {};
+  cityData.forEach(item => {
+      const neighborhood = item.neighbourhood;
+      const price = parseFloat(item.price);
+      if (!neighborhoodPrices[neighborhood]) {
+          neighborhoodPrices[neighborhood] = [];
+      }
+      neighborhoodPrices[neighborhood].push(price);
+  });
+
+  // Calculate average prices for each neighborhood in the selected city
+  const neighborhoodAverages = {};
+  Object.keys(neighborhoodPrices).forEach(neighborhood => {
+      const prices = neighborhoodPrices[neighborhood];
+      const averagePrice = prices.reduce((acc, cur) => acc + cur, 0) / prices.length;
+      neighborhoodAverages[neighborhood] = averagePrice;
+  });
+  // Extract house types and their counts for the selected city
+  let houseTypes = {};
+  cityData.forEach(function(item) {
+    let houseType = item.type_of_house;
+    if (!houseTypes[houseType]) {
+      houseTypes[houseType] = 0;
+    }
+    houseTypes[houseType]++;
+  });
+
+  // Update chart datasets
+  myChart4.data.labels = Object.keys(neighborhoodAverages);
+  myChart4.data.datasets[0].data = Object.values(neighborhoodAverages);
+  myChart4.update();
+
+  // Update chart 5 data
+  myChart5.data.labels = Object.keys(houseTypes);
+  myChart5.data.datasets[0].data = Object.values(houseTypes);
+  myChart5.update();
+
+  // Update chart 7 data
+  myChart7.data.labels = Object.keys(neighborhoodPrices);
+  myChart7.data.datasets[0].data = Object.values(neighborhoodPrices).map(prices => prices.length);
+  myChart7.update();
+}
+
+    // Event listener for dropdown change
+    dropdown.selectAll("a").on("click", function() {
+        const selectedCity = d3.select(this).text();
+        updateCharts(selectedCity);
+    });
+    // Extract house types and their counts
+let houseTypes = {};
+data.forEach(function(item) {
+  let houseType = item.type_of_house;
+  if (!houseTypes[houseType]) {
+    houseTypes[houseType] = 0;
+  }
+  houseTypes[houseType]++;
+});
+
     // Step 2: Create a canvas element for the chart
     let canvas = document.createElement('canvas');
     canvas.width = 400;
@@ -61,9 +136,10 @@ d3.json(URL)
       let city = item.city;
       let neighborhood = item.neighbourhood;
       let listPrice = parseFloat(item.price);
-      let salePrice = parseFloat(item.price); // Assuming the same for sale price
+      let salePrice = parseFloat(item.sold_price);
 
-      if (!isNaN(salePrice)) {
+      // Only consider entries where salePrice is not zero
+      if (!isNaN(salePrice) && salePrice !== 0) {
         if (!averageListPricesByCity[city]) {
           averageListPricesByCity[city] = [];
           averageSalePricesByCity[city] = [];
@@ -172,23 +248,14 @@ d3.json(URL)
     myChart4 = new Chart(document.getElementById('chart4'), {
       type: 'bar',
       data: {
-        labels: neighborhoods,
+        labels: [],
         datasets: [{
           label: 'Average List Price',
-          data: Object.values(averageListPricesByNeighborhood),
+          data: [Object.values(averageListPricesByNeighborhood)],
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           borderColor: 'rgba(255, 99, 132, 1)',
           borderWidth: 1
-        }]
-      },
-      options: options
-    });
-
-    myChart5 = new Chart(document.getElementById('chart5'), {
-      type: 'bar',
-      data: {
-        labels: neighborhoods,
-        datasets: [{
+        }, {
           label: 'Average Sale Price',
           data: Object.values(averageSalePricesByNeighborhood),
           backgroundColor: 'rgba(54, 162, 235, 0.2)',
@@ -199,55 +266,63 @@ d3.json(URL)
       options: options
     });
 
-    // Add 6th chart
-    myChart6 = new Chart(document.getElementById('chart6'), {
-      type: 'bubble',
+    myChart5 = new Chart(canvas, {
+      type: 'bar',
       data: {
+        labels: Object.keys(houseTypes),
         datasets: [{
-          label: 'Houses Marked (by City)',
-          backgroundColor: 'rgba(255, 99, 132, 0.6)',
-          borderColor: 'rgba(255, 99, 132, 1)',
-          data: cities.map(city => ({
-            x: city,
-            y: data.filter(item => item.city === city).length,
-            r: data.filter(item => item.city === city).length * 5
-          }))
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            display: false
-          }
-        }
-      }
-    });
-
-    // Add 7th chart
-    myChart7 = new Chart(document.getElementById('chart7'), {
-      type: 'bubble',
-      data: {
-        datasets: [{
-          label: 'Houses Marked (by Neighborhood)',
+          label: 'Number of Houses',
+          data: Object.values(houseTypes),
           backgroundColor: 'rgba(54, 162, 235, 0.6)',
           borderColor: 'rgba(54, 162, 235, 1)',
-          data: neighborhoods.map(neighborhood => ({
-            x: neighborhood,
-            y: data.filter(item => item.neighbourhood === neighborhood).length,
-            r: data.filter(item => item.neighbourhood === neighborhood).length * 5
-          }))
+          borderWidth: 1
         }]
       },
-      options: {
-        scales: {
-          y: {
-            display: false
-          }
-        }
-      }
+      options: options
     });
+
+    // Add 6th chart (changed to Polar Area)
+myChart6 = new Chart(document.getElementById('chart6'), {
+  type: 'polarArea',
+  data: {
+    labels: cities,
+    datasets: [{
+      label: 'Houses Marked (by City)',
+      backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
+      data: cities.map(city => data.filter(item => item.city === city).length)
+    }]
+  },
+  options: {
+    scale: {
+      ticks: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+// Add 7th chart (changed to Pie Chart)
+myChart7 = new Chart(document.getElementById('chart7'), {
+  type: 'pie',
+  data: {
+    labels: neighborhoods,
+    datasets: [{
+      label: 'Houses Marked (by Neighborhood)',
+      backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
+      data: neighborhoods.map(neighborhood => data.filter(item => item.neighbourhood === neighborhood).length)
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        display: false
+      }
+    }
+  }
+});
+
+
 
   }).catch(function(error) {
     console.log('Error loading data:', error);
   });
-

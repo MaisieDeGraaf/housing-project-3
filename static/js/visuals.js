@@ -2,30 +2,30 @@
 let URL = 'http://127.0.0.1:5000/api/v1.0/housing';
 let weatherURL = "http://127.0.0.1:5000/api/v1.0/weather";
 
-// WEATHER BOX
 d3.json(weatherURL).then(weatherData => {
+    let currentDate = new Date();
+    let currentMonth = currentDate.getMonth() + 1;
+    let currentDay = currentDate.getDate();
+    
+    let weatherDataForCurrentMonthDay = weatherData.filter(entry => {
+        let entryDate = new Date(entry.local_date);
+        return entryDate.getMonth() + 1 === currentMonth && entryDate.getDate() === currentDay;
+    });
 
-  // let currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
-  let currentDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); // Use US locale for date so it's our "current date"
+    let averageMaxTemperature = weatherDataForCurrentMonthDay.reduce((acc, curr) => acc + curr.max_temperature, 0) / weatherDataForCurrentMonthDay.length;
+    let averageMinTemperature = weatherDataForCurrentMonthDay.reduce((acc, curr) => acc + curr.min_temperature, 0) / weatherDataForCurrentMonthDay.length;
+    let averageWindSpeed = weatherDataForCurrentMonthDay.reduce((acc, curr) => acc + curr.wind_speed, 0) / weatherDataForCurrentMonthDay.length;
+    let averagePrecipitation = weatherDataForCurrentMonthDay.reduce((acc, curr) => acc + curr.total_precipitation, 0) / weatherDataForCurrentMonthDay.length;
 
-  let weatherDataForCurrentDate = weatherData.filter(entry => entry.local_date === currentDate);
-
-  // Calculate average values
-  let averageMaxTemperature = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.max_temperature, 0) / weatherDataForCurrentDate.length;
-  let averageMinTemperature = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.min_temperature, 0) / weatherDataForCurrentDate.length;
-  let averageWindSpeed = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.wind_speed, 0) / weatherDataForCurrentDate.length;
-  let averagePrecipitation = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.total_precipitation, 0) / weatherDataForCurrentDate.length;
-
-  // Display average weather information
-  let weatherBox = document.getElementById("weather-box");
-  weatherBox.innerHTML = `
-      <h2>Weather Information for ${currentDate}</h2>
-      <p>Average Max Temperature: ${averageMaxTemperature.toFixed(2)}</p>
-      <p>Average Min Temperature: ${averageMinTemperature.toFixed(2)}</p>
-      <p>Average Wind Speed: ${averageWindSpeed.toFixed(2)}</p>
-      <p>Average Precipitation: ${averagePrecipitation.toFixed(2)}</p>
-  `;
-});
+    let weatherBox = document.getElementById("weather-box");
+    weatherBox.innerHTML = `
+        <h2>Weather Information for ${currentMonth}/${currentDay}</h2>
+        <p>Average Max Temperature: ${averageMaxTemperature.toFixed(2)}</p>
+        <p>Average Min Temperature: ${averageMinTemperature.toFixed(2)}</p>
+        <p>Average Wind Speed: ${averageWindSpeed.toFixed(2)}</p>
+        <p>Average Precipitation: ${averagePrecipitation.toFixed(2)}</p>
+    `;
+})
 
 d3.json(URL)
   .then(function(data) {

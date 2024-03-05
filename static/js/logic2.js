@@ -190,7 +190,7 @@ d3.json(queryUrl).then(data => {
 
 
         console.log("Finished processing!")
-        
+
             // Add overlay maps      
             let overlayMaps = {
                 "<img src='../static/green.png' width='15' /> <span>Up to $250K</span>": layers.one,

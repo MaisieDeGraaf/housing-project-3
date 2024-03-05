@@ -2,9 +2,12 @@
 let URL = 'http://127.0.0.1:5000/api/v1.0/housing';
 let weatherURL = "http://127.0.0.1:5000/api/v1.0/weather";
 
+// WEATHER BOX
 d3.json(weatherURL).then(weatherData => {
 
-  let currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+  // let currentDate = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+  let currentDate = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }); // Use US locale for date so it's our "current date"
+
   let weatherDataForCurrentDate = weatherData.filter(entry => entry.local_date === currentDate);
 
   // Calculate average values
@@ -23,6 +26,7 @@ d3.json(weatherURL).then(weatherData => {
       <p>Average Precipitation: ${averagePrecipitation.toFixed(2)}</p>
   `;
 });
+
 d3.json(URL)
   .then(function(data) {
     // Log the loaded data for verification
@@ -140,12 +144,6 @@ d3.json(URL)
         houseTypes[houseType]++;
     });
 
-    // Step 2: Create a canvas element for the chart
-    let canvas = document.createElement('canvas');
-    canvas.width = 400;
-    canvas.height = 400;
-    document.body.appendChild(canvas);
-
     // Step 3: Define options for your charts
     let options = {
         scales: {
@@ -175,7 +173,7 @@ d3.json(URL)
     };
 
     // Step 4: Create Chart.js instances
-    let myChart1, myChart2, myChart3, myChart4, myChart5, myChart6, myChart7;
+    let myChart1, myChart3, myChart4, myChart5, myChart6, myChart7;
 
     // Step 5: Function to update chart data
     function updateChartData(chart, newData) {
@@ -289,21 +287,6 @@ d3.json(URL)
         }
     });
 
-    // // Create Chart.js instances
-    // myChart2 = new Chart(document.getElementById('chart2'), {
-    //     type: 'bar',
-    //     data: {
-    //         labels: cities,
-    //         datasets: [{
-    //             label: 'Average Sale Price',
-    //             data: Object.values(averageSalePricesByCity),
-    //             backgroundColor: 'rgba(54, 162, 235, 0.2)',
-    //             borderColor: 'rgba(54, 162, 235, 1)',
-    //             borderWidth: 1
-    //         }]
-    //     },
-    //     options: options
-    // });
 
     myChart3 = new Chart(document.getElementById('chart3'), {
         type: 'bar',
@@ -372,20 +355,40 @@ d3.json(URL)
       }
   });
 
-    myChart5 = new Chart(canvas, {
-        type: 'bar',
-        data: {
-            labels: Object.keys(houseTypes),
-            datasets: [{
-                label: 'Number of Houses',
-                data: Object.values(houseTypes),
-                backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: options
-    });
+  myChart5 = new Chart(document.getElementById('chart5'), {
+    type: 'bar',
+    data: {
+        labels: Object.keys(houseTypes),
+        datasets: [{
+            label: 'Number of Houses',
+            data: Object.values(houseTypes),
+            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    callback: function(value, index, values) {
+                        return value; // Remove '$' from the axis
+                    }
+                },
+                scaleLabel: {
+                    display: true,
+                    labelString: 'Number of Houses'
+                },
+                grid: {
+                    display: true,
+                    color: 'rgba(0, 0, 0, 0.1)'
+                }
+            }
+        }
+    }
+});
+
 
     // Add 6th chart (changed to Polar Area)
     myChart6 = new Chart(document.getElementById('chart6'), {

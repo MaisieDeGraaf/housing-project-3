@@ -195,14 +195,14 @@ data.forEach(function(item) {
 
     // Create Chart.js instances
     myChart1 = new Chart(document.getElementById('chart1'), {
-      type: 'doughnut',
+      type: 'bar',
       data: {
-        labels: Object.keys(houseTypes),
+        labels: cities,
         datasets: [{
-          label: 'Status of Houses',
-          data: Object.values(houseTypes),
-          backgroundColor: ['rgba(255, 99, 132, 0.6)', 'rgba(54, 162, 235, 0.6)', 'rgba(255, 206, 86, 0.6)', 'rgba(75, 192, 192, 0.6)', 'rgba(153, 102, 255, 0.6)'],
-          borderColor: 'rgba(255, 255, 255, 1)',
+          label: 'Average List Price',
+          data: Object.values(averageListPricesByCity),
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+          borderColor: 'rgba(255, 99, 132, 1)',
           borderWidth: 1
         }]
       },

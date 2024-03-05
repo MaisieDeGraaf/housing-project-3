@@ -83,27 +83,27 @@ let layers = {
 // Get housing data and process it
 d3.json(queryUrl).then(data => {
         data.forEach(function (city) {
-                if (city.price <250000){
+                if (city.price <500000){
                     let myMarker = L.marker([city.longitude,city.latitude], {icon:greenIcon});
                     myMarker.bindPopup(`<h6>${city.address} </h6> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
                     layers.one.addLayer(myMarker);
                 }
-                else if (city.price >= 250000 && city.price <500000){
+                else if (city.price >= 500000 && city.price <750000){
                     let myMarker = L.marker([city.longitude,city.latitude], {icon:blueIcon});
                     myMarker.bindPopup(`<h6>${city.address} </h6> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
                     layers.two.addLayer(myMarker);
                 }
-                else if (city.price >= 500000 && city.price <750000){
+                else if (city.price >= 750000 && city.price <1000000){
                     let myMarker = L.marker([city.longitude,city.latitude], {icon:orangeIcon});
                     myMarker.bindPopup(`<h6>${city.address} </h6> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
                     layers.three.addLayer(myMarker);
                 }
-                else if (city.price >= 750000 && city.price <1000000){
+                else if (city.price >= 1000000 && city.price <1250000){
                     let myMarker = L.marker([city.longitude,city.latitude], {icon:yellowIcon});
                     myMarker.bindPopup(`<h6>${city.address} </h6> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
                     layers.four.addLayer(myMarker);
                 }
-                else if (city.price >= 1000000){
+                else if (city.price >= 1250000){
                     let myMarker = L.marker([city.longitude,city.latitude], {icon:redIcon});
                     myMarker.bindPopup(`<h6>${city.address} </h6> Price: $${numberWithCommas(city.price)} <br> Bathrooms: ${city.bathrooms} <br> Bedrooms: ${city.bedrooms}`);
                     layers.five.addLayer(myMarker);
@@ -193,11 +193,11 @@ d3.json(queryUrl).then(data => {
         
             // Add overlay maps      
             let overlayMaps = {
-                "<div class='legend-item'><img src='../static/green.png' width='15' /> <span>Up to $250K</span></div>": layers.one,
-                "<div class='legend-item'><img src='../static/blue.png' width='15' /> <span>$250K - $500K</span></div>": layers.two,
-                "<div class='legend-item'><img src='../static/orange.png' width='15' /> <span>$500K - $750K</span></div>": layers.three,
-                "<div class='legend-item'><img src='../static/yellow.png' width='15' /> <span>$750K - $1M</span></div>": layers.four,
-                "<div class='legend-item'><img src='../static/red.png' width='15' /> <span>$1M+</span></div>": layers.five,
+                "<div class='legend-item'><img src='../static/green.png' width='15' /> <span>Up to $500K</span></div>": layers.one,
+                "<div class='legend-item'><img src='../static/blue.png' width='15' /> <span>$500K - $750K</span></div>": layers.two,
+                "<div class='legend-item'><img src='../static/orange.png' width='15' /> <span>$750K - $1M</span></div>": layers.three,
+                "<div class='legend-item'><img src='../static/yellow.png' width='15' /> <span>$1M - $1.25M</span></div>": layers.four,
+                "<div class='legend-item'><img src='../static/red.png' width='15' /> <span>$1.25M+</span></div>": layers.five,
                 "<div class='legend-item'><img src='../static/city.png' width='15' /> <span>City </span></div>": layers.six,
                 "<div class='legend-item'><img src='../static/leisure.png' width='15' /> <span>Leisure Spots</span></div>": leisureLayer
             };

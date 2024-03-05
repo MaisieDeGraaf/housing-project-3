@@ -193,13 +193,13 @@ d3.json(queryUrl).then(data => {
         
             // Add overlay maps      
             let overlayMaps = {
-                "<div class='legend-item'><img src='../static/green.png' width='15' /> <span>Up to $500K</span></div>": layers.one,
-                "<div class='legend-item'><img src='../static/blue.png' width='15' /> <span>$500K - $750K</span></div>": layers.two,
-                "<div class='legend-item'><img src='../static/orange.png' width='15' /> <span>$750K - $1M</span></div>": layers.three,
-                "<div class='legend-item'><img src='../static/yellow.png' width='15' /> <span>$1M - $1.25M</span></div>": layers.four,
-                "<div class='legend-item'><img src='../static/red.png' width='15' /> <span>$1.25M+</span></div>": layers.five,
-                "<div class='legend-item'><img src='../static/city.png' width='15' /> <span>City </span></div>": layers.six,
-                "<div class='legend-item'><img src='../static/leisure.png' width='15' /> <span>Leisure Spots</span></div>": leisureLayer
+                "<img src='../static/green.png' width='15' /> <span>Up to $250K</span>": layers.one,
+                "<img src='../static/blue.png' width='15' /> <span>$250K - $500K</span>": layers.two,
+                "<img src='../static/orange.png' width='15' /> <span>$500K - $750K</span>": layers.three,
+                "<img src='../static/yellow.png' width='15' /> <span>$750K - $1M</span>": layers.four,
+                "<img src='../static/red.png' width='15' /> <span>$1M+</span>": layers.five,
+                "<img src='../static/city.png' width='15' /> <span>City </span>": layers.six,
+                "<img src='../static/leisure.png' width='15' /> <span>Leisure Spots</span>": leisureLayer
             };
         
                     // Add controls 

@@ -48,3 +48,7 @@ footer {
   display: block; 
   opacity: 1; /* Set opacity to 1 when dropdown is hovered */
 }
+
+footer p {
+  font-size: 12px;
+}

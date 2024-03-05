@@ -4,23 +4,22 @@ let weatherURL = "http://127.0.0.1:5000/api/v1.0/weather";
 
 d3.json(weatherURL).then(weatherData => {
     let currentDate = new Date();
-    let currentMonth = currentDate.getMonth() + 1; // Adding 1 because getMonth() returns zero-based month index
+    let currentMonth = currentDate.getMonth() + 1;
     let currentDay = currentDate.getDate();
     let currentDateFormatted = currentDate.toISOString().split('T')[0];
 
     let weatherDataForCurrentDate = weatherData.filter(entry => {
-        let entryDateFormatted = new Date(entry.local_date).toISOString().split('T')[0]; 
+        let entryDate = new Date(entry.local_date);
+        let entryDateFormatted = entryDate.toISOString().split('T')[0];
         return entryDateFormatted === currentDateFormatted;
     });
     console.log("Weather data for current month and day:", weatherDataForCurrentDate);
-
 
     let averageMaxTemperature = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.max_temperature, 0) / weatherDataForCurrentDate.length;
     let averageMinTemperature = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.min_temperature, 0) / weatherDataForCurrentDate.length;
     let averageWindSpeed = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.wind_speed, 0) / weatherDataForCurrentDate.length;
     let averagePrecipitation = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.total_precipitation, 0) / weatherDataForCurrentDate.length;
 
-    // Display average weather information
     let weatherBox = document.getElementById("weather-box");
     weatherBox.innerHTML = `
         <h2>Weather Information for ${currentMonth}/${currentDay}</h2>

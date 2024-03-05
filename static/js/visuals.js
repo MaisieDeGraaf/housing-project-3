@@ -305,25 +305,50 @@ d3.json(URL)
     });
 
     myChart4 = new Chart(document.getElementById('chart4'), {
-        type: 'bar',
-        data: {
-            labels: [],
-            datasets: [{
-                label: 'Average List Price',
-                data: [Object.values(averageListPricesByNeighborhood)],
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255, 99, 132, 1)',
-                borderWidth: 1
-            }, {
-                label: 'Average Sale Price',
-                data: Object.values(averageSalePricesByNeighborhood),
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: options
-    });
+      type: 'bar',
+      data: {
+          labels: Object.keys(averageListPricesByNeighborhood), // Use neighborhood names as labels
+          datasets: [{
+              label: 'Average List Price',
+              data: Object.values(averageListPricesByNeighborhood),
+              backgroundColor: 'rgba(255, 99, 132, 0.2)',
+              borderColor: 'rgba(255, 99, 132, 1)',
+              borderWidth: 1
+          }, {
+              label: 'Average Sale Price',
+              data: Object.values(averageSalePricesByNeighborhood),
+              backgroundColor: 'rgba(54, 162, 235, 0.2)',
+              borderColor: 'rgba(54, 162, 235, 1)',
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              x: {
+                  title: {
+                      display: true,
+                      text: 'Neighborhoods' // Label for the x-axis
+                  }
+              },
+              y: {
+                  beginAtZero: true,
+                  ticks: {
+                      callback: function(value, index, values) {
+                          return '$' + value;
+                      }
+                  },
+                  scaleLabel: {
+                      display: true,
+                      labelString: 'Price'
+                  },
+                  grid: {
+                      display: true,
+                      color: 'rgba(0, 0, 0, 0.1)'
+                  }
+              }
+          }
+      }
+  });
 
     myChart5 = new Chart(canvas, {
         type: 'bar',

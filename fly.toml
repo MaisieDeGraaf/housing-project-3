@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for housing-project-3-muddy-river-7488 on 2024-03-06T14:15:20-05:00
+# fly.toml app configuration file generated for housing-project3 on 2024-03-06T14:36:14-05:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'housing-project-3-muddy-river-7488'
+app = 'housing-project3'
 primary_region = 'yyz'
 
 [build]

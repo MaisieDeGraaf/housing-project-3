@@ -1,5 +1,6 @@
-pymongo
-bson
 Flask
-pandas
+pymongo
 gunicorn
+requests
+beautifulsoup4
+bson==0.5.10

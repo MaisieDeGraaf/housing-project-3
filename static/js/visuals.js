@@ -7,12 +7,12 @@ d3.json(weatherURL).then(weatherData => {
     let currentDate = new Date();
     let currentMonth = currentDate.getMonth() + 1;
     let currentDay = currentDate.getDate();
-    let currentDateFormatted = currentDate.toISOString().split('T')[0];
 
     let weatherDataForCurrentDate = weatherData.filter(entry => {
         let entryDate = new Date(entry.local_date);
-        let entryDateFormatted = entryDate.toISOString().split('T')[0];
-        return entryDateFormatted === currentDateFormatted;
+        let entryMonth = entryDate.getMonth() + 1;
+        let entryDay = entryDate.getDate();
+        return entryMonth === currentMonth && entryDay === currentDay;
     });
     console.log("Weather data for current month and day:", weatherDataForCurrentDate);
 
@@ -44,6 +44,13 @@ document.getElementById('weather-toggle').addEventListener('click', function() {
         arrowIcon.classList.remove('fa-chevron-up');
         arrowIcon.classList.add('fa-chevron-down');
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    let currentDate = new Date();
+    let options = { year: 'numeric', month: 'long', day: 'numeric' };
+    let formattedDate = currentDate.toLocaleDateString('en-US', options);
+    document.getElementById('weather-header').textContent += formattedDate;
 });
 
 d3.json(URL)

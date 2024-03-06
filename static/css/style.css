@@ -78,11 +78,31 @@ footer {
   display: block;
   opacity: 1; 
 }
-#weather-box {
+.weather-toggle {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column; /* Add this line */
+  align-items: center;
+  justify-content: space-between;
+}
+
+#arrow-icon {
+  position: absolute; /* Position the arrow icon absolutely */
+  right: 10px; /* Adjust the right position as needed */
+  top: 50%; /* Position the arrow icon vertically in the middle */
+  transform: translateY(-50%); /* Center the arrow icon vertically */
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+.weather-box {
+  display: none; /* Initially hide the weather box */
   background-color: #f0f0f0;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 footer p {
   font-size: 12px;

@@ -30,6 +30,21 @@ d3.json(weatherURL).then(weatherData => {
     `;
 });
 
+document.getElementById('weather-toggle').addEventListener('click', function() {
+    let weatherBox = document.getElementById('weather-box');
+    let arrowIcon = document.getElementById('arrow-icon');
+    
+    if (weatherBox.style.display === 'none') {
+        weatherBox.style.display = 'block';
+        arrowIcon.classList.add('fa-chevron-up');
+        arrowIcon.classList.remove('fa-chevron-down');
+    } else {
+        weatherBox.style.display = 'none';
+        arrowIcon.classList.remove('fa-chevron-up');
+        arrowIcon.classList.add('fa-chevron-down');
+    }
+});
+
 d3.json(URL)
   .then(function(data) {
     // Log the loaded data for verification

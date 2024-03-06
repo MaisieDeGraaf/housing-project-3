@@ -1,35 +1,23 @@
-import os
-from pymongo import MongoClient
-
-
-# Retrieve the MongoDB connection string from the environment variable
-mongo_uri = os.environ.get('MONGO_URI')
-
-# Check if the environment variable is set
-if not mongo_uri:
-    raise ValueError("MONGO_URI environment variable is not set")
-
-
 # Import the dependencies.
+from pymongo import MongoClient
 from pprint import pprint
 from bson import json_util
 from flask import Flask, jsonify, render_template
 import json
+from api_keys import mongo_username,mongo_password
+
 
 #################################################
 # Database Setup
 #################################################
 #Creating an instance of MongoClient
 
-# connection_string = f'mongodb+srv://{mongo_username}:{mongo_password}@cluster0.9gjuly6.mongodb.net/'
-# mongo = MongoClient(connection_string)
-
-
-# Retrieve the MongoDB connection string from the environment variable
-client = MongoClient(mongo_uri)
+connection_string = f'mongodb+srv://{mongo_username}:{mongo_password}@cluster0.9gjuly6.mongodb.net/'
+mongo = MongoClient(connection_string)
 
 #Assigning our db to a variable  
-db = client.properties
+
+db = mongo['properties']
 
 #Assigning our collections to a variable
 

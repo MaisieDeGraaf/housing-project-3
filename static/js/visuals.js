@@ -3,6 +3,7 @@ let URL = 'http://127.0.0.1:5000/api/v1.0/housing';
 let weatherURL = "http://127.0.0.1:5000/api/v1.0/weather";
 
 d3.json(weatherURL).then(weatherData => {
+    console.log("Weather data:", weatherData);
     let currentDate = new Date();
     let currentMonth = currentDate.getMonth() + 1;
     let currentDay = currentDate.getDate();

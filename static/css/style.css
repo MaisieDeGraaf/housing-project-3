@@ -1,79 +1,108 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa; 
+  font-family: "Open Sans", sans-serif;
+  background-color: #f8f9fa;
 }
-
 .container {
-  max-width: 1200px; 
-  margin: 0 auto; 
-  padding: 0 15px; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-
-/* Header Styles */
 header {
-  background-color: #343a40; 
-  color: #ffffff; 
-  padding: 20px 0; 
+  background: linear-gradient(to right, #96d7d7, #fdc38f);
+  color: #ffffff;
+  padding: 20px 0;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid transparent; 
+  border-image: linear-gradient(to right, #76b7b7, #e3a175); 
+  border-image-slice: 1; 
+  font-family: "Open Sans", sans-serif;
+  font-size: 50px; /
 }
-
 header h1 {
-  margin: 0; 
+  margin: 0;
 }
-
-#map,
-body,
-html {
+#map, body, html {
   height: 100%;
 }
 
-/* Footer Styles */
 footer {
-  background-color: #343a40; 
-  color: #ffffff; 
-  padding: 20px 0; 
+  background-color: #fdc38f;
+  padding: 20px 0;
+  border-radius: 10px; 
+  text-align: center;
+}
+.dropbtn {
+  background-color: rgba(75, 192, 161, 0.9); 
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  text-align: center; 
+  display: block; 
+  margin: 0 auto; 
 }
 
 
+.card-title {
+  text-align: center; 
+}
 .dropdown-content {
   display: none;
-  position: absolute;
-  background-color: #ffffff; 
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); 
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   z-index: 1;
-  opacity: 0; /* Set initial opacity to 0 */
-  transition: opacity 0.3s ease-in-out; /* Apply transition to opacity */
+  border-radius: 5px;
+  text-align: left; 
+  position: relative; 
 }
 
+
+.card {
+  text-align: center; 
+  position: relative; 
+}
+
+.dropdown-content a {
+  color: rgba(0, 0, 0, 0.658);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 5px;
+}
+
+.dropdown-content a:hover {
+  background-color: #96d7d7;
+}
 .dropdown:hover .dropdown-content {
-  display: block; 
-  opacity: 1; /* Set opacity to 1 when dropdown is hovered */
+  display: block;
+  opacity: 1; 
 }
-
-/* For control layer - icons and text */
-.legend-item {
+.weather-toggle {
+  cursor: pointer;
   display: flex;
   align-items: center;
 }
 
-.legend-item img {
-  margin-right: 5px;
+#arrow-icon {
+  margin-left: 10px; 
 }
 
-/* For the space between checkbox and the icon */
-.legend-item input[type='checkbox'] {
-  margin-right: 5px;
+.arrow-up {
+  transform: rotate(180deg);
 }
 
-/* I used chatGPT to help on how to hide the default controler and create the styling for the new custom controler*/
-/* Hide default Leaflet layer control */
-.leaflet-control-layers {
-  display: none !important;
+.weather-box {
+  display: none; /* Initially hide the weather box */
+  color:rgb(70, 70, 70);
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
-/* Style for the custom control */
-.custom-control {
-  background: white;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+footer p {
+  font-size: 12px;
+}
+#weather-header {
+  font-size: 20px; 
 }

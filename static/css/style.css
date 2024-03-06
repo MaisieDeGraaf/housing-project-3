@@ -85,7 +85,7 @@ footer {
 }
 
 #arrow-icon {
-  margin-left: 10px; /* Adjust the margin as needed */
+  margin-left: 10px; 
 }
 
 .arrow-up {
@@ -94,6 +94,7 @@ footer {
 
 .weather-box {
   display: none; /* Initially hide the weather box */
+  color:darkgrey;
   background-color: #f0f0f0;
   border-radius: 10px;
   padding: 20px;
@@ -103,5 +104,5 @@ footer p {
   font-size: 12px;
 }
 #weather-header {
-  font-size: 20px; /* Change the value as needed */
+  font-size: 20px; 
 }

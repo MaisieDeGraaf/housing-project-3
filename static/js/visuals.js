@@ -17,15 +17,12 @@ d3.json(weatherURL).then(weatherData => {
     console.log("Weather data for current month and day:", weatherDataForCurrentDate);
     let averageMaxTemperature = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.max_temperature, 0) / weatherDataForCurrentDate.length;
     let averageMinTemperature = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.min_temperature, 0) / weatherDataForCurrentDate.length;
-    let averageWindSpeed = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.wind_speed, 0) / weatherDataForCurrentDate.length;
     let averagePrecipitation = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.total_precipitation, 0) / weatherDataForCurrentDate.length;
 
     let weatherBox = document.getElementById("weather-box");
     weatherBox.innerHTML = `
-        <h2>Weather Information for ${currentMonth}/${currentDay}</h2>
-        <p>Average Max Temperature: ${averageMaxTemperature.toFixed(2)}</p>
-        <p>Average Min Temperature: ${averageMinTemperature.toFixed(2)}</p>
-        <p>Average Wind Speed: ${averageWindSpeed.toFixed(2)}</p>
+        <p>Average Max Temperature: ${averageMaxTemperature.toFixed(2)}°C</p>
+        <p>Average Min Temperature: ${averageMinTemperature.toFixed(2)}°C</p>
         <p>Average Precipitation: ${averagePrecipitation.toFixed(2)}</p>
     `;
 }).catch(error => {

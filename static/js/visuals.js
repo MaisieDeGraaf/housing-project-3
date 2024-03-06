@@ -69,7 +69,7 @@ d3.json(URL)
     
     // Populate dropdown menu
     const dropdown = d3.select("#cityDropdown");
-    const citys = ["All Cities", "Milton", "Oakville", "Vaughan", "Burlington", "Oshawa"];
+    const citys = ["All Cities","Burlington", "Milton", "Oakville","Oshawa", "Vaughan"];
 
     dropdown.selectAll("a")
         .data(citys)
@@ -324,7 +324,32 @@ d3.json(URL)
                 borderWidth: 1
             }]
         },
-        options: options
+        options: {
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Cities'
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        callback: function(value, index, values) {
+                            return '$' + value.toLocaleString();
+                        }
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Price'
+                    },
+                    grid: {
+                        display: true,
+                        color: 'rgba(0, 0, 0, 0.1)'
+                    }
+                }
+            }
+        }
     });
 
     myChart4 = new Chart(document.getElementById('chart4'), {
@@ -357,7 +382,7 @@ d3.json(URL)
                   beginAtZero: true,
                   ticks: {
                       callback: function(value, index, values) {
-                          return '$' + value;
+                          return '$' + value.toLocaleString();
                       }
                   },
                   scaleLabel: {
@@ -387,6 +412,12 @@ d3.json(URL)
     },
     options: {
         scales: {
+            x: {
+                title: {
+                    display: true,
+                    text: 'Type of House' // Add x-axis label
+                }
+            },
             y: {
                 beginAtZero: true,
                 ticks: {

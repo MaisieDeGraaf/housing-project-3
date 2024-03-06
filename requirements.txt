@@ -1,0 +1,7 @@
+pymongo
+pprint
+bson
+Flask
+json
+pandas
+gunicorn

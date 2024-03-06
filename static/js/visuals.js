@@ -292,7 +292,7 @@ d3.json(URL)
                     'rgba(75, 192, 192, 0.6)',
                     'rgba(153, 102, 255, 0.6)',
                     'rgba(255, 159, 64, 0.6)',
-                    'rgba(255, 99, 132, 0.6)' // Add more colors if needed
+                    'rgba(255, 99, 132, 0.6)' 
                 ],
                 borderWidth: 1
             }]
@@ -404,7 +404,7 @@ d3.json(URL)
               x: {
                   title: {
                       display: true,
-                      text: 'Neighborhoods' // Label for the x-axis
+                      text: 'Neighborhoods' 
                   }
               },
               y: {
@@ -466,7 +466,7 @@ d3.json(URL)
                 beginAtZero: true,
                 ticks: {
                     callback: function(value, index, values) {
-                        return value; // Remove '$' from the axis
+                        return value; 
                     }
                 },
                 scaleLabel: {
@@ -483,7 +483,7 @@ d3.json(URL)
 });
 
 
-    // Add 6th chart (changed to Polar Area)
+    // Add 6th chart 
     myChart6 = new Chart(document.getElementById('chart6'), {
         type: 'polarArea',
         data: {
@@ -509,7 +509,7 @@ d3.json(URL)
         }
     });
 
-    // Add 7th chart (changed to Pie Chart)
+    // Add 7th chart 
     myChart7 = new Chart(document.getElementById('chart7'), {
         type: 'pie',
         data: {

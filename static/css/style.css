@@ -94,7 +94,7 @@ footer {
 
 .weather-box {
   display: none; /* Initially hide the weather box */
-  color:darkgrey;
+  color:rgb(70, 70, 70);
   background-color: #f0f0f0;
   border-radius: 10px;
   padding: 20px;

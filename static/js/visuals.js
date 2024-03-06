@@ -23,7 +23,7 @@ d3.json(weatherURL).then(weatherData => {
     weatherBox.innerHTML = `
         <p>Average Max Temperature: ${averageMaxTemperature.toFixed(2)}°C</p>
         <p>Average Min Temperature: ${averageMinTemperature.toFixed(2)}°C</p>
-        <p>Average Precipitation: ${averagePrecipitation.toFixed(2)}</p>
+        <p>Average Precipitation: ${averagePrecipitation.toFixed(2)} cm</p>
     `;
 }).catch(error => {
     console.error('Error loading weather data:', error);

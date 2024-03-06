@@ -291,10 +291,12 @@ d3.json(URL)
         options: {
             responsive: true,
             maintainAspectRatio: false,
-            title: {
-                display: true,
-                text: 'House Status'
-            },
+            plugins:{
+                title: {
+                    display: true,
+                    text: 'House Status',
+                    font : {size:20}
+            }},
             legend: {
                 display: true,
                 position: 'right',
@@ -325,6 +327,13 @@ d3.json(URL)
             }]
         },
         options: {
+            plugins:{
+                    title:{
+                        display:true,
+                        text: 'Average List Price vs Average Sale Price per City',
+                        font : {size : 20}
+
+                    }},
             scales: {
                 x: {
                     title: {
@@ -333,6 +342,10 @@ d3.json(URL)
                     }
                 },
                 y: {
+                    title:{
+                        display: true,
+                        text: 'Price'
+                    },
                     beginAtZero: true,
                     ticks: {
                         callback: function(value, index, values) {
@@ -371,6 +384,13 @@ d3.json(URL)
           }]
       },
       options: {
+            plugins :{
+                title : {
+                    display: true,
+                    text : 'Average List Price vs Average Sale Price per Neighborhood',
+                    font: {size : 20}
+                    
+                }},
           scales: {
               x: {
                   title: {
@@ -379,6 +399,10 @@ d3.json(URL)
                   }
               },
               y: {
+                title : {
+                    display : true,
+                    text : 'Price'
+                },
                   beginAtZero: true,
                   ticks: {
                       callback: function(value, index, values) {
@@ -410,7 +434,14 @@ d3.json(URL)
             borderWidth: 1
         }]
     },
-    options: {
+    options: {            
+        plugins : {
+            title : {
+                display : true,
+                text : 'Number of Houses per House Type',
+                font : {size :20}
+
+        }},
         scales: {
             x: {
                 title: {
@@ -419,6 +450,10 @@ d3.json(URL)
                 }
             },
             y: {
+                title : {
+                    display : true,
+                    text: 'Number of Houses'
+                },
                 beginAtZero: true,
                 ticks: {
                     callback: function(value, index, values) {
@@ -451,6 +486,12 @@ d3.json(URL)
             }]
         },
         options: {
+            plugins : {
+                title : {
+                    display : true,
+                    text : 'Number of Houses per City',
+                    font : {size : 20}
+                }},
             scale: {
                 ticks: {
                     beginAtZero: true
@@ -471,6 +512,13 @@ d3.json(URL)
             }]
         },
         options: {
+            plugins: {
+                title:{
+                    display : true,
+                    text : 'Number of Houses per Neighborhood',
+                    font : {size : 20}
+
+            }},
             scales: {
                 y: {
                     display: false

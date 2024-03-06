@@ -415,7 +415,7 @@ d3.json(URL)
             x: {
                 title: {
                     display: true,
-                    text: 'Type of House' // Add x-axis label
+                    text: 'Type of House'
                 }
             },
             y: {

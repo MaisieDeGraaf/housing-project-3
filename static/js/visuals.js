@@ -9,19 +9,12 @@ d3.json(weatherURL).then(weatherData => {
     let currentDay = currentDate.getDate();
     console.log("date:", currentDate);
     console.log("day:", currentDay);
-    console.log("day:", currentMonth);
+    console.log("month:", currentMonth);
 
     let weatherDataForCurrentDate = weatherData.filter(entry => {
-        let entryDate = new Date(entry.local_date);
-        let entryMonth = entryDate.getMonth() + 1;
-        let entryDay = entryDate.getDate();
-        return entryMonth === currentMonth && entryDay === currentDay;
+        return entry.local_month === currentMonth && entry.local_day === currentDay;
     });
     console.log("Weather data for current month and day:", weatherDataForCurrentDate);
-    console.log("Entry:", entryDate)
-    console.log("Date:", entryDay)
-    console.log("Month:", entryMonth)
-
     let averageMaxTemperature = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.max_temperature, 0) / weatherDataForCurrentDate.length;
     let averageMinTemperature = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.min_temperature, 0) / weatherDataForCurrentDate.length;
     let averageWindSpeed = weatherDataForCurrentDate.reduce((acc, curr) => acc + curr.wind_speed, 0) / weatherDataForCurrentDate.length;
@@ -35,6 +28,8 @@ d3.json(weatherURL).then(weatherData => {
         <p>Average Wind Speed: ${averageWindSpeed.toFixed(2)}</p>
         <p>Average Precipitation: ${averagePrecipitation.toFixed(2)}</p>
     `;
+}).catch(error => {
+    console.error('Error loading weather data:', error);
 });
 
 document.getElementById('weather-toggle').addEventListener('click', function() {

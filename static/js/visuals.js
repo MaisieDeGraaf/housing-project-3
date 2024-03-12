@@ -1,6 +1,6 @@
 // Call URL using d3
-let URL = 'http://127.0.0.1:5000/api/v1.0/housing';
-let weatherURL = "http://127.0.0.1:5000/api/v1.0/weather";
+let URL = '/api/v1.0/housing';
+let weatherURL = "/api/v1.0/weather";
 
 d3.json(weatherURL).then(weatherData => {
     console.log("Weather data:", weatherData);

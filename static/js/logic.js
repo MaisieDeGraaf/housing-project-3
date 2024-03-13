@@ -22,8 +22,8 @@ let cities = [{
   ];
   
 // API endpoints
-let queryUrl = "http://127.0.0.1:5000/api/v1.0/housing"
-let leisureUrl = "http://127.0.0.1:5000/api/v1.0/leisure";
+let queryUrl = "/api/v1.0/housing";
+let leisureUrl = "/api/v1.0/leisure";
 
 // function to add commas to List Price popup
 function numberWithCommas(x) {

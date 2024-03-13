@@ -1,16 +1,12 @@
-# fly.toml app configuration file generated for housing-project-3 on 2024-03-11T21:52:00-04:00
+# fly.toml app configuration file generated for hp3 on 2024-03-13T16:57:56-06:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'housing-project-3'
-primary_region = 'yyz'
+app = 'hp3'
+primary_region = 'sea'
 
 [build]
-  builder = 'paketobuildpacks/builder:base'
-
-[env]
-  PORT = '8080'
 
 [http_service]
   internal_port = 8080
